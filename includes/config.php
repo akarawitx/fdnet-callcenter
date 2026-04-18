@@ -11,7 +11,14 @@ define('SITE_EMAIL', 'ict@watphrathammakaya.ac.th');
 define('SITE_HOURS', 'เปิดทำการ วันจันทร์–ศุกร์ เวลา 09:00–17:30 น.');
 
 $host = $_SERVER['HTTP_HOST'] ?? '';
-define('BASE_URL', (str_starts_with($host, 'localhost') || $host === '127.0.0.1') ? '' : '/itdiv/makarawit-services');
+define('BASE_URL', 
+    (str_starts_with($host, 'localhost') || $host === '127.0.0.1')
+        ? ''                            // localhost
+        : (str_contains($host, 'vm14')
+            ? '/itdiv/makarawit-services'  // vm14 ที่ทำงาน
+            : ''                           // AwardSpace / domain อื่น
+        )
+);
 
 // ==============================
 // Navigation Menu Structure
@@ -42,23 +49,33 @@ function get_navigation(): array
             ],
         ],
         [
-            'label'    => 'คู่มือการใช้งาน',
-            'url'      => "$b/pages/guides.php",
+            'label'    => 'ระบบจัดหาอุปกรณ์สารสนเทศ',
+            'url'      => "$b/pages/procurement.php",
             'icon'     => '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
             'children' => [
-                ['label' => 'การตั้งค่า Email',        'url' => "$b/pages/guides.php?cat=email"],
-                ['label' => 'การใช้งาน Wi-Fi',         'url' => "$b/pages/guides.php?cat=wifi"],
-                ['label' => 'ระบบสารบรรณ',             'url' => "$b/pages/guides.php?cat=saraban"],
                 [
-                    'label'    => 'Microsoft Office 365',
-                    'url'      => "$b/pages/guides.php?cat=office365",
+                    'label' => 'การขอใช้อุปกรณ์สารสนเทศ',
+                    'url' => "$b/pages/procurement.php",
                     'children' => [
-                        ['label' => 'Word & Excel',   'url' => "$b/pages/guides.php?cat=word-excel"],
-                        ['label' => 'Microsoft Teams', 'url' => "$b/pages/guides.php?cat=teams"],
-                        ['label' => 'OneDrive',       'url' => "$b/pages/guides.php?cat=onedrive"],
-                        ['label' => 'SharePoint',     'url' => "$b/pages/guides.php?cat=sharepoint"],
+                        ['label' => 'Access Control', 'url' => "$b/pages/procurement.php?cat=accessControl"],
+                        ['label' => 'CCTV',         'url' => "$b/pages/procurement.php?cat=cctv"],
+                        ['label' => 'VPN & Mail องค์กร', 'url' => "$b/pages/procurement.php?cat=vpn&mail"],
+                        ['label' => 'กล่องสัญญาณ GBN', 'url' => "$b/pages/procurement.php?cat=gbn"],
+                        ['label' => 'จอ LED',       'url' => "$b/pages/procurement.php?cat=led"],
+                        ['label' => 'Server',        'url' => "$b/pages/procurement.php?cat=server"],
+                        ['label' => 'Wi-Fi & LAN',  'url' => "$b/pages/procurement.php?cat=wifi&lan"],
+                        ['label' => 'ค่าบริการโทรศัพท์',  'url' => "$b/pages/procurement.php?cat=telephonebill"],
+                        ['label' => 'ถ่ายเอกสาร',    'url' => "$b/pages/procurement.php?cat=printDocument"],
+                        ['label' => 'File Share',    'url' => "$b/pages/procurement.php?cat=fileShare"],
+                        ['label' => 'อบรมความรู้สารสนเทศ', 'url' => "$b/pages/procurement.php?cat=training"],
+                        ['label' => 'ยืม คืน ซ่อมอุปกรณ์คอมพิวเตอร์', 'url' => "$b/pages/procurement.php?cat=it&com"],
+                        ['label' => 'จัดซื้อ ยืม คืน เเจ้งซ่อมอุปกรณ์มัลติมีเดีย', 'url' => "$b/pages/procurement.php?cat=video"],
+                        ['label' => 'จัดซื้อ ยืม คืน เเจ้งซ่อมอุปกรณ์เครื่องเสียง', 'url' => "$b/pages/procurement.php?cat=audio"],
+                        ['label' => 'ยืม-คืน/เเจ้งซ่อมวิทยุสื่อสาร','url' => "$b/pages/procurement.php?cat=radio"],
                     ],
                 ],
+                ['label' => 'การขอใช้งานอุปกรณ์',         'url' => "$b/pages/procurement.php?cat=equipment"],
+                ['label' => 'การขอใช้สถานที่',             'url' => "$b/pages/procurement.php?cat=location"],
             ],
         ],
         [
@@ -66,6 +83,7 @@ function get_navigation(): array
             'url'      => "$b/pages/network.php",
             'icon'     => '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
             'children' => [
+                ['label' => 'อินเตอร์เน็ตภายในองค์กร',     'url' => "$b/pages/network.php?cat=network"],
                 ['label' => 'นโยบาย IT',          'url' => "$b/pages/network.php?cat=policy"],
                 ['label' => 'VPN',                 'url' => "$b/pages/network.php?cat=vpn"],
                 ['label' => 'ความปลอดภัยข้อมูล',  'url' => "$b/pages/network.php?cat=security"],

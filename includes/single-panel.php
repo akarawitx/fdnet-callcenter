@@ -110,9 +110,9 @@ if ($current) {
           <div class="sp-single__extra"><?= $item['extra_html'] ?></div>
         <?php endif; ?>
 
-        <div class="sp-single__footer">
+        <!-- <div class="sp-single__footer">
           <a href="#" class="btn btn--primary sp-single__cta">ขอรับบริการนี้ →</a>
-        </div>
+        </div> -->
 
       </div><!-- /.sp-single -->
 

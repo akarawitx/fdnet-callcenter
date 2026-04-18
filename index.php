@@ -17,36 +17,25 @@ $quick_services = [
   ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>', 'label' => 'ขอเพิ่มอินเทอร์เน็ต', 'sub' => 'เพิ่มปริมาณการใช้งาน', 'url' => 'pages/services.php?cat=internet'],
 ];
 
-// ---- Featured guides ----
+// ---- Featured guides (Procurement) ----
 $featured_guides = [
-  [
-    'badge'  => 'มือใหม่',
-    'title'  => 'การขอ Account และตั้งค่าครั้งแรก',
-    'desc'   => 'ขั้นตอนตั้งแต่กรอกแบบฟอร์ม รออนุมัติ ล็อกอินครั้งแรก จนถึงตั้ง 2FA',
-    'tags'   => ['Account', 'ขั้นตอน'],
-    'url'    => 'pages/guides.php?cat=account',
-  ],
-  [
-    'badge'  => 'บุคลากร',
-    'title'  => 'การใช้งาน Microsoft 365 ภายในวัด',
-    'desc'   => 'Teams, Outlook, OneDrive และ SharePoint สำหรับบุคลากรภายในองค์กร',
-    'tags'   => ['Office 365', 'Teams'],
-    'url'    => 'pages/guides.php?cat=office365',
-  ],
-  [
-    'badge'  => 'ระบบสาร',
-    'title'  => 'ระบบรับ-ส่งหนังสือราชการดิจิทัล',
-    'desc'   => 'วิธีสร้าง ส่ง รับ และจัดเก็บหนังสือในระบบสารบรรณอิเล็กทรอนิกส์',
-    'tags'   => ['สารบรรณ', 'เอกสาร'],
-    'url'    => 'pages/guides.php?cat=saraban',
-  ],
-  [
-    'badge'  => 'ความปลอดภัย',
-    'title'  => 'นโยบายและแนวทางความปลอดภัยข้อมูล',
-    'desc'   => 'การตั้งรหัสที่ปลอดภัย การใช้ VPN และสิ่งที่ต้องระวังในการใช้งานเครือข่าย',
-    'tags'   => ['Security', 'นโยบาย'],
-    'url'    => 'pages/network.php?cat=security',
-  ],
+  // ['title' => 'Access Control',                                      'desc' => 'ขั้นตอนการขอใช้งาน Access Control',                          'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=accessControl'],
+  // ['title' => 'CCTV',                                                'desc' => 'ขั้นตอนการขอติดตั้งกล้องวงจรปิด',                           'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=cctv'],
+  ['title' => 'VPN & Mail องค์กร',                                   'desc' => 'ขั้นตอนการขอใช้งาน VPN และอีเมลองค์กร',                     'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=vpn&mail'],
+  // ['title' => 'กล่องสัญญาณ GBN',                                    'desc' => 'ขั้นตอนการขอใช้งานกล่องสัญญาณ GBN',                         'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=gbn'],
+  // ['title' => 'จอ LED',                                              'desc' => 'ขั้นตอนการขอใช้งานจอ LED',                                   'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=led'],
+  ['title' => 'Server / IP Address',                                 'desc' => 'ขั้นตอนการขอ IP Address ถาวร',                               'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=server'],
+  // ['title' => 'Wi-Fi & LAN',                                         'desc' => 'ขั้นตอนการขอใช้งาน Wi-Fi และ LAN',                           'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=wifi&lan'],
+  // ['title' => 'ค่าบริการโทรศัพท์',                                  'desc' => 'ขั้นตอนการขอเบิกค่าบริการโทรศัพท์',                          'tags' => ['บริการ'],        'url' => 'pages/procurement.php?cat=telephonebill'],
+  // ['title' => 'ถ่ายเอกสาร',                                         'desc' => 'ขั้นตอนการขอใช้บริการถ่ายเอกสาร',                            'tags' => ['บริการ'],        'url' => 'pages/procurement.php?cat=printDocument'],
+  ['title' => 'File Share',                                          'desc' => 'ขั้นตอนการขอใช้งาน File Share',                               'tags' => ['บริการ'],        'url' => 'pages/procurement.php?cat=fileShred'],
+  // ['title' => 'อบรมความรู้สารสนเทศ',                                'desc' => 'ขั้นตอนการสมัครอบรมความรู้ด้านสารสนเทศ',                     'tags' => ['อบรม'],          'url' => 'pages/procurement.php?cat=training'],
+  ['title' => 'ยืม คืน ซ่อมอุปกรณ์คอมพิวเตอร์',                   'desc' => 'ขั้นตอนการยืม คืน และแจ้งซ่อมอุปกรณ์คอมพิวเตอร์',           'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=it&com'],
+  // ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์มัลติมีเดีย',      'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์มัลติมีเดีย',            'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=video'],
+  // ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์เครื่องเสียง',     'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์เครื่องเสียง',           'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=audio'],
+  // ['title' => 'ยืม-คืน/แจ้งซ่อมวิทยุสื่อสาร',                     'desc' => 'ขั้นตอนการยืม คืน และแจ้งซ่อมวิทยุสื่อสาร',                  'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=radio'],
+  ['title' => 'การขอใช้งานอุปกรณ์',                                 'desc' => 'ขั้นตอนการขอใช้งานอุปกรณ์ภายในองค์กร',                       'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=equipment'],
+  ['title' => 'การขอใช้งานสถานที่',                                 'desc' => 'ขั้นตอนการขอใช้พื้นที่ภายในองค์กร',                           'tags' => ['สถานที่'],       'url' => 'pages/procurement.php?cat=location'],
 ];
 
 require_once 'includes/header.php';
@@ -56,48 +45,124 @@ require_once 'includes/header.php';
 <main class="layout__main">
 
   <!-- HERO BANNER -->
-  <section class="hero">
-    <div class="hero__text">
-      <div class="hero__eyebrow">ยินดีต้อนรับ</div>
-      <h1 class="hero__title">กองบริการสารสนเทศ</h1>
-      <p class="hero__desc">บริการให้คำปรึกษา และแก้ไขปัญหาด้านสารสนเทศครบวงจร<br>เปิดทำการทุกวันจันทร์–เสาร์ เวลา 9:00–17:30 น.</p>
-      <div class="hero__actions">
-        <a href="pages/services.php" class="btn btn--red-account">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-            <circle cx="12" cy="7" r="4" />
-            <line x1="18" y1="8" x2="23" y2="13" />
-            <line x1="23" y1="8" x2="18" y2="13" />
-          </svg>
-          ยูสเซอร์หน้าแดง
-        </a>
+  <div class="hero-wrapper">
+    <section class="hero">
+      <div class="hero__text">
+        <div class="hero__eyebrow">ยินดีต้อนรับ</div>
+        <h1 class="hero__title">กองบริการสารสนเทศ</h1>
+        <p class="hero__desc">บริการให้คำปรึกษา และแก้ไขปัญหาด้านสารสนเทศครบวงจร<br>เปิดทำการทุกวันจันทร์–เสาร์ เวลา 9:00–17:30 น.</p>
+      </div>
+    </section>
+
+    <!-- QUICK STRIP (ลอยออกจาก Hero) -->
+    <div class="hero__strip-outer">
+      <div class="hero__strip">
+        <?php foreach ($quick_services as $svc): ?>
+          <a href="<?= htmlspecialchars($svc['url']) ?>" class="hero__strip-item">
+            <div class="hero__strip-icon"><?= $svc['icon'] ?></div>
+            <div class="hero__strip-label"><?= htmlspecialchars($svc['label']) ?></div>
+          </a>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO SECTION -->
+  <section class="page-section intro-section">
+    <div class="intro-wrap">
+      <div class="intro-img">
+        <img src="<?= BASE_URL ?>/assets/images/redlogin.png" alt="กองบริหารสารสนเทศ">
+      </div>
+      <div class="intro-body">
+        <div class="intro-eyebrow">เกี่ยวกับเรา</div>
+        <h2 class="intro-title">Login หน้าเเดง</h2>
+        <p class="intro-desc">
+          ให้บริการอินเตอร์เน็ตและระบบเครือข่ายภายในวัด พร้อมทั้งให้คำปรึกษาและแก้ไขปัญหาด้านสารสนเทศต่างๆ แก่พระภิกษุสามเณรและเจ้าหน้าที่ของวัด
+        </p>
+        <ul class="intro-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            ให้บริการอินเทอร์เน็ตผ่านระบบ Wi-Fi และ LAN ภายในวัด
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            ให้คำปรึกษาและแก้ไขปัญหาด้านสารสนเทศ เช่น การเข้าใช้อินเทอร์เน็ต
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            เปิดทำการ วันจันทร์–เสาร์ เวลา 09:00–17:30 น.
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            ติดต่อสอบถามเพิ่มเติมได้ที่ โทร. 02-123-4567 ต่อ 1234
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            ลิ้งเข้าใช้อินเทอร์เน็ต: <a href="https://cyberoam.dhammakaya.network:8090/" target="_blank" rel="noopener" style="color:#1e73be;text-decoration:underline;">cyberoam.dhammakaya.network</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- QUICK SERVICES -->
-  <section class="page-section">
-    <h2 class="section-title">บริการที่ใช้บ่อย</h2>
-    <div class="service-grid">
-      <?php foreach ($quick_services as $svc): ?>
-        <a href="<?= htmlspecialchars($svc['url']) ?>" class="service-card">
-          <div class="service-card__icon"><?= $svc['icon'] ?></div>
-          <div class="service-card__label"><?= htmlspecialchars($svc['label']) ?></div>
-          <div class="service-card__sub"><?= htmlspecialchars($svc['sub']) ?></div>
-        </a>
-      <?php endforeach; ?>
+  <!-- INTRO SECTION 2
+  <section class="page-section intro-section">
+    <div class="intro-wrap intro-wrap--reverse">
+      <div class="intro-body">
+        <div class="intro-eyebrow">บริการของเรา</div>
+        <h2 class="intro-title">กองบริการสารสนเทศ</h2>
+        <p class="intro-desc">
+          ให้บริการด้านระบบเครือข่ายภายในองค์กร ครอบคลุมทั้ง Wi-Fi, LAN, VPN
+          รวมถึงการดูแลและซ่อมบำรุงอุปกรณ์คอมพิวเตอร์ทุกประเภท
+        </p>
+        <ul class="intro-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            ติดตั้งและดูแลระบบเครือข่าย LAN / Wi-Fi
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            บริการ VPN สำหรับการทำงานนอกสถานที่
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            ซ่อมบำรุงและยืม-คืนอุปกรณ์คอมพิวเตอร์
+          </li>
+        </ul>
+      </div>
+      <div class="intro-img">
+        <img src="/assets/images/fdnet.png" alt="ระบบเครือข่าย">
+      </div>
     </div>
-  </section>
+  </section> -->
 
-  <!-- FEATURED GUIDES -->
+  <!-- GUIDE SECTION -->
   <div>
     <section class="page-section">
-      <h2 class="section-title">คู่มือแนะนำ</h2>
+      <h2 class="section-title">ระบบจัดหาอุปกรณ์สารสนเทศ</h2>
       <div class="guide-list">
         <?php foreach ($featured_guides as $g): ?>
           <a href="<?= htmlspecialchars($g['url']) ?>" class="guide-item">
             <div class="guide-item__top">
-              <span class="badge badge--blue"><?= htmlspecialchars($g['badge']) ?></span>
+              <?php if (!empty($g['badge'])): ?>
+                <span class="badge badge--blue"><?= htmlspecialchars($g['badge']) ?></span>
+              <?php endif; ?>
             </div>
             <div class="guide-item__title"><?= htmlspecialchars($g['title']) ?></div>
             <div class="guide-item__desc"><?= htmlspecialchars($g['desc']) ?></div>
@@ -108,7 +173,7 @@ require_once 'includes/header.php';
             </div>
           </a>
         <?php endforeach; ?>
-        <a href="pages/guides.php" class="btn btn--outline btn--sm" style="align-self:flex-start;margin-top:4px">ดูคู่มือทั้งหมด →</a>
+        <a href="<?= BASE_URL ?>/pages/procurement.php" class="btn btn--outline btn--sm" style="align-self:flex-start;margin-top:4px">ดูทั้งหมด</a>
       </div>
     </section>
 
@@ -183,9 +248,9 @@ require_once 'includes/header.php';
   }
 
   .btn--red-account {
-    background: rgba(220, 80, 80, 0.25);
+    background: hsla(0, 100%, 66%, 0.25);
     color: #fff;
-    border: 1.5px solid rgba(255, 160, 160, 0.6);
+    border: 1.5px solid rgba(255, 0, 0, 0.6);
     backdrop-filter: blur(4px);
   }
 
@@ -256,6 +321,83 @@ require_once 'includes/header.php';
 
   .hero__icon-grid span:hover {
     transform: scale(1.1);
+  }
+
+  /* Intro Section */
+  .intro-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .intro-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro-img img {
+    width: 100%;
+    max-width: 500px;
+    /* ควบคุมขนาดสูงสุด */
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    display: block;
+  }
+
+  .intro-eyebrow {
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--clr-primary);
+    margin-bottom: 8px;
+  }
+
+  .intro-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--clr-text);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .intro-desc {
+    font-size: .9rem;
+    color: var(--clr-text-muted);
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+
+  .intro-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .intro-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .88rem;
+    color: var(--clr-text);
+  }
+
+  .intro-list li svg {
+    stroke: var(--clr-primary);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 700px) {
+    .intro-wrap {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 
   /* Service grid */
@@ -411,6 +553,25 @@ require_once 'includes/header.php';
     margin-bottom: 36px;
   }
 
+  .intro-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  /* สลับรูปไปขวา */
+  .intro-wrap--reverse .intro-img {
+    order: 2;
+  }
+
+  .intro-wrap--reverse .intro-body {
+    order: 1;
+    text-align: right;
+  }
+
+  .intro-wrap--reverse .intro-list li {
+    justify-content: flex-end;
+  }
+
   @media (max-width: 600px) {
     .hero {
       flex-direction: column;
@@ -427,6 +588,98 @@ require_once 'includes/header.php';
 
     .service-grid {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ── Hero Wrapper + Floating Strip ── */
+  .hero-wrapper {
+    position: relative;
+    margin-bottom: 60px;
+    /* เผื่อพื้นที่ strip ที่ล้นออกมา */
+  }
+
+  /* ปรับ hero เดิมให้มี padding-bottom เพิ่ม */
+  .hero {
+    padding-bottom: 48px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero__strip-outer {
+    position: absolute;
+    bottom: -36px;
+    /* ล้นออกมาครึ่งหนึ่ง */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    /* เว้น margin ซ้าย-ขวา (สีส้ม) */
+    z-index: 10;
+  }
+
+  .hero__strip {
+    display: flex;
+    background: var(--clr-surface, #fff);
+    border: 1px solid var(--clr-border, #e2e8f0);
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+  }
+
+  .hero__strip-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px 10px;
+    color: var(--clr-text, #1e293b);
+    font-size: 0.75rem;
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+    border-right: 1px solid var(--clr-border, #e2e8f0);
+    text-decoration: none;
+  }
+
+  .hero__strip-item:last-child {
+    border-right: none;
+  }
+
+  .hero__strip-item:hover {
+    background: var(--clr-primary-pale, #eff6ff);
+    color: var(--clr-primary, #1d6fa4);
+  }
+
+  .hero__strip-icon svg {
+    stroke: var(--clr-primary, #1d6fa4);
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero__strip-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1.3;
+    white-space: normal;
+  }
+
+  @media (max-width: 768px) {
+    .hero__strip-outer {
+      width: calc(100% - 32px);
+      bottom: -28px;
+    }
+
+    .hero-wrapper {
+      margin-bottom: 52px;
+    }
+
+    .hero__strip {
+      flex-wrap: wrap;
+    }
+
+    .hero__strip-item {
+      flex: 0 0 25%;
+      /* 4 คอลัมน์บนมือถือ */
+      border-bottom: 1px solid var(--clr-border, #e2e8f0);
     }
   }
 </style>
