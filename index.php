@@ -7,11 +7,14 @@ $page_title = 'หน้าหลัก';
 
 // ---- Quick services ----
 $quick_services = [
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>', 'label' => 'ขอ Account', 'sub' => 'สมัครบัญชีใหม่', 'url' => 'pages/services.php?cat=account'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>', 'label' => 'รีเซ็ตรหัสผ่าน', 'sub' => 'ลืม / เปลี่ยน password', 'url' => 'pages/services.php?cat=reset'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>', 'label' => 'ขอ Email', 'sub' => 'อีเมลองค์กร', 'url' => 'pages/services.php?cat=email'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>', 'label' => 'ขอใช้ Wi-Fi', 'sub' => 'รหัส / ต่อเครือข่าย', 'url' => 'pages/services.php?cat=wifi'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>', 'label' => 'คู่มือทั้งหมด', 'sub' => 'สอนการใช้งาน', 'url' => 'pages/guides.php'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg>', 'label' => 'ขอ Account ใหม่', 'sub' => 'สมัครบัญชีใหม่', 'url' => 'pages/services.php?cat=account'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>', 'label' => 'ต่ออายุ Account', 'sub' => 'ขยายอายุการใช้งาน', 'url' => 'pages/services.php?cat=renew'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>', 'label' => 'เช็กสถานะ Account', 'sub' => 'ตรวจสอบ / รหัสผ่าน', 'url' => 'pages/services.php?cat=status'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>', 'label' => 'รีเซทรหัสผ่าน', 'sub' => 'ลืม / เปลี่ยน password', 'url' => 'pages/services.php?cat=reset'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>', 'label' => 'ขอ Join Domain', 'sub' => 'เชื่อมคอมกับ Domain', 'url' => 'pages/services.php?cat=domain'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>', 'label' => 'ขอสิทธิ์เข้า Computer', 'sub' => 'ขอสิทธิ์ใช้งาน', 'url' => 'pages/services.php?cat=access'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>', 'label' => 'ขอเปลี่ยน Email', 'sub' => 'แก้ไขอีเมลองค์กร', 'url' => 'pages/services.php?cat=email'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>', 'label' => 'ขอเพิ่มอินเทอร์เน็ต', 'sub' => 'เพิ่มปริมาณการใช้งาน', 'url' => 'pages/services.php?cat=internet'],
 ];
 
 // ---- Featured guides ----
@@ -59,47 +62,15 @@ require_once 'includes/header.php';
       <h1 class="hero__title">กองบริการสารสนเทศ</h1>
       <p class="hero__desc">บริการให้คำปรึกษา และแก้ไขปัญหาด้านสารสนเทศครบวงจร<br>เปิดทำการทุกวันจันทร์–เสาร์ เวลา 9:00–17:30 น.</p>
       <div class="hero__actions">
-        <a href="pages/services.php" class="btn btn--outline">
+        <a href="pages/services.php" class="btn btn--red-account">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3" />
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+            <line x1="18" y1="8" x2="23" y2="13" />
+            <line x1="23" y1="8" x2="18" y2="13" />
           </svg>
-          บริการทั้งหมด
+          ยูสเซอร์หน้าแดง
         </a>
-      </div>
-    </div>
-    <div class="hero__illustration">
-      <div class="hero__circle c1"></div>
-      <div class="hero__circle c2"></div>
-      <div class="hero__circle c3"></div>
-      <div class="hero__icon-grid">
-        <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" />
-            <line x1="8" y1="21" x2="16" y2="21" />
-            <line x1="12" y1="17" x2="12" y2="21" />
-          </svg></span>
-        <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-            <polyline points="22,6 12,13 2,6" />
-          </svg></span>
-        <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          </svg></span>
-        <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-            <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-            <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-            <circle cx="12" cy="20" r="1" fill="currentColor" />
-          </svg></span>
-        <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 6 2 18 2 18 9" />
-            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-            <rect x="6" y="14" width="12" height="8" />
-          </svg></span>
-        <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-          </svg></span>
       </div>
     </div>
   </section>
@@ -118,7 +89,7 @@ require_once 'includes/header.php';
     </div>
   </section>
 
-<!-- FEATURED GUIDES -->
+  <!-- FEATURED GUIDES -->
   <div>
     <section class="page-section">
       <h2 class="section-title">คู่มือแนะนำ</h2>
@@ -152,7 +123,9 @@ require_once 'includes/header.php';
 
   /* Hero */
   .hero {
-    background: linear-gradient(135deg, var(--clr-primary) 0%, #0d4d80 100%);
+    background:
+      linear-gradient(135deg, rgba(8, 47, 73, 0.82) 0%, rgba(13, 77, 128, 0.70) 100%),
+      url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80') center/cover no-repeat;
     border-radius: var(--radius-lg);
     padding: 40px 40px 40px 44px;
     margin-bottom: 36px;
@@ -163,6 +136,8 @@ require_once 'includes/header.php';
     position: relative;
     min-height: 200px;
     box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(0px);
   }
 
   .hero__text {
@@ -205,6 +180,22 @@ require_once 'includes/header.php';
 
   .hero__actions .btn--outline:hover {
     background: rgba(255, 255, 255, .15);
+  }
+
+  .btn--red-account {
+    background: rgba(220, 80, 80, 0.25);
+    color: #fff;
+    border: 1.5px solid rgba(255, 160, 160, 0.6);
+    backdrop-filter: blur(4px);
+  }
+
+  .btn--red-account:hover {
+    background: rgba(220, 80, 80, 0.40);
+    border-color: rgba(255, 180, 180, 0.8);
+  }
+
+  .btn--red-account svg {
+    stroke: #ffb3b3;
   }
 
   .hero__illustration {
