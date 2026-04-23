@@ -586,7 +586,7 @@ require_once '../includes/header.php';
 ?>
 
 <?php
-$panel_title   = 'บริการ IT';
+$panel_title   = 'บริการยูสเซอร์สำหรับบุคลากร';
 $panel_cat     = $cat;
 $panel_base    = 'services.php';
 $panel_menu    = $categories;
