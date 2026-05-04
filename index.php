@@ -102,7 +102,7 @@ require_once 'includes/header.php';
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12" />
             </svg>
-            ติดต่อสอบถามเพิ่มเติมได้ที่ โทร. 02-123-4567 ต่อ 1234
+            ติดต่อสอบถามเพิ่มเติมได้ที่ โทร. 02-831-1441 ต่อ 14141
           </li>
           <li>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">

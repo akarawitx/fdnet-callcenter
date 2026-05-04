@@ -343,17 +343,16 @@ $guides = [
             <div class="eq-note" style="margin-top:14px">
               <strong>ตัวอย่างการกรอกเอกสารเพื่อขอใช้ห้องคอมพิวเตอร์</strong>
             </div>
-            <img class="eq-img" src="https://i.pinimg.com/1200x/52/c0/e6/52c0e6034e7f0a11870cfaf91cf3362e.jpg" alt="ตัวอย่างกรอกเอกสาร 1">
-            <img class="eq-img" src="https://i.pinimg.com/1200x/52/c0/e6/52c0e6034e7f0a11870cfaf91cf3362e.jpg" alt="ตัวอย่างกรอกเอกสาร 2">
-            <img class="eq-img" src="https://i.pinimg.com/1200x/52/c0/e6/52c0e6034e7f0a11870cfaf91cf3362e.jpg" alt="ตัวอย่างกรอกเอกสาร 3">
-            <img class="eq-img" src="https://i.pinimg.com/1200x/52/c0/e6/52c0e6034e7f0a11870cfaf91cf3362e.jpg" alt="ตัวอย่างกรอกเอกสาร 4">
+            <img class="eq-img" src="../assets/images/procurement/location/computer1.png" alt="ตัวอย่างกรอกเอกสาร 1">
+            <img class="eq-img" src="../assets/images/procurement/location/computer2.png" alt="ตัวอย่างกรอกเอกสาร 2">
+            <img class="eq-img" src="../assets/images/procurement/location/computer3.png" alt="ตัวอย่างกรอกเอกสาร 3">
 
             <div class="eq-note" style="margin-top:14px">
               <strong>ตัวอย่างการกรอก คพ. เพื่อขอให้หัวหน้ากองอนุมัติ</strong>
             </div>
-            <img class="eq-img" src="https://i.pinimg.com/1200x/52/c0/e6/52c0e6034e7f0a11870cfaf91cf3362e.jpg" alt="ตัวอย่าง คพ. 1">
-            <img class="eq-img" src="https://i.pinimg.com/1200x/52/c0/e6/52c0e6034e7f0a11870cfaf91cf3362e.jpg" alt="ตัวอย่าง คพ. 2">
-            <img class="eq-img" src="https://i.pinimg.com/1200x/52/c0/e6/52c0e6034e7f0a11870cfaf91cf3362e.jpg" alt="ตัวอย่าง คพ. 3">
+            <img class="eq-img" src="../assets/images/procurement/location/form1.png" alt="ตัวอย่าง คพ. 1">
+            <img class="eq-img" src="../assets/images/procurement/location/form2.png" alt="ตัวอย่าง คพ. 2">
+            <img class="eq-img" src="../assets/images/procurement/location/form3.png" alt="ตัวอย่าง คพ. 3">
 
             <div class="eq-note" style="margin-top:14px">
               <strong>ปฏิทินการจองห้องคอมพิวเตอร์</strong>

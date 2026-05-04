@@ -16,7 +16,19 @@
  *   $panel_contact bool    — แสดงกล่องโทรศัพท์หรือไม่ (default true)
  */
 
+/** @var string  $panel_title */
+/** @var string  $panel_base  */
+/** @var array   $panel_menu  */
+/** @var array   $panel_items */
+/** @var bool    $panel_contact */
+
+$panel_cat     = $panel_cat     ?? '';
+$panel_title   = $panel_title   ?? '';
+$panel_base    = $panel_base    ?? '';
+$panel_menu    = $panel_menu    ?? [];
+$panel_items   = $panel_items   ?? [];
 $panel_contact = $panel_contact ?? true;
+
 $current = $panel_cat;
 
 // กรองรายการตาม cat
@@ -51,18 +63,56 @@ if ($current) {
       </ul>
     </div>
 
-    <?php if ($panel_contact): ?>
-      <div class="sp-sidebar-card sp-contact">
-        <div class="sp-sidebar-title">ต้องการความช่วยเหลือ?</div>
-        <p>โทรติดต่อเจ้าหน้าที่โดยตรง</p>
-        <a href="tel:<?= SITE_PHONE ?>" class="btn btn--primary btn--sm sp-contact__btn">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-          <?= SITE_PHONE ?>
-        </a>
-      </div>
-    <?php endif; ?>
+    <div class="sp-sidebar-card sp-contact">
+      <div class="sp-sidebar-title">ต้องการความช่วยเหลือ?</div>
+      <p>ติดต่อเจ้าหน้าที่โดยตรง</p>
+
+      <!-- โทรศัพท์ -->
+      <a href="tel:<?= SITE_PHONE ?>" class="btn btn--primary btn--sm sp-contact__btn" style="margin-bottom:8px">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <?= SITE_PHONE ?>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:noc@dhammakaya.center"
+        style="display:flex;align-items:center;justify-content:center;gap:7px;
+                width:100%;padding:8px 12px;border-radius:8px;margin-bottom:8px;
+                background:var(--clr-bg);border:1px solid var(--clr-border);
+                color:var(--clr-text);font-size:.82rem;font-weight:600;text-decoration:none">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+        noc@dhammakaya.center
+      </a>
+
+      <!-- Line it4141 -->
+      <a href="https://line.me/ti/p/~it4141" target="_blank"
+        style="display:flex;align-items:center;justify-content:center;gap:7px;
+                width:100%;padding:8px 12px;border-radius:8px;margin-bottom:8px;
+                background:#06C755;border:1px solid #05a847;
+                color:white;font-size:.82rem;font-weight:600;text-decoration:none">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="white">
+          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zM14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521zM9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521zM7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63.345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629zM22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516.382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094C21.392 14.375 22 12.618 22 10.732z" />
+        </svg>
+        Line: it4141
+      </a>
+
+      <!-- Line it4141-2 -->
+      <a href="https://line.me/ti/p/~it4141-2" target="_blank"
+        style="display:flex;align-items:center;justify-content:center;gap:7px;
+                width:100%;padding:8px 12px;border-radius:8px;
+                background:#06C755;border:1px solid #05a847;
+                color:white;font-size:.82rem;font-weight:600;text-decoration:none">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="white">
+          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zM14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521zM9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521zM7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63.345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629zM22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516.382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094C21.392 14.375 22 12.618 22 10.732z" />
+        </svg>
+        Line: it4141-2
+      </a>
+
+    </div>
   </aside>
 
   <!-- MAIN CONTENT -->

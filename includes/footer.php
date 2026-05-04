@@ -17,7 +17,7 @@
         <div class="footer__contact">
           กองบริการสารสนเทศ ฝ่ายสารสนเทศ<br>
           สำนักประธานคณะกรรมการบริหารสภาธรรมกายสากล<br>
-          ที่ตั้ง: อาคาร 100 ปีฯ ตึก O ชั้น 11 วัดพระธรรมกาย<br>
+          ที่ตั้ง: อาคาร 100 ปีฯ ตึก 0 ชั้น 11 วัดพระธรรมกาย<br>
           โทร: 02-831-1441 &nbsp;|&nbsp; <?= SITE_PHONE ?> &nbsp;|&nbsp;
           <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a><br>
           <?= SITE_HOURS ?>
@@ -42,7 +42,7 @@
           <li><a href="pages/guides.php?cat=vpn">VPN</a></li>
         </ul>
       </div>
-<div class="footer__col">
+      <div class="footer__col">
         <div class="footer__col-title">ลิงก์ด่วน</div>
         <ul>
           <li><a href="pages/network.php?cat=policy">นโยบาย IT</a></li>
@@ -53,7 +53,7 @@
     </div>
   </div>
   <div class="footer__bottom">
-    <span>© <?= date('Y') ?> <?= SITE_NAME ?> · พัฒนาโดยทีม ICT วัดพระธรรมกาย</span>
+    <span>© <?= date('Y') ?> <?= SITE_NAME ?> · พัฒนาโดยทีมกองบริการสารสนเทศ</span>
   </div>
 </footer>
 

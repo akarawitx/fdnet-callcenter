@@ -14,6 +14,7 @@ $categories = [
   'access'   => ['label' => 'ขอสิทธิ์เข้า Computer'],
   'email'    => ['label' => 'ขอเปลี่ยน Email'],
   'internet' => ['label' => 'ขอเพิ่มปริมาณอินเทอร์เน็ต'],
+  'quota'    => ['label' => 'เช็กโควต้าอินเทอร์เน็ต'],
 ];
 
 $all_services = [
@@ -249,18 +250,73 @@ $all_services = [
       </div>
 
       <!-- ───── ติดต่อสอบถาม ───── -->
-      <a href="mailto:noc@dhammakaya.center"
-         style="display:inline-flex;align-items:center;gap:8px;
-                background:var(--clr-bg);border:1px solid var(--clr-border);
-                color:var(--clr-text);padding:10px 18px;border-radius:8px;
-                font-size:.87rem;font-weight:600;text-decoration:none">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
-        </svg>
-        ติดต่อสอบถาม: noc@dhammakaya.center
-      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+
+        <!-- Email -->
+        <a href="mailto:noc@dhammakaya.center"
+           style="display:inline-flex;align-items:center;gap:8px;
+                  background:var(--clr-bg);border:1px solid var(--clr-border);
+                  color:var(--clr-text);padding:10px 18px;border-radius:8px;
+                  font-size:.87rem;font-weight:600;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          noc@dhammakaya.center
+        </a>
+
+        <!-- Line it4141 -->
+        <a href="https://line.me/ti/p/~it4141" target="_blank"
+           style="display:inline-flex;align-items:center;gap:8px;
+                  background:#06C755;border:1px solid #05a847;
+                  color:white;padding:10px 18px;border-radius:8px;
+                  font-size:.87rem;font-weight:600;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
+                     c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
+                     c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
+                     M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
+                     c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
+                     a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
+                     M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
+                     c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
+                     M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
+                     .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
+                     M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
+                     .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
+                     c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
+                     C21.392 14.375 22 12.618 22 10.732z"/>
+          </svg>
+          Line: it4141
+        </a>
+
+        <!-- Line it4141-2 -->
+        <a href="https://line.me/ti/p/~it4141-2" target="_blank"
+           style="display:inline-flex;align-items:center;gap:8px;
+                  background:#06C755;border:1px solid #05a847;
+                  color:white;padding:10px 18px;border-radius:8px;
+                  font-size:.87rem;font-weight:600;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
+                     c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
+                     c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
+                     M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
+                     c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
+                     a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
+                     M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
+                     c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
+                     M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
+                     .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
+                     M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
+                     .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
+                     c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
+                     C21.392 14.375 22 12.618 22 10.732z"/>
+          </svg>
+          Line: it4141-2
+        </a>
+
+      </div>
 
     ',
   ],
@@ -274,7 +330,7 @@ $all_services = [
     'extra_html' => '
 
       <!-- ───── ปุ่มลิงก์ไปฟอร์มจริง ───── -->
-      <a href="https://fdnet.dhammakaya.network/form/renew.php" target="_blank"
+      <a href="https://fdnet.dhammakaya.network/register_renew.php" target="_blank"
          style="display:flex;align-items:center;justify-content:space-between;
                 background:linear-gradient(135deg,#166534 0%,#22c55e 100%);
                 color:white;border-radius:14px;padding:16px 22px;text-decoration:none;
@@ -453,6 +509,32 @@ $all_services = [
         </div>
       </a>
 
+      <!-- ───── คำเตือนกำหนดเวลา ───── -->
+      <div style="border:1px solid #fca5a5;border-radius:12px;overflow:hidden;margin-bottom:12px">
+        <div style="background:#fef2f2;padding:10px 16px;border-bottom:1px solid #fca5a5">
+          <span style="font-weight:600;font-size:.85rem;color:#991b1b">⚠️ คำเตือน : กำหนดการต่ออายุ</span>
+        </div>
+        <div style="padding:14px 16px;font-size:.84rem;color:var(--clr-text);line-height:1.85;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:8px">
+            <span style="flex-shrink:0;color:#dc2626;font-weight:700">•</span>
+            <span id="renew-deadline-notice"></span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <span style="flex-shrink:0;color:#dc2626;font-weight:700">•</span>
+            <span>หากยื่นคำขอ<strong>หลังวันที่ 31 ธันวาคม</strong> ผู้ใช้จะต้องขึ้นมาติดต่อที่ <strong>กองบริหารสารสนเทศ</strong> เองเท่านั้น</span>
+          </div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var thYear = new Date().getFullYear() + 543;
+          var el = document.getElementById(\'renew-deadline-notice\');
+          if (el) {
+            el.innerHTML = \'การขอต่ออายุสามารถขอได้<strong>ก่อนวันที่ 31 ธันวาคม \' + thYear + \'</strong>\';
+          }
+        })();
+      </script>
+
       <!-- ───── หมายเหตุ ───── -->
       <div style="border:1px solid var(--clr-border);border-radius:12px;overflow:hidden;margin-bottom:16px">
         <div style="background:#fef9f0;padding:10px 16px;border-bottom:1px solid #fde68a">
@@ -481,19 +563,73 @@ $all_services = [
       </div>
 
       <!-- ───── ติดต่อสอบถาม ───── -->
-      <a href="mailto:noc@dhammakaya.center"
-         style="display:inline-flex;align-items:center;gap:8px;
-                background:var(--clr-bg);border:1px solid var(--clr-border);
-                color:var(--clr-text);padding:10px 18px;border-radius:8px;
-                font-size:.87rem;font-weight:600;text-decoration:none">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
-        </svg>
-        ติดต่อสอบถาม: noc@dhammakaya.center
-      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
 
+        <!-- Email -->
+        <a href="mailto:noc@dhammakaya.center"
+           style="display:inline-flex;align-items:center;gap:8px;
+                  background:var(--clr-bg);border:1px solid var(--clr-border);
+                  color:var(--clr-text);padding:10px 18px;border-radius:8px;
+                  font-size:.87rem;font-weight:600;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          noc@dhammakaya.center
+        </a>
+
+        <!-- Line it4141 -->
+        <a href="https://line.me/ti/p/~it4141" target="_blank"
+           style="display:inline-flex;align-items:center;gap:8px;
+                  background:#06C755;border:1px solid #05a847;
+                  color:white;padding:10px 18px;border-radius:8px;
+                  font-size:.87rem;font-weight:600;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
+                     c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
+                     c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
+                     M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
+                     c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
+                     a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
+                     M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
+                     c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
+                     M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
+                     .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
+                     M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
+                     .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
+                     c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
+                     C21.392 14.375 22 12.618 22 10.732z"/>
+          </svg>
+          Line: it4141
+        </a>
+
+        <!-- Line it4141-2 -->
+        <a href="https://line.me/ti/p/~it4141-2" target="_blank"
+           style="display:inline-flex;align-items:center;gap:8px;
+                  background:#06C755;border:1px solid #05a847;
+                  color:white;padding:10px 18px;border-radius:8px;
+                  font-size:.87rem;font-weight:600;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
+                     c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
+                     c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
+                     M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
+                     c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
+                     a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
+                     M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
+                     c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
+                     M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
+                     .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
+                     M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
+                     .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
+                     c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
+                     C21.392 14.375 22 12.618 22 10.732z"/>
+          </svg>
+          Line: it4141-2
+        </a>
+
+      </div>
     ',
   ],
 
@@ -681,6 +817,79 @@ $all_services = [
             <div style="font-size:.73rem;color:rgba(255,255,255,.8);margin-top:1px">ไปที่หน้ารีเซต</div>
           </div>
         </a>
+      </div>
+
+      <!-- ───── ติดต่อสอบถาม ───── -->
+      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--clr-border)">
+        <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
+                    color:var(--clr-text-muted);margin-bottom:10px">ติดต่อสอบถาม</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+
+          <!-- Email -->
+          <a href="mailto:noc@dhammakaya.center"
+             style="display:inline-flex;align-items:center;gap:8px;
+                    background:var(--clr-bg);border:1px solid var(--clr-border);
+                    color:var(--clr-text);padding:10px 18px;border-radius:8px;
+                    font-size:.87rem;font-weight:600;text-decoration:none">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            noc@dhammakaya.center
+          </a>
+
+          <!-- Line it4141 -->
+          <a href="https://line.me/ti/p/~it4141" target="_blank"
+             style="display:inline-flex;align-items:center;gap:8px;
+                    background:#06C755;border:1px solid #05a847;
+                    color:white;padding:10px 18px;border-radius:8px;
+                    font-size:.87rem;font-weight:600;text-decoration:none">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
+                       c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
+                       c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
+                       M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
+                       c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
+                       a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
+                       M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
+                       c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
+                       M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
+                       .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
+                       M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
+                       .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
+                       c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
+                       C21.392 14.375 22 12.618 22 10.732z"/>
+            </svg>
+            Line: it4141
+          </a>
+
+          <!-- Line it4141-2 -->
+          <a href="https://line.me/ti/p/~it4141-2" target="_blank"
+             style="display:inline-flex;align-items:center;gap:8px;
+                    background:#06C755;border:1px solid #05a847;
+                    color:white;padding:10px 18px;border-radius:8px;
+                    font-size:.87rem;font-weight:600;text-decoration:none">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
+                       c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
+                       c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
+                       M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
+                       c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
+                       a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
+                       M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
+                       c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
+                       M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
+                       .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
+                       M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
+                       .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
+                       c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
+                       C21.392 14.375 22 12.618 22 10.732z"/>
+            </svg>
+            Line: it4141-2
+          </a>
+
+        </div>
       </div>
 
     ',
@@ -942,18 +1151,73 @@ $all_services = [
       </table>
 
       <!-- ───── ติดต่อสอบถาม ───── -->
-      <a href="mailto:noc@dhammakaya.center"
-         style="display:inline-flex;align-items:center;gap:8px;
-                background:var(--clr-bg);border:1px solid var(--clr-border);
-                color:var(--clr-text);padding:10px 18px;border-radius:8px;
-                font-size:.87rem;font-weight:600;text-decoration:none">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
-        </svg>
-        ติดต่อสอบถาม: noc@dhammakaya.center
-      </a>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+
+        <!-- Email -->
+        <a href="mailto:noc@dhammakaya.center"
+           style="display:inline-flex;align-items:center;gap:8px;
+                  background:var(--clr-bg);border:1px solid var(--clr-border);
+                  color:var(--clr-text);padding:10px 18px;border-radius:8px;
+                  font-size:.87rem;font-weight:600;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          noc@dhammakaya.center
+        </a>
+
+        <!-- Line it4141 -->
+        <a href="https://line.me/ti/p/~it4141" target="_blank"
+           style="display:inline-flex;align-items:center;gap:8px;
+                  background:#06C755;border:1px solid #05a847;
+                  color:white;padding:10px 18px;border-radius:8px;
+                  font-size:.87rem;font-weight:600;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
+                     c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
+                     c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
+                     M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
+                     c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
+                     a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
+                     M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
+                     c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
+                     M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
+                     .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
+                     M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
+                     .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
+                     c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
+                     C21.392 14.375 22 12.618 22 10.732z"/>
+          </svg>
+          Line: it4141
+        </a>
+
+        <!-- Line it4141-2 -->
+        <a href="https://line.me/ti/p/~it4141-2" target="_blank"
+           style="display:inline-flex;align-items:center;gap:8px;
+                  background:#06C755;border:1px solid #05a847;
+                  color:white;padding:10px 18px;border-radius:8px;
+                  font-size:.87rem;font-weight:600;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
+                     c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
+                     c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
+                     M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
+                     c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
+                     a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
+                     M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
+                     c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
+                     M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
+                     .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
+                     M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
+                     .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
+                     c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
+                     C21.392 14.375 22 12.618 22 10.732z"/>
+          </svg>
+          Line: it4141-2
+        </a>
+
+      </div>
 
     ',
   ],
@@ -1040,7 +1304,7 @@ $all_services = [
       <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
                   color:var(--clr-text-muted);margin-bottom:12px">ขั้นตอนถัดไป</div>
 
-      <a href="manual.php?cat=itManual"
+      <a href="manual.php?cat=domain"
          style="display:flex;align-items:center;justify-content:space-between;
                 background:var(--clr-bg);border:1px solid var(--clr-border);
                 border-radius:14px;padding:16px 20px;text-decoration:none;
@@ -1337,6 +1601,230 @@ $all_services = [
           </div>
         </div>
 
+      </div>
+
+    ',
+  ],
+
+  // เช็คโคต้าอินเตอร์เน็ตที่ใช้
+  [
+    'cat'   => 'quota',
+    'icon'  => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>',
+    'title' => 'เช็กโควต้าอินเทอร์เน็ตที่ใช้',
+    'desc'  => 'ตรวจสอบปริมาณอินเทอร์เน็ตที่ใช้ไปในแต่ละวัน ผ่าน Sophos User Portal',
+    'extra_html' => '
+
+      <!-- ───── ปุ่มเปิดระบบ ───── -->
+      <a href="https://cyberoam.dhammakaya.network:4443/userportal/webpages/myaccount/login.jsp" target="_blank"
+         style="display:flex;align-items:center;justify-content:space-between;
+                background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 100%);
+                color:white;border-radius:14px;padding:16px 22px;text-decoration:none;
+                margin-bottom:24px;box-shadow:0 4px 15px rgba(37,99,235,.35)">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:40px;height:40px;background:rgba(255,255,255,.2);border-radius:10px;
+                      display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+              <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+              <circle cx="12" cy="20" r="1" fill="white"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-weight:700;font-size:.95rem">เปิด Sophos User Portal</div>
+            <div style="font-size:.78rem;opacity:.85;margin-top:2px">cyberoam.dhammakaya.network:4443</div>
+          </div>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+
+      <!-- ───── คำอธิบาย ───── -->
+      <p style="font-size:.93rem;line-height:1.85;color:var(--clr-text);margin-bottom:24px">
+        ระบบ <strong>Sophos User Portal</strong> ให้ท่านตรวจสอบปริมาณอินเทอร์เน็ตที่ใช้ไปได้ด้วยตนเอง
+        ทั้งยอดรวมรายเดือน ยอดรายวัน Upload/Download และเวลาที่ใช้งาน
+      </p>
+
+      <!-- ───── ขั้นตอน ───── -->
+      <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
+                  color:var(--clr-text-muted);margin-bottom:14px">ขั้นตอนการเช็กโควต้าอินเทอร์เน็ต</div>
+
+      <!-- Step 1 -->
+      <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:12px">
+        <div style="background:var(--clr-primary-pale);padding:10px 16px;display:flex;
+                    align-items:center;gap:10px;border-bottom:1px solid var(--clr-border)">
+          <div style="width:24px;height:24px;background:var(--clr-primary);border-radius:50%;
+                      display:flex;align-items:center;justify-content:center;
+                      color:white;font-size:.72rem;font-weight:700;flex-shrink:0">1</div>
+          <span style="font-weight:600;font-size:.9rem;color:var(--clr-primary-dark)">
+            เข้าสู่ระบบด้วย Username และ Password หน้าแดง
+          </span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+          <div style="padding:12px;border-right:1px solid var(--clr-border)">
+            <img src="../assets/images/quota_login.png"
+                 alt="หน้า Login Sophos User Portal"
+                 style="width:100%;border-radius:8px;display:block;border:1px solid #e5e7eb"
+                 onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
+            <div style="display:none;background:#eff6ff;border-radius:8px;padding:20px;min-height:100px;
+                        flex-direction:column;align-items:center;justify-content:center;
+                        gap:4px;color:#94a3b8;font-size:.75rem;text-align:center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              quota_login.png
+            </div>
+          </div>
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;
+                      gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>เปิดลิงก์ <strong>Sophos User Portal</strong> ด้านบน</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>กรอก <strong>Username</strong> หน้าแดง เช่น <code style="background:#f1f5f9;padding:1px 6px;border-radius:4px;font-family:monospace;font-size:.85em;color:#dc2626">makarawit</code></span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>กรอก <strong>Password</strong> หน้าแดง แล้วกด <strong>Login</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:12px">
+        <div style="background:var(--clr-primary-pale);padding:10px 16px;display:flex;
+                    align-items:center;gap:10px;border-bottom:1px solid var(--clr-border)">
+          <div style="width:24px;height:24px;background:var(--clr-primary);border-radius:50%;
+                      display:flex;align-items:center;justify-content:center;
+                      color:white;font-size:.72rem;font-weight:700;flex-shrink:0">2</div>
+          <span style="font-weight:600;font-size:.9rem;color:var(--clr-primary-dark)">
+            คลิกเมนู "Internet usage" เพื่อดูรายละเอียด
+          </span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+          <div style="padding:12px;border-right:1px solid var(--clr-border)">
+            <img src="../assets/images/quota_usage.png"
+                 alt="หน้า Internet Usage Sophos"
+                 style="width:100%;border-radius:8px;display:block;border:1px solid #e5e7eb"
+                 onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
+            <div style="display:none;background:#eff6ff;border-radius:8px;padding:20px;min-height:100px;
+                        flex-direction:column;align-items:center;justify-content:center;
+                        gap:4px;color:#94a3b8;font-size:.75rem;text-align:center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              quota_usage.png
+            </div>
+          </div>
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;
+                      gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>ในเมนูซ้าย คลิก <strong>"Internet usage"</strong></span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>ระบบแสดง <strong>Policy information</strong> เช่น Group, เวลาใช้งาน และวันต่ออายุ</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>ดู <strong>Usage information</strong> ยอด Upload / Download / Total รวม</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>ดู <strong>CurrentDailyCycle</strong> ปริมาณใช้งานรอบวันปัจจุบัน</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:24px">
+        <div style="background:#f0fdf4;padding:10px 16px;display:flex;
+                    align-items:center;gap:10px;border-bottom:1px solid #bbf7d0">
+          <div style="width:24px;height:24px;background:#16a34a;border-radius:50%;
+                      display:flex;align-items:center;justify-content:center;
+                      color:white;font-size:.72rem;font-weight:700;flex-shrink:0">3</div>
+          <span style="font-weight:600;font-size:.9rem;color:#166534">
+            เลือกเดือนเพื่อดูประวัติการใช้งานรายวัน
+          </span>
+        </div>
+        <div style="padding:14px 16px;font-size:.85rem;color:var(--clr-text);line-height:1.8;
+                    display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:8px">
+            <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
+            <span>เลื่อนลงมาที่ส่วน <strong>"View usage for"</strong> เลือกเดือนที่ต้องการ เช่น <strong>May-2026</strong></span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
+            <span>ตารางด้านล่างจะแสดง <strong>IP Address, เวลาเริ่ม/หยุด, ระยะเวลา (นาที), Download/Upload</strong> แต่ละ Session</span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
+            <span>สามารถกด <strong>คอลัมน์ Start time</strong> เพื่อเรียงลำดับวันที่ได้</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───── ตารางอธิบายข้อมูล ───── -->
+      <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
+                  color:var(--clr-text-muted);margin-bottom:10px">คำอธิบายข้อมูลในหน้า Internet Usage</div>
+      <div style="border:1px solid var(--clr-border);border-radius:12px;overflow:hidden;margin-bottom:20px">
+        <table style="width:100%;border-collapse:collapse;font-size:.84rem">
+          <thead>
+            <tr style="background:var(--clr-primary-pale)">
+              <th style="padding:10px 14px;text-align:left;border-bottom:1px solid var(--clr-border);
+                         font-weight:700;color:var(--clr-primary-dark)">ฟิลด์</th>
+              <th style="padding:10px 14px;text-align:left;border-bottom:1px solid var(--clr-border);
+                         font-weight:700;color:var(--clr-primary-dark)">ความหมาย</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);font-weight:600;white-space:nowrap">Time allotted (HH)</td>
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);color:var(--clr-text)">เวลาที่ได้รับสิทธิ์ใช้งาน (ชั่วโมง) — <strong style="color:#16a34a">Unlimited</strong> คือไม่จำกัด</td>
+            </tr>
+            <tr style="background:var(--clr-bg)">
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);font-weight:600;white-space:nowrap">Surfing quota expiry</td>
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);color:var(--clr-text)">วันหมดอายุโควต้าท่องเว็บ — <strong style="color:#16a34a">N.A.</strong> คือไม่มีกำหนด</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);font-weight:600;white-space:nowrap">Data transfer cycle renewal</td>
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);color:var(--clr-text)">วันที่รีเซตยอด Data รายเดือน</td>
+            </tr>
+            <tr style="background:var(--clr-bg)">
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);font-weight:600;white-space:nowrap">Internet usage time</td>
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);color:var(--clr-text)">เวลาสะสมที่ใช้งานอินเทอร์เน็ตทั้งหมด (HH:MM)</td>
+            </tr>
+            <tr>
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);font-weight:600;white-space:nowrap">Download / Upload</td>
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);color:var(--clr-text)">ปริมาณดาวน์โหลด / อัปโหลดสะสม (MB)</td>
+            </tr>
+            <tr style="background:var(--clr-bg)">
+              <td style="padding:9px 14px;font-weight:600;white-space:nowrap">Cycle total network traffic</td>
+              <td style="padding:9px 14px;color:var(--clr-text)">โควต้า Data รายวันที่ได้รับ และเหลืออยู่ (MB)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ───── Info box ───── -->
+      <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;
+                  padding:14px 18px;font-size:.88rem;color:#1e3a8a;line-height:1.75;margin-bottom:12px">
+        💡 <strong>เคล็ดลับ:</strong> หาก <strong>Remaining</strong> ใกล้ศูนย์ แสดงว่าโควต้าใกล้หมด
+        ให้รีบติดต่อขอปรับปริมาณอินเทอร์เน็ตได้ที่เมนู
+        <a href="services.php?cat=internet" style="color:#1d4ed8;font-weight:600;text-decoration:underline">
+          ขอปรับปริมาณการใช้อินเทอร์เน็ต
+        </a>
+      </div>
+
+      <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;
+                  padding:14px 18px;font-size:.88rem;color:#166534;line-height:1.75">
+        📞 หากเข้าระบบไม่ได้หรือพบปัญหา ติดต่อกองบริหารสารสนเทศ โทร <strong>4141</strong>
+        / Line: <strong>it4141</strong>
       </div>
 
     ',
