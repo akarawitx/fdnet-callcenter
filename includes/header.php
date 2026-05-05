@@ -671,6 +671,177 @@ function render_nav_items(array $items, int $depth = 0): void
         display: none;
       }
     }
+
+    /* ── Search Dropdown ── */
+    .search-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      width: 380px;
+      max-height: 420px;
+      background: var(--clr-white);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 12px 40px rgba(26, 111, 168, .18), 0 4px 12px rgba(0, 0, 0, .08);
+      z-index: 9999;
+      overflow: hidden;
+      animation: srch-drop .15s ease;
+    }
+
+    @keyframes srch-drop {
+      from {
+        opacity: 0;
+        transform: translateY(-6px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .search-dropdown.is-open {
+      display: block
+    }
+
+    .search-dropdown__inner {
+      overflow-y: auto;
+      max-height: 380px;
+      padding: 6px 0;
+      scrollbar-width: thin;
+      scrollbar-color: var(--clr-border) transparent;
+    }
+
+    .srch-section {
+      padding: 8px 14px 4px;
+      font-size: .68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      color: var(--clr-text-muted);
+      background: var(--clr-bg);
+      border-bottom: 1px solid var(--clr-border);
+      margin-top: 4px;
+    }
+
+    .srch-section:first-child {
+      margin-top: 0
+    }
+
+    .srch-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 9px 14px;
+      text-decoration: none;
+      color: var(--clr-text);
+      transition: background .12s;
+      cursor: pointer;
+      border-left: 3px solid transparent;
+    }
+
+    .srch-item:hover,
+    .srch-item.is-focused {
+      background: var(--clr-primary-pale);
+      border-left-color: var(--clr-primary);
+    }
+
+    .srch-item__icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      background: var(--clr-primary-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: .82rem;
+      color: var(--clr-primary);
+    }
+
+    .srch-item__body {
+      flex: 1;
+      min-width: 0
+    }
+
+    .srch-item__title {
+      font-size: .87rem;
+      font-weight: 600;
+      color: var(--clr-text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .srch-item__title mark {
+      background: #fef9c3;
+      color: var(--clr-text);
+      border-radius: 2px;
+      padding: 0 1px;
+      font-weight: 700;
+    }
+
+    .srch-item__desc {
+      font-size: .76rem;
+      color: var(--clr-text-muted);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .srch-item__badge {
+      font-size: .68rem;
+      background: var(--clr-primary-pale);
+      color: var(--clr-primary);
+      border-radius: 20px;
+      padding: 1px 7px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .search-dropdown__empty {
+      padding: 32px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--clr-text-muted);
+      font-size: .85rem;
+    }
+
+    .srch-item[data-section="บริการ IT"] .srch-item__icon {
+      background: #eff6ff
+    }
+
+    .srch-item[data-section="แจ้งปัญหา"] .srch-item__icon {
+      background: #fef2f2
+    }
+
+    .srch-item[data-section="คู่มือ"] .srch-item__icon {
+      background: #f0fdf4
+    }
+
+    .srch-item[data-section="จัดหาอุปกรณ์"] .srch-item__icon {
+      background: #fefce8
+    }
+
+    .srch-item[data-section="เครือข่าย"] .srch-item__icon {
+      background: #f0f9ff
+    }
+
+    .srch-item[data-section="หน้าหลัก"] .srch-item__icon {
+      background: #faf5ff
+    }
+
+    @media (max-width: 580px) {
+      .search-dropdown {
+        width: calc(100vw - 32px);
+        right: -16px
+      }
+    }
   </style>
 </head>
 
@@ -688,14 +859,25 @@ function render_nav_items(array $items, int $depth = 0): void
       <div class="site-header__name"><?= SITE_NAME_EN ?></div>
       <div class="site-header__sub"><?= SITE_NAME ?></div>
     </div>
-    <div class="site-header__search">
-      <button type="button" aria-label="ค้นหา">
+    <div class="site-header__search" id="search-box" style="position:relative">
+      <button type="button" aria-label="ค้นหา" id="search-icon-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
         </svg>
       </button>
-      <input type="search" placeholder="ค้นหาคู่มือ, บริการ...">
+      <input type="search" placeholder="ค้นหาคู่มือ, บริการ..." id="search-input" autocomplete="off" aria-label="ค้นหา" aria-haspopup="listbox" aria-expanded="false">
+
+      <div class="search-dropdown" id="search-dropdown" role="listbox" aria-label="ผลการค้นหา">
+        <div class="search-dropdown__inner" id="search-results"></div>
+        <div class="search-dropdown__empty" id="search-empty" style="display:none">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <span>ไม่พบผลลัพธ์</span>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -756,6 +938,186 @@ function render_nav_items(array $items, int $depth = 0): void
       <?php endforeach; ?>
     </ul>
   </div>
+
+  <script src="<?= BASE_URL ?>/assets/js/search-index.js"></script>
+  <script>
+    (function() {
+      'use strict';
+      var input = document.getElementById('search-input');
+      var dropdown = document.getElementById('search-dropdown');
+      var results = document.getElementById('search-results');
+      var empty = document.getElementById('search-empty');
+      var box = document.getElementById('search-box');
+      var iconBtn = document.getElementById('search-icon-btn');
+      var index = window.SITE_SEARCH_INDEX || [];
+      var focusIdx = -1;
+      var items = [];
+      var sectionIcon = {
+        'บริการ IT': `<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M4 4h16v12H4z" stroke="currentColor" stroke-width="2"/>
+      <path d="M2 20h20" stroke="currentColor" stroke-width="2"/>
+    </svg>`,
+
+        'แจ้งปัญหา': `<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M12 9v4M12 17h.01" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+    </svg>`,
+
+        'คู่มือ': `<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M4 4h14v16H4z" stroke="currentColor" stroke-width="2"/>
+      <path d="M18 4l2 2v14H6" stroke="currentColor" stroke-width="2"/>
+    </svg>`,
+
+        'จัดหาอุปกรณ์': `<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="2"/>
+      <path d="M3 10h18" stroke="currentColor" stroke-width="2"/>
+    </svg>`,
+
+        'เครือข่าย': `<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="2" fill="currentColor"/>
+      <path d="M4 12a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="2"/>
+    </svg>`,
+
+        'หน้าหลัก': `<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <path d="M3 10l9-7 9 7v10H3z" stroke="currentColor" stroke-width="2"/>
+    </svg>`
+      };
+
+      function highlight(text, q) {
+        if (!q) return text;
+        var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+        return text.replace(re, '<mark>$1</mark>');
+      }
+
+      function score(item, tokens) {
+        var s = 0;
+        tokens.forEach(function(t) {
+          if (!t) return;
+          if (item.title.toLowerCase().indexOf(t) !== -1) s += 10;
+          if (item.section.toLowerCase().indexOf(t) !== -1) s += 5;
+          if (item.desc.toLowerCase().indexOf(t) !== -1) s += 3;
+          if ((item.keywords || '').toLowerCase().indexOf(t) !== -1) s += 2;
+        });
+        return s;
+      }
+
+      function render(q) {
+        var tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+        var scored;
+        if (!tokens.length) {
+          scored = index.slice(0, 8).map(function(item) {
+            return {
+              item: item,
+              s: 1
+            }
+          });
+        } else {
+          scored = index
+            .map(function(item) {
+              return {
+                item: item,
+                s: score(item, tokens)
+              }
+            })
+            .filter(function(r) {
+              return r.s > 0
+            })
+            .sort(function(a, b) {
+              return b.s - a.s
+            })
+            .slice(0, 12);
+        }
+        if (!scored.length) {
+          results.innerHTML = '';
+          empty.style.display = 'flex';
+          items = [];
+          focusIdx = -1;
+          return;
+        }
+        empty.style.display = 'none';
+        var grouped = {},
+          order = [];
+        scored.forEach(function(r) {
+          var sec = r.item.section;
+          if (!grouped[sec]) {
+            grouped[sec] = [];
+            order.push(sec);
+          }
+          grouped[sec].push(r.item);
+        });
+        var html = '';
+        order.forEach(function(sec) {
+          html += '<div class="srch-section">' + sec + '</div>';
+          grouped[sec].forEach(function(item) {
+            html += '<a class="srch-item" href="' + item.url + '" data-section="' + sec + '" role="option">' +
+              '<div class="srch-item__icon">' + (sectionIcon[sec] || '📄') + '</div>' +
+              '<div class="srch-item__body">' +
+              '<div class="srch-item__title">' + highlight(item.title, q) + '</div>' +
+              '<div class="srch-item__desc">' + item.desc + '</div>' +
+              '</div>' +
+              '<span class="srch-item__badge">' + sec + '</span>' +
+              '</a>';
+          });
+        });
+        results.innerHTML = html;
+        items = Array.from(results.querySelectorAll('.srch-item'));
+        focusIdx = -1;
+      }
+
+      function open() {
+        dropdown.classList.add('is-open');
+        input.setAttribute('aria-expanded', 'true');
+        render(input.value.trim());
+      }
+
+      function close() {
+        dropdown.classList.remove('is-open');
+        input.setAttribute('aria-expanded', 'false');
+        focusIdx = -1;
+        items.forEach(function(el) {
+          el.classList.remove('is-focused')
+        });
+      }
+
+      function setFocus(idx) {
+        items.forEach(function(el) {
+          el.classList.remove('is-focused')
+        });
+        if (idx >= 0 && idx < items.length) {
+          focusIdx = idx;
+          items[idx].classList.add('is-focused');
+          items[idx].scrollIntoView({
+            block: 'nearest'
+          });
+        } else focusIdx = -1;
+      }
+      input.addEventListener('input', open);
+      input.addEventListener('focus', open);
+      iconBtn.addEventListener('click', function() {
+        input.focus();
+        open();
+      });
+      input.addEventListener('keydown', function(e) {
+        if (!dropdown.classList.contains('is-open')) return;
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          setFocus(Math.min(focusIdx + 1, items.length - 1));
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          setFocus(Math.max(focusIdx - 1, -1));
+        } else if (e.key === 'Enter' && focusIdx >= 0 && items[focusIdx]) {
+          e.preventDefault();
+          items[focusIdx].click();
+        } else if (e.key === 'Escape') {
+          close();
+          input.blur();
+        }
+      });
+      document.addEventListener('click', function(e) {
+        if (!box.contains(e.target)) close();
+      });
+    })();
+  </script>
 
   <!-- MAIN LAYOUT -->
   <div class="layout">

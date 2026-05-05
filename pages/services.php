@@ -68,8 +68,9 @@ $all_services = [
           </div>
         </div>
         <img src="../assets/images/account_form_preview.png"
-             alt="ตัวอย่างหน้าฟอร์มขอ Account ใหม่"
-             style="width:100%;display:block"
+          alt="ตัวอย่างหน้าฟอร์มขอ Account ใหม่"
+          onclick="lbOpen([\'../assets/images/account_form_preview.png\'], 0)"
+          style="width:100%;display:block;cursor:pointer"
              onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
         <!-- fallback ถ้าไม่มีรูป -->
         <div style="display:none;background:#f8fafc;padding:32px;flex-direction:column;
@@ -372,8 +373,9 @@ $all_services = [
           </div>
         </div>
         <img src="../assets/images/renew_form_preview.png"
-             alt="ตัวอย่างหน้าฟอร์มต่ออายุ Account"
-             style="width:100%;display:block"
+          alt="ตัวอย่างหน้าฟอร์มต่ออายุ Account"
+          onclick="lbOpen([\'../assets/images/renew_form_preview.png\'], 0)"
+          style="width:100%;display:block;cursor:pointer"
              onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
         <!-- fallback ถ้าไม่มีรูป -->
         <div style="display:none;background:#f8fafc;padding:32px;flex-direction:column;
@@ -641,118 +643,155 @@ $all_services = [
     'desc'  => 'ตรวจสอบว่าบัญชียังใช้งานได้อยู่หรือไม่ และวันหมดอายุของรหัสผ่าน',
     'extra_html' => '
 
+      <!-- ───── ปุ่มลิงก์ไประบบเช็กสถานะ ───── -->
+      <a href="https://oauth.dhammakaya.network/chkrenew" target="_blank"
+         style="display:flex;align-items:center;justify-content:space-between;
+                background:linear-gradient(135deg,#1e40af 0%,#3b82f6 100%);
+                color:white;border-radius:14px;padding:16px 22px;text-decoration:none;
+                margin-bottom:24px;box-shadow:0 4px 15px rgba(59,130,246,.35)">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:40px;height:40px;background:rgba(255,255,255,.2);border-radius:10px;
+                      display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-weight:700;font-size:.95rem">เปิดระบบเช็กสถานะบัญชีองค์กร</div>
+            <div style="font-size:.78rem;opacity:.85;margin-top:2px">oauth.dhammakaya.network/chkrenew</div>
+          </div>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+
       <!-- ───── วิธีใช้งาน ───── -->
-      <p style="font-size:.93rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
+      <p style="font-size:.93rem;line-height:1.85;color:var(--clr-text);margin-bottom:24px">
         ระบบเช็กสถานะให้บริการ <strong>ตลอด 24 ชั่วโมง</strong>
         เพียงพิมพ์ <strong>Username หน้าแดง</strong> ลงในช่องแล้วกดตรวจสอบ
-        ระบบจะแสดงสถานะบัญชีและอายุรหัสผ่านทันที
+        ระบบจะ<strong>ส่งผลการตรวจสอบไปยัง Email</strong> ของท่านในระบบ HR ทันที
       </p>
 
-      <!-- ───── ภาพ Step 1: หน้าจอกรอก Username ───── -->
+      <!-- ───── ขั้นตอนการใช้งาน ───── -->
       <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
-                  color:var(--clr-text-muted);margin-bottom:10px">
-        ขั้นตอนที่ 1 — กรอก Username แล้วกดตรวจสอบ
-      </div>
-      <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;
-                  margin-bottom:8px;box-shadow:0 2px 10px rgba(0,0,0,.07)">
-        <img src="../assets/images/status_step1.png"
-             alt="หน้าจอเช็กสถานะ — กรอก Username"
-             style="width:100%;display:block"
-             onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
-        <div style="display:none;background:#f0f9ff;padding:24px;flex-direction:column;
-                    align-items:center;gap:8px;color:#94a3b8">
-          <span style="font-size:1.8rem">🔍</span>
-          <span style="font-size:.82rem">วางรูปภาพ status_step1.png ไว้ในโฟลเดอร์ assets/images/</span>
-        </div>
-      </div>
-      <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:8px;
-                  padding:10px 14px;font-size:.82rem;color:#0369a1;margin-bottom:24px">
-        💡 พิมพ์ <strong>User หน้าแดง</strong> ในช่อง Username เช่น pjohn, vjohn, mjohn
-      </div>
+                  color:var(--clr-text-muted);margin-bottom:14px">ขั้นตอนการเช็กสถานะ</div>
 
-      <!-- ───── ผลลัพธ์ที่เป็นไปได้ ───── -->
-      <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
-                  color:var(--clr-text-muted);margin-bottom:12px">ผลลัพธ์ที่อาจได้รับ</div>
-
-      <!-- กรณี ✅ บัญชีปกติ -->
-      <div style="border:1px solid #bbf7d0;border-radius:14px;overflow:hidden;margin-bottom:12px">
-        <div style="background:#f0fdf4;padding:10px 16px;display:flex;align-items:center;gap:8px;
-                    border-bottom:1px solid #bbf7d0">
-          <div style="width:10px;height:10px;border-radius:50%;background:#22c55e;flex-shrink:0"></div>
-          <span style="font-weight:600;font-size:.88rem;color:#166534">กรณีที่ 1 — บัญชีและรหัสผ่านปกติ</span>
+      <!-- Step 1 -->
+      <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:12px">
+        <div style="background:var(--clr-primary-pale);padding:10px 16px;display:flex;
+                    align-items:center;gap:10px;border-bottom:1px solid var(--clr-border)">
+          <div style="width:24px;height:24px;background:var(--clr-primary);border-radius:50%;
+                      display:flex;align-items:center;justify-content:center;
+                      color:white;font-size:.72rem;font-weight:700;flex-shrink:0">1</div>
+          <span style="font-weight:600;font-size:.9rem;color:var(--clr-primary-dark)">
+            กรอก Username แล้วกด "ตรวจสอบ"
+          </span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
-          <div style="padding:14px 16px;border-right:1px solid #bbf7d0">
-            <img src="../assets/images/status_ok.png"
-                 alt="ผลลัพธ์บัญชีปกติ"
-                 style="width:100%;border-radius:8px;display:block"
-                 onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
-            <div style="display:none;background:#f8fafc;border-radius:8px;padding:20px;
-                        flex-direction:column;align-items:center;gap:6px;color:#94a3b8;min-height:80px">
-              <span style="font-size:.75rem">status_ok.png</span>
+          <div style="padding:12px;border-right:1px solid var(--clr-border)">
+            <img src="../assets/images/status_step1.png"
+                 alt="หน้าจอเช็กสถานะ — กรอก Username"
+                 onclick="lbOpen([\'../assets/images/status_step1.png\'], 0)"
+                 style="width:100%;border-radius:8px;display:block;cursor:pointer">
+          </div>
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;
+                      gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>เปิดลิงก์ระบบเช็กสถานะด้านบน</span>
             </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>พิมพ์ <strong>Username หน้าแดง</strong> ในช่อง</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>ทำรายการได้สูงสุด <strong>5 ครั้ง</strong>ต่อนาที</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>กดปุ่ม <strong>"ตรวจสอบ"</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:12px">
+        <div style="background:var(--clr-primary-pale);padding:10px 16px;display:flex;
+                    align-items:center;gap:10px;border-bottom:1px solid var(--clr-border)">
+          <div style="width:24px;height:24px;background:var(--clr-primary);border-radius:50%;
+                      display:flex;align-items:center;justify-content:center;
+                      color:white;font-size:.72rem;font-weight:700;flex-shrink:0">2</div>
+          <span style="font-weight:600;font-size:.9rem;color:var(--clr-primary-dark)">
+            ระบบแจ้งผลสำเร็จ — ส่งผลไปยัง Email ใน HR แล้ว
+          </span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+          <div style="padding:12px;border-right:1px solid var(--clr-border)">
+            <img src="../assets/images/status_step2.png"
+                 alt="หน้าจอแจ้งผลสำเร็จ"
+                 onclick="lbOpen([\'../assets/images/status_step2.png\'], 0)"
+                 style="width:100%;border-radius:8px;display:block;cursor:pointer">
           </div>
           <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;gap:8px">
-            <div style="font-size:.85rem;color:var(--clr-text);line-height:1.7">
-              ระบบแสดง <strong style="color:#166534">ชื่อ-สกุล</strong> และ
-              <strong style="color:#166534">อายุรหัสผ่าน</strong> ที่เหลืออยู่
+            <div style="background:#dcfce7;border-radius:10px;padding:12px 14px;
+                        font-size:.84rem;color:#166534;line-height:1.7">
+              ✅ ระบบส่งผลการตรวจสอบไปยัง <strong>Email ของท่านใน HR</strong> เรียบร้อยแล้ว
             </div>
-            <div style="background:#dcfce7;border-radius:8px;padding:10px 12px;
-                        font-size:.82rem;color:#166534;line-height:1.6">
-              ✅ ใช้งานได้ตามปกติ<br>ไม่ต้องดำเนินการใดๆ
+            <div style="background:#fef3c7;border:1px solid #fde68a;border-radius:8px;
+                        padding:8px 12px;font-size:.8rem;color:#92400e;line-height:1.65">
+              📬 หากไม่พบอีเมล กรุณาตรวจสอบใน <strong>Junk Mail</strong> หรือถังขยะ
             </div>
           </div>
         </div>
       </div>
 
-      <!-- กรณี ❌ บัญชีถูกระงับ -->
-      <div style="border:1px solid #fecaca;border-radius:14px;overflow:hidden;margin-bottom:20px">
-        <div style="background:#fef2f2;padding:10px 16px;display:flex;align-items:center;gap:8px;
-                    border-bottom:1px solid #fecaca">
-          <div style="width:10px;height:10px;border-radius:50%;background:#ef4444;flex-shrink:0"></div>
-          <span style="font-weight:600;font-size:.88rem;color:#991b1b">กรณีที่ 2 — บัญชีถูกระงับ / รหัสผ่านหมดอายุ</span>
+      <!-- Step 3 -->
+      <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:24px">
+        <div style="background:#f0fdf4;padding:10px 16px;display:flex;
+                    align-items:center;gap:10px;border-bottom:1px solid #bbf7d0">
+          <div style="width:24px;height:24px;background:#16a34a;border-radius:50%;
+                      display:flex;align-items:center;justify-content:center;
+                      color:white;font-size:.72rem;font-weight:700;flex-shrink:0">3</div>
+          <span style="font-weight:600;font-size:.9rem;color:#166534">
+            เปิด Email ดูผลการตรวจสอบบัญชี
+          </span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
-          <div style="padding:14px 16px;border-right:1px solid #fecaca">
-            <img src="../assets/images/status_expired.png"
-                 alt="ผลลัพธ์บัญชีถูกระงับ"
-                 style="width:100%;border-radius:8px;display:block"
-                 onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
-            <div style="display:none;background:#f8fafc;border-radius:8px;padding:20px;
-                        flex-direction:column;align-items:center;gap:6px;color:#94a3b8;min-height:80px">
-              <span style="font-size:.75rem">status_expired.png</span>
-            </div>
+          <div style="padding:12px;border-right:1px solid #bbf7d0">
+            <img src="../assets/images/status_email.png"
+              alt="Email ผลการตรวจสอบบัญชี"
+              onclick="lbOpen([\'../assets/images/status_step1.png\',\'../assets/images/status_step2.png\',\'../assets/images/status_email.png\'], 2)"
+              style="width:100%;border-radius:8px;display:block;cursor:pointer">
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;gap:10px">
-            <div style="font-size:.85rem;color:var(--clr-text);line-height:1.7">
-              ระบบแจ้ง <strong style="color:#dc2626">Account ถูกระงับ</strong>
-              และ/หรือ <strong style="color:#dc2626">รหัสผ่านหมดอายุ</strong>
-              พร้อมแสดงลิงก์ดำเนินการ
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;
+                      gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
+            <div style="display:flex;gap:8px">
+              <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
+              <span>อีเมลจาก <strong>fdnet4141@dhammakaya.center</strong></span>
             </div>
-            <!-- ปุ่มต่ออายุ -->
-            <a href="services.php?cat=renew"
-               style="display:flex;align-items:center;gap:8px;background:#fff7ed;
-                      border:1px solid #fed7aa;border-radius:8px;padding:9px 12px;
-                      text-decoration:none;font-size:.82rem;color:#9a3412;font-weight:600">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M23 4v6h-6"/>
-                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
-              </svg>
-              ต่ออายุ Account
-            </a>
-            <!-- ปุ่มรีเซตรหัสผ่าน -->
-            <a href="services.php?cat=reset"
-               style="display:flex;align-items:center;gap:8px;background:#fef2f2;
-                      border:1px solid #fecaca;border-radius:8px;padding:9px 12px;
-                      text-decoration:none;font-size:.82rem;color:#991b1b;font-weight:600">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
-              รีเซตรหัสผ่าน
-            </a>
+            <div style="display:flex;gap:8px">
+              <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
+              <span>แสดง <strong>ชื่อผู้ใช้งาน</strong> และ <strong>เวลาที่ตรวจสอบ</strong></span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
+              <span>แสดง <strong>สถานะโดยรวม</strong> เช่น ปกติ / ถูกระงับ</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
+              <span>แสดง <strong>อายุรหัสผ่าน</strong> และวันที่จะหมดอายุ</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
+              <span>แสดงว่า <strong>ต่ออายุ Account ปีไหนแล้ว</strong></span>
+            </div>
           </div>
         </div>
       </div>
@@ -824,8 +863,6 @@ $all_services = [
         <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
                     color:var(--clr-text-muted);margin-bottom:10px">ติดต่อสอบถาม</div>
         <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
-
-          <!-- Email -->
           <a href="mailto:noc@dhammakaya.center"
              style="display:inline-flex;align-items:center;gap:8px;
                     background:var(--clr-bg);border:1px solid var(--clr-border);
@@ -838,57 +875,20 @@ $all_services = [
             </svg>
             noc@dhammakaya.center
           </a>
-
-          <!-- Line it4141 -->
           <a href="https://line.me/ti/p/~it4141" target="_blank"
              style="display:inline-flex;align-items:center;gap:8px;
                     background:#06C755;border:1px solid #05a847;
                     color:white;padding:10px 18px;border-radius:8px;
                     font-size:.87rem;font-weight:600;text-decoration:none">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
-              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
-                       c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
-                       c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
-                       M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
-                       c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
-                       a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
-                       M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
-                       c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
-                       M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
-                       .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
-                       M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
-                       .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
-                       c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
-                       C21.392 14.375 22 12.618 22 10.732z"/>
-            </svg>
             Line: it4141
           </a>
-
-          <!-- Line it4141-2 -->
           <a href="https://line.me/ti/p/~it4141-2" target="_blank"
              style="display:inline-flex;align-items:center;gap:8px;
                     background:#06C755;border:1px solid #05a847;
                     color:white;padding:10px 18px;border-radius:8px;
                     font-size:.87rem;font-weight:600;text-decoration:none">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
-              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755
-                       c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108
-                       c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755z
-                       M14.271 12.629c0 .27-.174.51-.432.594a.627.627 0 0 1-.695-.232l-2.386-3.239v2.877
-                       c0 .344-.283.629-.627.629-.35 0-.631-.285-.631-.629V8.108c0-.27.173-.51.43-.594
-                       a.63.63 0 0 1 .697.233l2.386 3.239V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.521z
-                       M9.818 12.629c0 .344-.282.629-.63.629-.346 0-.628-.285-.628-.629V8.108
-                       c0-.345.282-.63.628-.63.348 0 .63.285.63.63v4.521z
-                       M7.576 12.629H5.189c-.344 0-.627-.285-.627-.629V8.108c0-.345.283-.63.63-.63
-                       .345 0 .627.285.627.63v3.891h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.628.629z
-                       M22 10.732C22 5.442 17.073 1 11 1S0 5.442 0 10.732c0 4.766 4.168 8.76 9.8 9.516
-                       .382.083.902.254 1.033.582.12.3.078.769.038 1.073l-.164 1.003
-                       c-.045.3-.24 1.178 1.048.642 1.286-.537 6.956-4.143 9.489-7.094
-                       C21.392 14.375 22 12.618 22 10.732z"/>
-            </svg>
             Line: it4141-2
           </a>
-
         </div>
       </div>
 
@@ -948,8 +948,11 @@ $all_services = [
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
           <div style="padding:12px;border-right:1px solid var(--clr-border)">
             <img src="../assets/images/reset_step1.png"
-                 alt="หน้าจอกรอก Username เพื่อรีเซทรหัสผ่าน"
-                 style="width:100%;border-radius:8px;display:block"
+              alt="หน้าจอกรอก Username เพื่อรีเซทรหัสผ่าน"
+              onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_email_otp.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 0)"
+              style="width:100%;border-radius:8px;display:block;cursor:pointer"
+              onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
+              style="width:100%;border-radius:8px;display:block;cursor:pointer"
                  onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#f0f4ff;border-radius:8px;padding:20px;min-height:80px;
                         flex-direction:column;align-items:center;justify-content:center;
@@ -989,9 +992,10 @@ $all_services = [
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
           <div style="padding:12px;border-right:1px solid var(--clr-border)">
             <img src="../assets/images/reset_email_otp.png"
-                 alt="Email OTP รีเซทรหัสผ่าน"
-                 style="width:100%;border-radius:8px;display:block"
-                 onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
+              alt="Email OTP รีเซทรหัสผ่าน"
+              onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_email_otp.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 1)"
+              style="width:100%;border-radius:8px;display:block;cursor:pointer"
+              onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#f0f4ff;border-radius:8px;padding:20px;min-height:80px;
                         flex-direction:column;align-items:center;justify-content:center;
                         gap:4px;color:#94a3b8;font-size:.75rem">
@@ -1034,9 +1038,10 @@ $all_services = [
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
           <div style="padding:12px;border-right:1px solid var(--clr-border)">
             <img src="../assets/images/reset_step3.png"
-                 alt="หน้าจอกรอก OTP และรหัสผ่านใหม่"
-                 style="width:100%;border-radius:8px;display:block"
-                 onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
+              alt="หน้าจอกรอก OTP และรหัสผ่านใหม่"
+              onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_email_otp.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 2)"
+              style="width:100%;border-radius:8px;display:block;cursor:pointer"
+              onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#f0f4ff;border-radius:8px;padding:20px;min-height:80px;
                         flex-direction:column;align-items:center;justify-content:center;
                         gap:4px;color:#94a3b8;font-size:.75rem">
@@ -1078,7 +1083,8 @@ $all_services = [
           <div style="padding:12px;border-right:1px solid #bbf7d0">
             <img src="../assets/images/reset_success.png"
                  alt="หน้าจอส่งรหัสสำเร็จ"
-                 style="width:100%;border-radius:8px;display:block"
+                 onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_email_otp.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 3)"
+                 style="width:100%;border-radius:8px;display:block;cursor:pointer"
                  onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#f0fdf4;border-radius:8px;padding:20px;min-height:80px;
                         flex-direction:column;align-items:center;justify-content:center;
@@ -1667,9 +1673,10 @@ $all_services = [
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
           <div style="padding:12px;border-right:1px solid var(--clr-border)">
             <img src="../assets/images/quota_login.png"
-                 alt="หน้า Login Sophos User Portal"
-                 style="width:100%;border-radius:8px;display:block;border:1px solid #e5e7eb"
-                 onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
+              alt="หน้า Login Sophos User Portal"
+              onclick="lbOpen([\'../assets/images/quota_login.png\',\'../assets/images/quota_usage.png\'], 0)"
+              style="width:100%;border-radius:8px;display:block;border:1px solid #e5e7eb;cursor:pointer"
+              onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#eff6ff;border-radius:8px;padding:20px;min-height:100px;
                         flex-direction:column;align-items:center;justify-content:center;
                         gap:4px;color:#94a3b8;font-size:.75rem;text-align:center">
@@ -1709,9 +1716,10 @@ $all_services = [
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
           <div style="padding:12px;border-right:1px solid var(--clr-border)">
             <img src="../assets/images/quota_usage.png"
-                 alt="หน้า Internet Usage Sophos"
-                 style="width:100%;border-radius:8px;display:block;border:1px solid #e5e7eb"
-                 onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
+              alt="หน้า Internet Usage Sophos"
+              onclick="lbOpen([\'../assets/images/quota_login.png\',\'../assets/images/quota_usage.png\'], 1)"
+              style="width:100%;border-radius:8px;display:block;border:1px solid #e5e7eb;cursor:pointer"
+              onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#eff6ff;border-radius:8px;padding:20px;min-height:100px;
                         flex-direction:column;align-items:center;justify-content:center;
                         gap:4px;color:#94a3b8;font-size:.75rem;text-align:center">

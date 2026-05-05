@@ -60,6 +60,205 @@
 <!-- MOBILE NAV JS -->
 <script src="assets/js/mobile-nav.js"></script>
 
+<!-- ───── LIGHTBOX ───── -->
+<div id="lb-overlay" style="display:none;position:fixed;inset:0;z-index:9999;
+     background:rgba(0,0,0,.88);align-items:center;justify-content:center;flex-direction:column">
+
+  <button onclick="lbClose()" title="ปิด (Esc)"
+    style="position:absolute;top:14px;right:18px;background:rgba(255,255,255,.15);
+           border:none;color:white;font-size:1.5rem;width:40px;height:40px;
+           border-radius:50%;cursor:pointer;line-height:1">✕</button>
+
+  <button onclick="lbMove(-1)" id="lb-prev"
+    style="position:absolute;left:10px;top:50%;transform:translateY(-50%);
+           background:rgba(255,255,255,.15);border:none;color:white;font-size:2rem;
+           width:48px;height:48px;border-radius:50%;cursor:pointer">‹</button>
+
+  <button onclick="lbMove(1)" id="lb-next"
+    style="position:absolute;right:10px;top:50%;transform:translateY(-50%);
+           background:rgba(255,255,255,.15);border:none;color:white;font-size:2rem;
+           width:48px;height:48px;border-radius:50%;cursor:pointer">›</button>
+
+  <div id="lb-imgwrap"
+    style="width:90vw;height:80vh;overflow:hidden;position:relative;
+           display:flex;align-items:center;justify-content:center;cursor:grab">
+    <img id="lb-img" src="" alt=""
+      style="max-width:90vw;max-height:80vh;border-radius:10px;
+             display:block;user-select:none;-webkit-user-drag:none;
+             transform-origin:center center;
+             transition:none">
+  </div>
+
+  <div style="margin-top:12px;display:flex;align-items:center;gap:10px">
+    <span id="lb-counter" style="color:rgba(255,255,255,.65);font-size:.85rem;min-width:50px;text-align:center"></span>
+    <button onclick="lbZoom(-1)"
+      style="background:rgba(255,255,255,.15);border:none;color:white;
+             border-radius:6px;padding:5px 14px;cursor:pointer;font-size:1.1rem">−</button>
+    <button onclick="lbZoom(1)"
+      style="background:rgba(255,255,255,.15);border:none;color:white;
+             border-radius:6px;padding:5px 14px;cursor:pointer;font-size:1.1rem">+</button>
+    <button onclick="lbZoomReset()"
+      style="background:rgba(255,255,255,.15);border:none;color:white;
+             border-radius:6px;padding:5px 12px;cursor:pointer;font-size:.8rem">Reset</button>
+  </div>
+</div>
+
+<script>
+  var _lbImgs = [],
+    _lbIdx = 0,
+    _lbScale = 1;
+
+  function lbOpen(imgs, idx) {
+    _lbImgs = imgs;
+    _lbIdx = idx;
+    _lbScale = 1;
+    document.getElementById('lb-overlay').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    lbShow();
+  }
+
+  function lbShow() {
+    var img = document.getElementById('lb-img');
+    img.src = _lbImgs[_lbIdx];
+    _lbScale = 1; _panX = 0; _panY = 0;
+    _applyTransform();
+    document.getElementById('lb-imgwrap').style.cursor = 'grab';
+    document.getElementById('lb-counter').textContent =
+      _lbImgs.length > 1 ? (_lbIdx + 1) + ' / ' + _lbImgs.length : '';
+    document.getElementById('lb-prev').style.display = _lbImgs.length > 1 ? '' : 'none';
+    document.getElementById('lb-next').style.display = _lbImgs.length > 1 ? '' : 'none';
+  }
+
+  function lbClose() {
+    document.getElementById('lb-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function lbMove(d) {
+    _lbIdx = (_lbIdx + d + _lbImgs.length) % _lbImgs.length;
+    lbShow();
+  }
+
+  function lbZoom(d) {
+    _lbScale = Math.min(4, Math.max(0.5, _lbScale + d * 0.4));
+    _applyTransform();
+  }
+
+  function lbZoomReset() {
+    _lbScale = 1;
+    _panX = 0;
+    _panY = 0;
+    _applyTransform();
+  }
+  
+  document.addEventListener('keydown', function(e) {
+    if (document.getElementById('lb-overlay').style.display === 'none') return;
+    if (e.key === 'Escape') lbClose();
+    if (e.key === 'ArrowLeft') lbMove(-1);
+    if (e.key === 'ArrowRight') lbMove(1);
+    if (e.key === '+') lbZoom(1);
+    if (e.key === '-') lbZoom(-1);
+  });
+  document.getElementById('lb-overlay').addEventListener('click', function(e) {
+    if (e.target === this) lbClose();
+  });
+
+  // ── Pan & Zoom state ──
+  var _panX = 0,
+    _panY = 0;
+
+  function _applyTransform() {
+    document.getElementById('lb-img').style.transform =
+      'translate(' + _panX + 'px,' + _panY + 'px) scale(' + _lbScale + ')';
+  }
+
+  // ── Mouse Wheel Zoom ──
+  document.getElementById('lb-imgwrap').addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var prev = _lbScale;
+    _lbScale = Math.min(4, Math.max(0.5, _lbScale + (e.deltaY < 0 ? 0.3 : -0.3)));
+    _applyTransform();
+  }, {
+    passive: false
+  });
+
+  // ── Mouse Drag Pan ──
+  var _drag = false,
+    _dragStartX = 0,
+    _dragStartY = 0,
+    _panStartX = 0,
+    _panStartY = 0;
+  var _wrap = document.getElementById('lb-imgwrap');
+
+  _wrap.addEventListener('mousedown', function(e) {
+    _drag = true;
+    _dragStartX = e.clientX;
+    _dragStartY = e.clientY;
+    _panStartX = _panX;
+    _panStartY = _panY;
+    _wrap.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!_drag) return;
+    _panX = _panStartX + (e.clientX - _dragStartX);
+    _panY = _panStartY + (e.clientY - _dragStartY);
+    _applyTransform();
+  });
+  document.addEventListener('mouseup', function() {
+    if (!_drag) return;
+    _drag = false;
+    _wrap.style.cursor = 'grab';
+  });
+
+  // ── Touch: 1 นิ้ว Pan + 2 นิ้ว Pinch Zoom ──
+  var _touchDist = 0;
+  var _t1StartX = 0,
+    _t1StartY = 0,
+    _panAtTouchX = 0,
+    _panAtTouchY = 0;
+
+  _wrap.addEventListener('touchstart', function(e) {
+    if (e.touches.length === 1) {
+      _t1StartX = e.touches[0].clientX;
+      _t1StartY = e.touches[0].clientY;
+      _panAtTouchX = _panX;
+      _panAtTouchY = _panY;
+    }
+    if (e.touches.length === 2) {
+      _touchDist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+    }
+  }, {
+    passive: true
+  });
+
+  _wrap.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+    if (e.touches.length === 1) {
+      _panX = _panAtTouchX + (e.touches[0].clientX - _t1StartX);
+      _panY = _panAtTouchY + (e.touches[0].clientY - _t1StartY);
+      _applyTransform();
+    }
+    if (e.touches.length === 2) {
+      var newDist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      var delta = newDist - _touchDist;
+      if (Math.abs(delta) > 3) {
+        _lbScale = Math.min(4, Math.max(0.5, _lbScale + (delta > 0 ? 0.05 : -0.05)));
+        _applyTransform();
+        _touchDist = newDist;
+      }
+    }
+  }, {
+    passive: false
+  });
+</script>
+
 <style>
   /* ============================================================
    FOOTER STYLES
