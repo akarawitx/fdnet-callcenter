@@ -190,9 +190,9 @@ window.SITE_SEARCH_INDEX = [
   },
 
   {
-    title: 'ขอ VPN และ Mail องค์กร', desc: 'ขั้นตอนการขอสิทธิ์ใช้งาน VPN ใหม่ ต่ออายุ VPN ขอใช้อีเมลองค์กร',
+    title: 'ขอสิทธิ์ใช้งาน VPN ใหม่ / ขอต่ออายุ VPN / ขอใช้อีเมลองค์กร', desc: 'กรอก Link คพ. แนบบัตรองค์กร รอหัวหน้ากอง / เจ้าอาวาส และทีม CNA อนุมัติ',
     url: '../pages/procurement.php?cat=vpn&mail', section: 'จัดหาอุปกรณ์',
-    keywords: 'vpn mail อีเมล email องค์กร ขอ สิทธิ์ ต่ออายุ ทำงานนอกสถานที่ remote เข้าจากบ้าน'
+    keywords: 'vpn mail อีเมล email องค์กร ขอ สิทธิ์ ต่ออายุ ทำงานนอกสถานที่ remote เข้าจากบ้าน CNA อนุมัติ บัตรองค์กร'
   },
 
   {
@@ -220,27 +220,27 @@ window.SITE_SEARCH_INDEX = [
   },
 
   {
-    title: 'ขอเบิกค่าบริการโทรศัพท์', desc: 'ขั้นตอนการขอเบิกค่าบริการโทรศัพท์',
+    title: 'ค่าบริการโทรศัพท์มือถือ', desc: 'Download แบบฟอร์ม ทศ.1 ขออนุมัติใหม่ / ทศ.2 เปลี่ยนเบอร์ ย้ายค่าย งบประมาณ / ทศ.3 ย้ายหน่วยงาน กองสำนัก',
     url: '../pages/procurement.php?cat=telephonebill', section: 'จัดหาอุปกรณ์',
-    keywords: 'โทรศัพท์ ค่าบริการ เบิก telephone bill ค่าโทร ค่าโทรศัพท์ มือถือ ซิม'
+    keywords: 'โทรศัพท์ ค่าบริการ เบิก telephone bill ค่าโทร ค่าโทรศัพท์ มือถือ ซิม ทศ.1 ทศ.2 ทศ.3 เปลี่ยนเบอร์ ย้ายค่าย งบประมาณ ย้ายหน่วยงาน กองสำนัก'
   },
 
   {
-    title: 'ขอใช้บริการถ่ายเอกสาร', desc: 'ขั้นตอนการขอใช้บริการถ่ายเอกสารภายในองค์กร',
+    title: 'ถ่ายเอกสารขาว-ดำ', desc: 'ติดต่อที่ห้องถ่ายเอกสารอาคาร 100 ปีคุณยายฯ ชั้น 1 ฝั่งตะวันออก เบอร์ภายใน 02-831-1000 ต่อ 11820',
     url: '../pages/procurement.php?cat=printDocument', section: 'จัดหาอุปกรณ์',
-    keywords: 'ถ่ายเอกสาร print เอกสาร copy ขอ photocopy ซีร็อกซ์ ถ่ายสำเนา'
+    keywords: 'ถ่ายเอกสาร print เอกสาร copy ขอ photocopy ซีร็อกซ์ ถ่ายสำเนา ขาวดำ 11820 ชั้น 1 ฝั่งตะวันออก'
   },
 
   {
-    title: 'ขอใช้งาน File Share', desc: 'ขั้นตอนการขอใช้งาน File Share แชร์ไฟล์ภายในองค์กร',
+    title: 'File Share (ss100, st100)', desc: 'ขอสิทธิ์เข้าไฟล์แชร์ คพ.8.2 / ขอสร้างพื้นที่ไฟล์แชร์ คพ.8.1 สแกนส่ง Link คพ. รอหัวหน้ากองอนุมัติ',
     url: '../pages/procurement.php?cat=fileShred', section: 'จัดหาอุปกรณ์',
-    keywords: 'file share แชร์ไฟล์ ไฟล์ folder โฟลเดอร์ shared folder network drive เข้าถึงไฟล์ แผนกไฟล์'
+    keywords: 'file share แชร์ไฟล์ ไฟล์ folder โฟลเดอร์ shared folder network drive เข้าถึงไฟล์ แผนกไฟล์ ss100 st100 คพ8.1 คพ8.2 permission storage สร้างพื้นที่ CNA'
   },
-
+  
   {
-    title: 'สมัครอบรมความรู้สารสนเทศ', desc: 'ขั้นตอนการสมัครอบรมความรู้ด้านสารสนเทศ',
+    title: 'ขออบรมโปรแกรมคอมพิวเตอร์', desc: 'สมัครอบรมผ่าน Jotform กรอก Link คพ. แนบไฟล์ PDF ห้องอบรม ชั้น L1M อาคาร 100 ปีคุณยายฯ สอบถาม 02-831-1000 ต่อ 11850 / กัลฯ ศิรินภา 065-292-9465',
     url: '../pages/procurement.php?cat=training', section: 'จัดหาอุปกรณ์',
-    keywords: 'อบรม training ความรู้ สารสนเทศ it สมัคร เรียน course class'
+    keywords: 'อบรม training ความรู้ สารสนเทศ it สมัคร เรียน course class โปรแกรม คอมพิวเตอร์ jotform ศิรินภา ผิง 11850 L1M ข้อปฏิบัติ กติกา'
   },
 
   {

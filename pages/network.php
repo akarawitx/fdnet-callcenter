@@ -33,6 +33,10 @@ $network_items = [
               <td style="padding:10px">อาคาร 100 ปี</td>
               <td style="padding:10px">.100Y-Office</td>
             </tr>
+            <tr>
+              <td style="padding:10px">อาคาร 100 ปี</td>
+              <td style="padding:10px">.100Y.Dhammakaya_dot1x</td>
+            </tr>
             <tr style="background:#f2f2f2">
               <td style="padding:10px">สภาธรรมกายสากล</td>
               <td style="padding:10px">DKC Network (Spha)</td>
@@ -42,8 +46,12 @@ $network_items = [
               <td style="padding:10px">DKC Network (VHK)</td>
             </tr>
             <tr style="background:#f2f2f2">
-              <td style="padding:10px">อาคารพระผู้ปราบมาร</td>
-              <td style="padding:10px">DKC Network (PM)</td>
+              <td style="padding:10px">อาคารพระผู้ปราบมาร1-2</td>
+              <td style="padding:10px">PIM-LANWAT-1-2-CNA</td>
+            </tr>
+            <tr style="background:#f2f2f2">
+              <td style="padding:10px">อาคารพระผู้ปราบมาร1-2</td>
+              <td style="padding:10px">PIM-LANWAT-1-2-CNA</td>
             </tr>
             <tr>
               <td style="padding:10px">อาคารหนึ่งไม่มีสอง</td>
@@ -56,6 +64,10 @@ $network_items = [
             <tr>
               <td style="padding:10px">อาคารบุญรักษา</td>
               <td style="padding:10px">Boonraksa</td>
+            </tr>
+            <tr>
+              <td style="padding:10px">อาคารร้อยสิบห้าปี</td>
+              <td style="padding:10px">DKC Network (115Y)</td>
             </tr>
           </tbody>
         </table>

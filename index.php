@@ -77,7 +77,7 @@ require_once 'includes/header.php';
         <div class="intro-eyebrow">เกี่ยวกับเรา</div>
         <h2 class="intro-title">Login หน้าเเดง</h2>
         <p class="intro-desc">
-          ให้บริการอินเตอร์เน็ตและระบบเครือข่ายภายในวัด พร้อมทั้งให้คำปรึกษาและแก้ไขปัญหาด้านสารสนเทศต่างๆ แก่พระภิกษุสามเณรและเจ้าหน้าที่ของวัด
+          ให้บริการอินเทอร์เน็ตและระบบเครือข่ายภายในวัด พร้อมทั้งให้คำปรึกษาและแก้ไขปัญหาด้านสารสนเทศต่างๆ แก่พระภิกษุสามเณรและเจ้าหน้าที่ของวัด
         </p>
         <ul class="intro-list">
           <li>
@@ -102,13 +102,13 @@ require_once 'includes/header.php';
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12" />
             </svg>
-            ติดต่อสอบถามเพิ่มเติมได้ที่ โทร. 02-831-1441 ต่อ 14141
+            ติดต่อสอบถามเพิ่มเติมได้ที่ โทร. 02-831-1441 หรือ 02 831 1000 ต่อ 14141
           </li>
           <li>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12" />
             </svg>
-            ลิ้งเข้าใช้อินเทอร์เน็ต: <a href="https://cyberoam.dhammakaya.network:8090/" target="_blank" rel="noopener" style="color:#1e73be;text-decoration:underline;">cyberoam.dhammakaya.network</a>
+            ลิงก์เข้าใช้อินเทอร์เน็ต: <a href="https://cyberoam.dhammakaya.network:8090/" target="_blank" rel="noopener" style="color:#1e73be;text-decoration:underline;">cyberoam.dhammakaya.network</a>
           </li>
         </ul>
       </div>

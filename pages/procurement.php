@@ -33,9 +33,9 @@ $guides = [
     'desc'  => 'ขั้นตอนการขอใช้งาน Access Control สำหรับบุคลากรที่ต้องการเข้าถึงระบบภายในองค์กร',
     'extra_html' => '
       <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/old/old2/%E0%B8%84%E0%B8%9E.xx%20%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%A1%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C-2021.xlsx" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">Click for Download</a> แบบฟอร์มขออนุมัติเครือข่ายคอมพิวเตอร์ 2021<br>
+        1. <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/Old-move_to_FDnet/old2/%E0%B8%84%E0%B8%9E.xx%20%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%A1%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C-2021.xlsx" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">Click for Download</a> แบบฟอร์มขออนุมัติเครือข่ายคอมพิวเตอร์ 2021<br>
         2. กรอกข้อมูลในไฟล์ให้ครบถ้วน<br>
-        3. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ที่กรอกข้อมูล เพื่อขออนุมัติ<br>
+        3. <a href="https://fdnet.dhammakaya.network/fdcom/system/form.php?&sidebarId=12&autocat=52" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ที่กรอกข้อมูล เพื่อขออนุมัติ<br>
         4. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
       </p>
     ',
@@ -49,9 +49,9 @@ $guides = [
     'desc'  => 'ขั้นตอนการขอใช้งาน CCTV สำหรับบุคลากรที่ต้องการติดตั้งกล้องวงจรปิดภายในองค์กร',
     'extra_html' => '
       <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/old/old2/%E0%B8%84%E0%B8%9E.xx%20%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%A1%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C-2021.xlsx" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">Click for Download</a> แบบฟอร์มขออนุมัติเครือข่ายคอมพิวเตอร์ 2021<br>
-        2. กรอกข้อมูลในไฟล์ให้ครบถ้วน<br>
-        3. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ที่กรอกข้อมูล เพื่อขออนุมัติ<br>
+        1. <a href="https://fdnet.dhammakaya.network/fdcom/system/form.php?&sidebarId=12&autocat=50&item=%E0%B8%82%E0%B8%AD%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%87%E0%B8%88%E0%B8%A3%E0%B8%9B%E0%B8%B4%E0%B8%94%20%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B9%80%E0%B8%A7%E0%B8%93...&purpose=%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD...%20(%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%99%20%E0%B8%94%E0%B8%B9%E0%B9%81%E0%B8%A5%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%20%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%95%E0%B9%89%E0%B8%99)" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ที่กรอกข้อมูล เพื่อขออนุมัติ<br>
+        2. <a href="https://fdnet.dhammakaya.network/fdcom/system/form.php?&sidebarId=12&autocat=51&item=%E0%B8%82%E0%B8%AD%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%A7%E0%B8%87%E0%B8%88%E0%B8%A3%E0%B8%9B%E0%B8%B4%E0%B8%94%20%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B9%80%E0%B8%A7%E0%B8%93...&purpose=%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD...%20(%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%99%20%E0%B8%94%E0%B8%B9%E0%B9%81%E0%B8%A5%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%9B%E0%B8%A5%E0%B8%AD%E0%B8%94%E0%B8%A0%E0%B8%B1%E0%B8%A2%20%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%95%E0%B9%89%E0%B8%99)" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ที่กรอกข้อมูล เพื่อขอเเจ้งซ่อม<br>
+        3. กรอกข้อมูลในไฟล์ให้ครบถ้วน<br>
         4. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
       </p>
     ',
@@ -64,12 +64,20 @@ $guides = [
     'title' => 'ขอสิทธิ์ใช้งาน VPN ใหม่ / ขอต่ออายุ VPN / ขอใช้อีเมลองค์กร',
     'desc'  => 'ขั้นตอนการขอใช้งาน VPN สำหรับบุคลากรที่ต้องการเข้าถึงระบบภายในองค์กรจากภายนอก',
     'extra_html' => '
-      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. กรอก link คพ. เพื่อขออนุมัติ ตามตัวอย่างด้านล่าง</br>
-        2. แนบไฟล์ภาพถ่ายบัตรองค์กรของผู้ที่ต้องการใช้ VPN / อีเมลองค์กร​​</br>
-        3. รอหัวหน้ากอง / เจ้าอาวาส และทีม CNA อนุมัติ</br>
-        4. รอเจ้าหน้าที่ดำเนินการให้ เสร็จแล้วเจ้าหน้าที่จะส่งอีเมลแจ้งกลับไป</br>
-      </p>
+      <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:12px">ขอสิทธิ์ใช้งาน VPN ใหม่ / ขอต่ออายุ VPN / ขอใช้อีเมลองค์กร</p>
+
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
+        <p style="margin:0">1. <a href="https://fdnet.dhammakaya.network/fdcom/system/form2.php?sidebarId=12&autocat=49&man=../../services/VPN.php&item=(%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%81)%20%E0%B8%82%E0%B8%AD%E0%B9%83%E0%B8%8A%E0%B9%89%20VPN%20/%20%E0%B8%95%E0%B9%88%E0%B8%AD%E0%B8%AD%E0%B8%B2%E0%B8%A2%E0%B8%B8%20VPN%20%3E%20Username:%20p...&purpose=(%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%81)%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%83%E0%B8%8A%E0%B9%89%20Winbudget%20/%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%20LAN%20%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ ตามตัวอย่างด้านล่าง</p>
+        <p style="margin:0">2. แนบไฟล์ภาพถ่ายบัตรองค์กรของผู้ที่ต้องการใช้ VPN / อีเมลองค์กร</p>
+        <p style="margin:0">3. รอหัวหน้ากอง / เจ้าอาวาส และทีม CNA อนุมัติ</p>
+        <p style="margin:0">4. รอเจ้าหน้าที่ดำเนินการให้ เสร็จแล้วเจ้าหน้าที่จะส่งอีเมลแจ้งกลับไป</p>
+      </div>
+
+      <p style="font-size:.95rem;font-weight:600;color:var(--clr-text);margin-bottom:10px">ตัวอย่างการกรอกข้อมูลขอ VPN</p>
+
+      <img src="../assets/images/procurement/vpn/vpn1.png" alt="ตัวอย่างการกรอกข้อมูลขอ VPN"
+        onclick="lbOpen([\'../assets/images/procurement/vpn/vpn1.png\'],0)"
+        style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
     ',
   ],
 
@@ -81,9 +89,9 @@ $guides = [
     'desc'  => 'ขั้นตอนการขอใช้งานกล่องสัญญาณ GBN สำหรับบุคลากรที่ต้องการเชื่อมต่อระบบภายในองค์กร',
     'extra_html' => '
       <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/old/old2/%E0%B8%84%E0%B8%9E.xx%20%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%A1%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C-2021.xlsx" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">Click for Download</a> แบบฟอร์มขออนุมัติเครือข่ายคอมพิวเตอร์ 2021<br>
-        2. กรอกข้อมูลในไฟล์ให้ครบถ้วน<br>
-        3. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ที่กรอกข้อมูล เพื่อขออนุมัติ<br>
+        1. <a href="https://fdnet.dhammakaya.network/fdcom/system/form.php?&sidebarId=12&autocat=59" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ สำหรับขอใหม่<br>
+        2. <a href="https://fdnet.dhammakaya.network/fdcom/system/form.php?&sidebarId=12&autocat=18" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> สำหรับแจ้งซ่อม<br>
+        3. กรอกข้อมูลในไฟล์ให้ครบถ้วน<br>
         4. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
       </p>
     ',
@@ -97,11 +105,91 @@ $guides = [
     'desc'  => 'ขั้นตอนการขอใช้งานจอ LED สำหรับบุคลากรที่ต้องการใช้จอ LEDภายในองค์กร',
     'extra_html' => '
       <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/old/old2/%E0%B8%84%E0%B8%9E.xx%20%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%A1%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C-2021.xlsx" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">Click for Download</a> แบบฟอร์มขออนุมัติเครือข่ายคอมพิวเตอร์ 2021<br>
-        2. กรอกข้อมูลในไฟล์ให้ครบถ้วน<br>
-        3. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ที่กรอกข้อมูล เพื่อขออนุมัติ<br>
-        4. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
+        <a href="https://fdnet.dhammakaya.network/fdcom/system/form.php?&sidebarId=12&autocat=63&item=%E0%B8%82%E0%B8%AD%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%88%E0%B8%AD%20LED&purpose=%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD...%20(%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%99%20%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%AD%E0%B8%94%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%95%E0%B8%B1%E0%B8%81%E0%B8%9A%E0%B8%B2%E0%B8%95%E0%B8%A3%20%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%95%E0%B9%89%E0%B8%99)" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> ขอใช้บริการจอ LED และบันทึกเป็นไฟล์ PDF
       </p>
+
+      <p style="font-size:.95rem;font-weight:600;color:var(--clr-text);margin-bottom:12px">ตัวอย่างขั้นตอนการกรอกข้อมูลขอยืมจอ LED</p>
+
+      <div style="display:flex;flex-direction:column;gap:20px;font-size:.92rem;line-height:1.85;color:var(--clr-text)">
+
+        <div>
+          <p style="margin:0 0 8px"><strong>1.</strong> Login เข้าหน้า FDcom</p>
+          <img src="../assets/images/procurement/led/step1.png" alt="Login FDcom"
+            onclick="lbOpen([\'../assets/images/procurement/led/step1.png\',\'../assets/images/procurement/led/step2.png\',\'../assets/images/procurement/led/step3.png\',\'../assets/images/procurement/led/step4.png\',\'../assets/images/procurement/led/step5.png\',\'../assets/images/procurement/led/step6.png\',\'../assets/images/procurement/led/step7.png\'],0)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px"><strong>2.</strong> กดเลือกเมนู 1.2 กรอกใบ คพ.</p>
+          <img src="../assets/images/procurement/led/step2.png" alt="เมนู 1.2"
+            onclick="lbOpen([\'../assets/images/procurement/led/step1.png\',\'../assets/images/procurement/led/step2.png\',\'../assets/images/procurement/led/step3.png\',\'../assets/images/procurement/led/step4.png\',\'../assets/images/procurement/led/step5.png\',\'../assets/images/procurement/led/step6.png\',\'../assets/images/procurement/led/step7.png\'],1)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px"><strong>3.</strong> กรอกข้อมูลส่วนตัวและเลือกหมวดที่ต้องการขอใช้บริการ</p>
+          <img src="../assets/images/procurement/led/step3.png" alt="กรอกข้อมูลส่วนตัว"
+            onclick="lbOpen([\'../assets/images/procurement/led/step1.png\',\'../assets/images/procurement/led/step2.png\',\'../assets/images/procurement/led/step3.png\',\'../assets/images/procurement/led/step4.png\',\'../assets/images/procurement/led/step5.png\',\'../assets/images/procurement/led/step6.png\',\'../assets/images/procurement/led/step7.png\'],2)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px"><strong>4.</strong> กรอกแบบฟอร์มขอใช้บริการ</p>
+          <img src="../assets/images/procurement/led/step4.png" alt="กรอกแบบฟอร์ม 1"
+            onclick="lbOpen([\'../assets/images/procurement/led/step1.png\',\'../assets/images/procurement/led/step2.png\',\'../assets/images/procurement/led/step3.png\',\'../assets/images/procurement/led/step4.png\',\'../assets/images/procurement/led/step5.png\',\'../assets/images/procurement/led/step6.png\',\'../assets/images/procurement/led/step7.png\'],3)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;margin-bottom:8px;cursor:pointer">
+          <img src="../assets/images/procurement/led/step5.png" alt="กรอกแบบฟอร์ม 2"
+            onclick="lbOpen([\'../assets/images/procurement/led/step1.png\',\'../assets/images/procurement/led/step2.png\',\'../assets/images/procurement/led/step3.png\',\'../assets/images/procurement/led/step4.png\',\'../assets/images/procurement/led/step5.png\',\'../assets/images/procurement/led/step6.png\',\'../assets/images/procurement/led/step7.png\'],4)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px"><strong>5.</strong> กดดาวน์โหลดไฟล์ PDF</p>
+          <img src="../assets/images/procurement/led/step6.png" alt="ดาวน์โหลด PDF"
+            onclick="lbOpen([\'../assets/images/procurement/led/step1.png\',\'../assets/images/procurement/led/step2.png\',\'../assets/images/procurement/led/step3.png\',\'../assets/images/procurement/led/step4.png\',\'../assets/images/procurement/led/step5.png\',\'../assets/images/procurement/led/step6.png\',\'../assets/images/procurement/led/step7.png\'],5)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px"><strong>6.</strong> กรอกวัตถุประสงค์ในการใช้งานและแนบไฟล์ PDF + ไฟล์ตำแหน่งที่ติดตั้งจอ LED</p>
+          <img src="../assets/images/procurement/led/step7.png" alt="แนบไฟล์ PDF"
+            onclick="lbOpen([\'../assets/images/procurement/led/step1.png\',\'../assets/images/procurement/led/step2.png\',\'../assets/images/procurement/led/step3.png\',\'../assets/images/procurement/led/step4.png\',\'../assets/images/procurement/led/step5.png\',\'../assets/images/procurement/led/step6.png\',\'../assets/images/procurement/led/step7.png\'],6)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px"><strong>7.</strong> รอเจ้าหน้าที่ติดต่อกลับ — ติดตามรายละเอียดการดำเนินการใน
+            <a href="https://fdnet.dhammakaya.network/fdcom/system/form1_user_list.php?sidebarId=11" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">Link Here</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div style="margin-top:24px;padding:14px 16px;background:var(--clr-bg);border-radius:10px;border:1px solid var(--clr-border);font-size:.9rem;line-height:1.85;color:var(--clr-text)">
+        <p style="margin:0 0 10px;font-weight:600">สอบถามรายละเอียดเพิ่มเติมที่</p>
+
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>เบอร์โทรภายใน: <a href="tel:028311000" style="color:#1e73be;font-weight:600;text-decoration:none">02-831-1000</a> ต่อ 11842</span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>พระนที พุทฺธินนฺโท: <a href="tel:0835404987" style="color:#1e73be;font-weight:600;text-decoration:none">083-540-4987</a></span>
+        </div>
+
+        <p style="margin:0 0 8px;font-weight:600">ทีมช่างติดตั้ง-ซ่อมแซม</p>
+
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <span>ช่างนาท: <a href="tel:0861221856" style="color:#1e73be;font-weight:600;text-decoration:none">086-122-1856</a></span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <span>ช่างพรชัย (ตูน): <a href="tel:0623744781" style="color:#1e73be;font-weight:600;text-decoration:none">062-374-4781</a></span>
+        </div>
+      </div>
     ',
   ],
 
@@ -134,10 +222,12 @@ $guides = [
     'desc'  => 'ขั้นตอนการขอใช้งาน Wi-Fi และ LAN สำหรับบุคลากรที่ต้องการเชื่อมต่อระบบภายในองค์กร',
     'extra_html' => '
       <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/old/old2/%E0%B8%84%E0%B8%9E.xx%20%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%A1%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0>B.1.2.xlsx" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">Click for Download</a> แบบฟอร์มขออนุมัติเครือข่ายคอมพิวเตอร์ 2021<br>
-        2. กรอกข้อมูลในไฟล์ให้ครบถ้วน<br>
-        3. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ที่กรอกข้อมูล เพื่อขออนุมัติ<br>
-        4. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้ เสร็จแล้วเจ้าหน้าที่จะส่งอีเมลแจ้งกลับไป
+        1. <a href="https://fdnet.dhammakaya.network/fdcom/system/form.php?&sidebarId=12&autocat=30" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ สำหรับ Wi-Fi<br>
+        2. <a href="https://fdnet.dhammakaya.network/fdcom/system/form.php?&sidebarId=12&autocat=5" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ สำหรับ LAN<br>
+        3. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้<br><br>
+        สอบถามรายละเอียดเพิ่มเติมที่<br>
+        เบอร์ภายใน: 02-831-1000 ต่อ 2820<br>
+        พระพงษ์สันต์ กุลเชฏฺโฐ: 086-822-8849
       </p>
     ',
   ],
@@ -149,9 +239,49 @@ $guides = [
     'title' => 'ค่าบริการโทรศัพท์',
     'desc'  => 'ขั้นตอนการขอเบิกค่าบริการโทรศัพท์สำหรับบุคลากรภายในองค์กร',
     'extra_html' => '
-      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ<br>
-        2. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
+      <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:12px">โทรศัพท์มือถือ</p>
+
+      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:6px">
+        1. Download ไฟล์ตามประเภทที่ต้องการ
+      </p>
+
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px;padding-left:16px">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/%E0%B8%84%E0%B8%9E.%E0%B9%82%E0%B8%97%E0%B8%A3%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%96%E0%B8%B7%E0%B8%AD%20%E0%B8%97%E0%B8%A8.%201%20%E0%B8%82%E0%B8%AD%E0%B8%AD%E0%B8%99%E0%B8%B8%E0%B8%A1%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88.xlsx" target="_blank"
+            style="display:inline-flex;align-items:center;gap:6px;background:#1e73be;color:#fff;font-size:.82rem;font-weight:600;padding:5px 12px;border-radius:6px;text-decoration:none;white-space:nowrap">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Click for Download ทศ.1
+          </a>
+          <span style="font-size:.88rem;color:var(--clr-text)">ขออนุมัติใหม่</span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/%E0%B8%84%E0%B8%9E.%E0%B9%82%E0%B8%97%E0%B8%A3%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%96%E0%B8%B7%E0%B8%AD%20%E0%B8%97%E0%B8%A8.%202%20%20%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B9%80%E0%B8%9A%E0%B8%AD%E0%B8%A3%E0%B9%8C%20%E0%B8%A2%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%A2%20%E0%B8%87%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A1%E0%B8%B2%E0%B8%93.xlsx" target="_blank"
+            style="display:inline-flex;align-items:center;gap:6px;background:#1e73be;color:#fff;font-size:.82rem;font-weight:600;padding:5px 12px;border-radius:6px;text-decoration:none;white-space:nowrap">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Click for Download ทศ.2
+          </a>
+          <span style="font-size:.88rem;color:var(--clr-text)">เปลี่ยนเบอร์ ย้ายค่าย งบประมาณ</span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/%E0%B8%84%E0%B8%9E.%E0%B9%82%E0%B8%97%E0%B8%A3%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%96%E0%B8%B7%E0%B8%AD%20%E0%B8%97%E0%B8%A8.%203%20%20%E0%B8%A2%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20%E0%B8%81%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81.xlsx" target="_blank"
+            style="display:inline-flex;align-items:center;gap:6px;background:#1e73be;color:#fff;font-size:.82rem;font-weight:600;padding:5px 12px;border-radius:6px;text-decoration:none;white-space:nowrap">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Click for Download ทศ.3
+          </a>
+          <span style="font-size:.88rem;color:var(--clr-text)">ย้ายหน่วยงาน กองสำนัก</span>
+        </div>
+      </div>
+
+      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:4px">
+        2. กรอกข้อมูลในไฟล์ให้ครบถ้วน
+      </p>
+      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:4px">
+        3. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ที่กรอกข้อมูล เพื่อขออนุมัติ
+      </p>
+      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:0">
+        4. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
       </p>
     ',
   ],
@@ -163,10 +293,21 @@ $guides = [
     'title' => 'ถ่ายเอกสาร',
     'desc'  => 'ขั้นตอนการขอใช้บริการถ่ายเอกสารภายในองค์กร',
     'extra_html' => '
-      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ<br>
-        2. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
-      </p>
+      <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:12px">ถ่ายเอกสารขาว-ดำ</p>
+
+      <div style="padding:14px 16px;background:var(--clr-bg);border-radius:10px;border:1px solid var(--clr-border);font-size:.9rem;line-height:1.85;color:var(--clr-text)">
+
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;color:var(--clr-text-muted)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>ติดต่อที่ห้องถ่ายเอกสารอาคาร 100 ปีคุณยายฯ ชั้น 1 ฝั่งตะวันออก</span>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:8px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>เบอร์ภายใน: <a href="tel:028311000" style="color:#1e73be;font-weight:600;text-decoration:none">02-831-1000</a> ต่อ 11820</span>
+        </div>
+
+      </div>
     ',
   ],
 
@@ -177,10 +318,36 @@ $guides = [
     'title' => 'File Share',
     'desc'  => 'ขั้นตอนการขอใช้งาน File Share สำหรับบุคลากรที่ต้องการแชร์ไฟล์ภายในองค์กร',
     'extra_html' => '
-      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ<br>
-        2. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
-      </p>
+      <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:16px">File Share (ss100, st100, etc)</p>
+
+      <div style="font-size:.92rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
+
+        <p style="margin:0 0 6px;font-weight:600">1. กรณีมีชื่อไฟล์แชร์อยู่แล้ว ต้องการขอเพิ่มสิทธ์เข้าใช้งาน</p>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;padding-left:16px">
+          <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/%E0%B8%84%E0%B8%9E.%208.2%20%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%AA%E0%B8%B4%E0%B8%97%E0%B8%98%E0%B8%B4%E0%B9%8C%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B9%84%E0%B8%9F%E0%B8%A5%E0%B9%8C%E0%B9%81%E0%B8%8A%E0%B8%A3%E0%B9%8C%20(Permission%20Form)%20By%20C%20N%20A%20-%20v.1.0.pdf" target="_blank"
+            style="display:inline-flex;align-items:center;gap:6px;background:#1e73be;color:#fff;font-size:.82rem;font-weight:600;padding:5px 12px;border-radius:6px;text-decoration:none;white-space:nowrap">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Click for Download
+          </a>
+          <span>คพ.8.2 แบบฟอร์มขอสิทธิ์ในการเข้าไฟล์แชร์ (Permission Form) CNA</span>
+        </div>
+
+        <p style="margin:0 0 6px;font-weight:600">กรณียังไม่มีชื่อไฟล์แชร์ ต้องการสร้างพื้นที่ไฟล์แชร์</p>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:20px;padding-left:16px">
+          <a href="https://fdnet.dhammakaya.network/form/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1/%E0%B8%84%E0%B8%9E.8.1_%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%82%E0%B8%AD%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5(Storage_Request_Form)_v.1.3_CNA.pdf" target="_blank"
+            style="display:inline-flex;align-items:center;gap:6px;background:#1e73be;color:#fff;font-size:.82rem;font-weight:600;padding:5px 12px;border-radius:6px;text-decoration:none;white-space:nowrap">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Click for Download
+          </a>
+          <span>คพ.8.1 แบบฟอร์มขอพื้นที่เก็บข้อมูล (Storage Request Form) CNA</span>
+        </div>
+
+        <p style="margin:0 0 4px">2. กรอกข้อมูลในเอกสารให้ครบถ้วน</p>
+        <p style="margin:0 0 4px">3. สแกนเอกสารเป็นไฟล์ PDF</p>
+        <p style="margin:0 0 4px">4. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ และแนบเอกสารที่สแกนไว้</p>
+        <p style="margin:0">5. รอหัวหน้ากองอนุมัติจากนั้นเจ้าหน้าที่จะดำเนินการขั้นต่อไป ดำเนินการเรียบร้อยแล้วเจ้าหน้าที่จะส่งอีเมลแจ้งกลับไป</p>
+
+      </div>
     ',
   ],
 
@@ -191,10 +358,73 @@ $guides = [
     'title' => 'อบรมความรู้สารสนเทศ',
     'desc'  => 'ขั้นตอนการสมัครเข้าอบรมความรู้ด้านสารสนเทศสำหรับบุคลากรภายในองค์กร',
     'extra_html' => '
-      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        1. <a href="https://fdnet.dhammakaya.network/fdcom/system/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ<br>
-        2. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
-      </p>
+      <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:12px">ขออบรมโปรแกรมคอมพิวเตอร์</p>
+      <p style="font-size:.88rem;color:var(--clr-text-muted);margin-bottom:14px">สำหรับผู้สนใจสมัครเรียนโปรแกรม</p>
+
+      <div style="font-size:.92rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
+        <p style="margin:0 0 8px">1. <a href="https://form.jotform.com/231301336713444" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link ฟอร์ม</a> เข้ารับการอบรมคอมพิวเตอร์ และบันทึกเป็นไฟล์ PDF</p>
+        <p style="margin:0 0 8px">2. <a href="https://fdnet.dhammakaya.network/fdcom/system/form2.php?sidebarId=12&autocat=58&man=../../services/Training_computer.php&item=(%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%81)%20%E0%B8%82%E0%B8%AD%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%A3%E0%B8%A1%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1...%20%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88...&purpose=(%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%81)%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%B3%E0%B9%84%E0%B8%9B%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99...%20/%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%97%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B0" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ PDF ที่บันทึกไว้ เพื่อขออนุมัติ</p>
+        <p style="margin:0 0 4px">• ต้องมีความรู้พื้นฐานการใช้งานคอมพิวเตอร์เบื้องต้น <span style="color:var(--clr-text-muted)">(เฉพาะบางโปรแกรม)</span></p>
+        <p style="margin:0 0 4px">• ทำแบบทดสอบที่กองบริการสารสนเทศ <span style="color:var(--clr-text-muted)">(เฉพาะบางโปรแกรม)</span></p>
+        <p style="margin:0 0 4px">• อาคาร 100 ปี คุณยายฯ ตึก O ชั้น 11 เวลา 9.00-17.00 น.</p>
+        <p style="margin:0">• ห้องอบรมคอมพิวเตอร์ ชั้น L1M อาคาร 100 ปีคุณยายฯ</p>
+      </div>
+
+      <div style="padding:14px 16px;background:var(--clr-bg);border-radius:10px;border:1px solid var(--clr-border);font-size:.9rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
+        <p style="margin:0 0 8px;font-weight:600">สอบถามรายละเอียดเพิ่มเติมที่</p>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>เบอร์ภายใน: <a href="tel:028311000" style="color:#1e73be;font-weight:600;text-decoration:none">02-831-1000</a> ต่อ 11850</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>กัลฯ ศิรินภา (ผิง): <a href="tel:0652929465" style="color:#1e73be;font-weight:600;text-decoration:none">065-292-9465</a></span>
+        </div>
+      </div>
+
+      <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:20px">
+        <div style="padding:10px 16px;background:var(--clr-bg);border-bottom:1px solid var(--clr-border);font-size:.9rem;font-weight:600;color:var(--clr-text)">ข้อปฏิบัติและกติกาในการเข้าอบรม</div>
+        <div style="padding:12px 16px;font-size:.88rem;line-height:1.85;color:var(--clr-text)">
+          <p style="margin:0 0 6px">1. เมื่อสมัครเข้าอบรมผ่านเว็บไซต์ ตามระบบเรียบร้อยแล้ว ก่อนวันอบรมจะมีเจ้าหน้าที่โทรแจ้งคอนเฟิร์ม ว่าท่านสามารถที่จะเข้าอบรมได้หรือไม่</p>
+          <p style="margin:0 0 6px">2. เมื่อสมัครเข้าอบรมเรียบร้อยแล้ว หากไม่สามารถเข้าอบรมตาม วัน,เวลา ที่กำหนดได้ ควรแจ้งเจ้าหน้าที่ล่วงหน้าอย่างน้อย 3 วัน มิฉะนั้นท่านจะถูกงดใช้สิทธิ์การอบรมในครั้งต่อไป และในกรณีที่สมัครเรียนแล้ว เจ้าหน้าที่ติดต่อไม่ได้ถือว่า "สละสิทธิ์" ในการอบรมครั้งนั้น</p>
+          <p style="margin:0 0 6px">3. ควรเข้าอบรมไม่ต่ำกว่า 80% ของระยะเวลาการอบรม เพื่อได้รับความรู้อย่างเต็มที่</p>
+          <p style="margin:0 0 6px">4. คอร์สที่เรียนปกติ 13.30 น. (เริ่มลงทะเบียนเรียนเวลา 13.00 - 13.15 น. หากไม่สามารถมาลงทะเบียนเรียนได้ตามเวลาที่กำหนด กรุณาโทรแจ้งเจ้าหน้าที่ล่วงหน้าก่อนลงทะเบียนอย่างน้อย 30 นาที)</p>
+          <p style="margin:0 0 6px">5. ร่วมบุญค่าลงทะเบียนเรียน ในวันแรกของการอบรมบริเวณด้านหลังห้องอบรม ก่อนเข้านั่งประจำที่อบรม</p>
+          <p style="margin:0 0 6px">6. ห้ามนำอาหารและเครื่องดื่มเข้ามารับประทานในห้องอบรมเพื่อป้องกันการหกใส่อุปกรณ์คอมพิวเตอร์ และห้ามรับประทานอาหาร / เครื่องดื่มขณะที่กำลังมีการเรียนการสอน (ให้รับประทานได้ในช่วงเวลาที่อาจารย์ผู้สอนอนุญาต หรือเบรกเท่านั้น)</p>
+          <p style="margin:0 0 6px">7. เมื่อเข้าอบรม ห้ามใช้โทรศัพท์มือถือขณะเรียน หากมีธุระจำเป็นให้ออกมาคุยด้านนอกห้องเรียนและเปิดระบบแบบสั่นหรือเสียงเบา ๆ (เพื่อให้ผู้เข้ารับการอบรมและอาจารย์มีสมาธิในการเรียนและการสอน)</p>
+          <p style="margin:0 0 6px">8. ผู้เข้ารับการอบรมควรมีพื้นฐานความรู้ตามโปรแกรมที่อาจารย์กำหนด ก่อนเข้าอบรมโปรแกรมนั้น ๆ</p>
+          <p style="margin:0">9. ในคาบเรียนให้ส่งแบบฝึกหัด แบบทดสอบ เพื่อวัดผลทั้งภายในห้องเรียนและนอกห้องเรียน ตามที่อาจารย์ผู้สอนกำหนดให้ทำ</p>
+        </div>
+      </div>
+
+      <p style="font-size:.95rem;font-weight:600;color:var(--clr-text);margin-bottom:10px">ตัวอย่างการกรอกใบสมัครอบรมคอมพิวเตอร์</p>
+
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <img src="../assets/images/procurement/training/step1.png" alt="ตัวอย่างการกรอก 1"
+          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],0)"
+          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        <img src="../assets/images/procurement/training/step2.png" alt="ตัวอย่างการกรอก 2"
+          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],1)"
+          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        <img src="../assets/images/procurement/training/step3.png" alt="ตัวอย่างการกรอก 3"
+          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],2)"
+          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        <img src="../assets/images/procurement/training/step4.png" alt="ตัวอย่างการกรอก 4"
+          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],3)"
+          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        <img src="../assets/images/procurement/training/step5.png" alt="ตัวอย่างการกรอก 5"
+          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],4)"
+          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        <img src="../assets/images/procurement/training/step6.png" alt="ตัวอย่างการกรอก 6"
+          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],5)"
+          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        <img src="../assets/images/procurement/training/step7.png" alt="ตัวอย่างการกรอก 7"
+          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\',\'../assets/images/procurement/training/step8.png\'],6)"
+          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        <img src="../assets/images/procurement/training/step8.png" alt="ตัวอย่างการกรอก 8"
+          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\',\'../assets/images/procurement/training/step8.png\'],7)"
+          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+      </div>
     ',
   ],
 
@@ -210,7 +440,7 @@ $guides = [
         2. กรอกข้อมูลในเอกสารให้ครบถ้วน<br>
         3. เสนอหัวหน้าหน่วยงานลงนามรับรอง<br>
         4. นำเอกสารส่งที่ห้องซ่อม ชั้น L1M<br>
-        5. แจ้งซ่อม: ติดต่อห้องซ่อม อาคาร 100 ปีคุณยายฯ ชั้น L1M โทรภายใน <strong>02-831-1000 ต่อ 11840</strong>
+        5. โทรภายใน <strong>11842</strong>
       </p>
     ',
   ],
@@ -343,16 +573,28 @@ $guides = [
             <div class="eq-note" style="margin-top:14px">
               <strong>ตัวอย่างการกรอกเอกสารเพื่อขอใช้ห้องคอมพิวเตอร์</strong>
             </div>
-            <img class="eq-img" src="../assets/images/procurement/location/computer1.png" alt="ตัวอย่างกรอกเอกสาร 1">
-            <img class="eq-img" src="../assets/images/procurement/location/computer2.png" alt="ตัวอย่างกรอกเอกสาร 2">
-            <img class="eq-img" src="../assets/images/procurement/location/computer3.png" alt="ตัวอย่างกรอกเอกสาร 3">
+            <img class="eq-img" src="../assets/images/procurement/location/computer1.png" alt="ตัวอย่างกรอกเอกสาร 1"
+              onclick="lbOpen([\'../assets/images/procurement/location/computer1.png\',\'../assets/images/procurement/location/computer2.png\',\'../assets/images/procurement/location/computer3.png\'],0)"
+              style="cursor:pointer">
+            <img class="eq-img" src="../assets/images/procurement/location/computer2.png" alt="ตัวอย่างกรอกเอกสาร 2"
+              onclick="lbOpen([\'../assets/images/procurement/location/computer1.png\',\'../assets/images/procurement/location/computer2.png\',\'../assets/images/procurement/location/computer3.png\'],1)"
+              style="cursor:pointer">
+            <img class="eq-img" src="../assets/images/procurement/location/computer3.png" alt="ตัวอย่างกรอกเอกสาร 3"
+              onclick="lbOpen([\'../assets/images/procurement/location/computer1.png\',\'../assets/images/procurement/location/computer2.png\',\'../assets/images/procurement/location/computer3.png\'],2)"
+              style="cursor:pointer">
 
             <div class="eq-note" style="margin-top:14px">
               <strong>ตัวอย่างการกรอก คพ. เพื่อขอให้หัวหน้ากองอนุมัติ</strong>
             </div>
-            <img class="eq-img" src="../assets/images/procurement/location/form1.png" alt="ตัวอย่าง คพ. 1">
-            <img class="eq-img" src="../assets/images/procurement/location/form2.png" alt="ตัวอย่าง คพ. 2">
-            <img class="eq-img" src="../assets/images/procurement/location/form3.png" alt="ตัวอย่าง คพ. 3">
+            <img class="eq-img" src="../assets/images/procurement/location/form1.png" alt="ตัวอย่าง คพ. 1"
+              onclick="lbOpen([\'../assets/images/procurement/location/form1.png\',\'../assets/images/procurement/location/form2.png\',\'../assets/images/procurement/location/form3.png\'],0)"
+              style="cursor:pointer">
+            <img class="eq-img" src="../assets/images/procurement/location/form2.png" alt="ตัวอย่าง คพ. 2"
+              onclick="lbOpen([\'../assets/images/procurement/location/form1.png\',\'../assets/images/procurement/location/form2.png\',\'../assets/images/procurement/location/form3.png\'],1)"
+              style="cursor:pointer">
+            <img class="eq-img" src="../assets/images/procurement/location/form3.png" alt="ตัวอย่าง คพ. 3"
+              onclick="lbOpen([\'../assets/images/procurement/location/form1.png\',\'../assets/images/procurement/location/form2.png\',\'../assets/images/procurement/location/form3.png\'],2)"
+              style="cursor:pointer">
 
             <div class="eq-note" style="margin-top:14px">
               <strong>ปฏิทินการจองห้องคอมพิวเตอร์</strong>

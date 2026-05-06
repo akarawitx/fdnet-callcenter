@@ -833,7 +833,7 @@ $manual_items = [
       </div>
 
       <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:14px 18px;font-size:.88rem;color:#166534;line-height:1.7">
-        📥 เอกสารทั้งหมดอัปเดตล่าสุด <strong>มกราคม 2568</strong> สอบถามเพิ่มเติม: <a href="mailto:ict@watphrathammakaya.ac.th" style="color:#166534;font-weight:600">ict@watphrathammakaya.ac.th</a>
+        📥 เอกสารทั้งหมดอัปเดตล่าสุด <strong>มกราคม 2568</strong> สอบถามเพิ่มเติม: <a href="mailto:noc@dhammakaya.center" style="color:#166534;font-weight:600">noc@dhammakaya.center</a>
       </div>
     ',
   ],

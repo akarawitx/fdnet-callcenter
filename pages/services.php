@@ -529,10 +529,9 @@ $all_services = [
       </div>
       <script>
         (function () {
-          var thYear = new Date().getFullYear() + 543;
           var el = document.getElementById(\'renew-deadline-notice\');
           if (el) {
-            el.innerHTML = \'การขอต่ออายุสามารถขอได้<strong>ก่อนวันที่ 31 ธันวาคม \' + thYear + \'</strong>\';
+            el.innerHTML = \'การขอต่ออายุสามารถขอได้ตั้งแต่ <strong>1 ธันวาคม ถึง 31 ธันวาคม</strong> ของทุกปี\';
           }
         })();
       </script>
@@ -746,7 +745,7 @@ $all_services = [
             </div>
             <div style="background:#fef3c7;border:1px solid #fde68a;border-radius:8px;
                         padding:8px 12px;font-size:.8rem;color:#92400e;line-height:1.65">
-              📬 หากไม่พบอีเมล กรุณาตรวจสอบใน <strong>Junk Mail</strong> หรือถังขยะ
+              📬 หากไม่พบอีเมล กรุณาตรวจสอบใน <strong>Junk Mail</strong> หรือจดหมายขยะ
             </div>
           </div>
         </div>
@@ -952,8 +951,6 @@ $all_services = [
               onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_email_otp.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 0)"
               style="width:100%;border-radius:8px;display:block;cursor:pointer"
               onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
-              style="width:100%;border-radius:8px;display:block;cursor:pointer"
-                 onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#f0f4ff;border-radius:8px;padding:20px;min-height:80px;
                         flex-direction:column;align-items:center;justify-content:center;
                         gap:4px;color:#94a3b8;font-size:.75rem">
@@ -1450,7 +1447,7 @@ $all_services = [
           <div style="font-size:.8rem;color:#1e3a8a;line-height:1.65">
             กองบริหารสารสนเทศ<br>
             อาคาร 100 ปีคุณยายฯ ตึก O ชั้น 11<br>
-            โทร <strong>4141</strong><br>
+            โทร <strong>02-831-1441 หรือ 02 831 1000 ต่อ 14141</strong><br>
             <span style="color:#3b82f6">นำบัตรประชาชนหรือบัตรเจ้าหน้าที่มาด้วย</span>
           </div>
         </div>
@@ -1831,7 +1828,7 @@ $all_services = [
 
       <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;
                   padding:14px 18px;font-size:.88rem;color:#166534;line-height:1.75">
-        📞 หากเข้าระบบไม่ได้หรือพบปัญหา ติดต่อกองบริหารสารสนเทศ โทร <strong>4141</strong>
+        📞 หากเข้าระบบไม่ได้หรือพบปัญหา ติดต่อกองบริหารสารสนเทศ โทร <strong>02-831-1441 หรือ 02 831 1000 ต่อ 14141</strong>
         / Line: <strong>it4141</strong>
       </div>
 
