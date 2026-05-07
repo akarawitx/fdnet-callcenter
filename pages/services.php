@@ -1436,11 +1436,11 @@ $all_services = [
 
       <p style="font-size:.93rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
         Email ที่ผูกกับ Account ใช้สำหรับ<strong>รีเซตรหัสผ่าน</strong>และรับการแจ้งเตือนจากระบบ
-        หากต้องการเปลี่ยนเป็น Email ใหม่ สามารถทำได้ <strong>2 วิธี</strong>
+        หากต้องการเปลี่ยนเป็น Email ใหม่ สามารถทำได้ <strong>3 วิธี</strong>
       </p>
 
-      <!-- 2 ช่องทาง -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px">
+      <!-- 3 ช่องทาง -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:24px">
         <div style="background:#eff6ff;border:2px solid #bfdbfe;border-radius:14px;padding:16px">
           <div style="font-size:1.4rem;margin-bottom:8px">🏢</div>
           <div style="font-weight:700;font-size:.9rem;color:#1e40af;margin-bottom:4px">มาด้วยตนเอง</div>
@@ -1453,18 +1453,82 @@ $all_services = [
         </div>
         <div style="background:#f0fdf4;border:2px solid #bbf7d0;border-radius:14px;padding:16px">
           <div style="font-size:1.4rem;margin-bottom:8px">🌐</div>
-          <div style="font-weight:700;font-size:.9rem;color:#166534;margin-bottom:4px">ผ่านเว็บออนไลน์</div>
+          <div style="font-weight:700;font-size:.9rem;color:#166534;margin-bottom:4px">ผ่านฟอร์มต่ออายุ</div>
           <div style="font-size:.8rem;color:#14532d;line-height:1.65">
             กรอกฟอร์มต่ออายุ Account<br>
             ระบุ Email ใหม่ในช่องที่กำหนด<br>
             <span style="color:#16a34a">ต้องรออนุมัติจากหัวหน้า</span>
           </div>
         </div>
+        <div style="background:#fdf4ff;border:2px solid #e9d5ff;border-radius:14px;padding:16px">
+          <div style="font-size:1.4rem;margin-bottom:8px">⚡</div>
+          <div style="font-weight:700;font-size:.9rem;color:#6b21a8;margin-bottom:4px">แก้ไขเองทันที</div>
+          <div style="font-size:.8rem;color:#581c87;line-height:1.65">
+            เข้าหน้า Profile ของตัวเอง<br>
+            แก้ไขช่อง Email แล้วกด บันทึก<br>
+            <span style="color:#7c3aed">ไม่ต้องรออนุมัติ</span>
+          </div>
+        </div>
       </div>
 
-      <!-- วิธีที่ 2 ขั้นตอนออนไลน์ -->
+      <!-- วิธีที่ 3 ขั้นตอนแก้ไขเองผ่าน Profile -->
       <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
-                  color:var(--clr-text-muted);margin-bottom:12px">ขั้นตอน — วิธีออนไลน์</div>
+                  color:var(--clr-text-muted);margin-bottom:12px">ขั้นตอน — วิธีแก้ไขเองผ่านหน้า Profile (เร็วที่สุด)</div>
+
+      <div style="border:1px solid #e9d5ff;border-radius:14px;overflow:hidden;margin-bottom:20px">
+        <!-- Step 3.1 -->
+        <div style="display:flex;gap:14px;padding:14px 16px;border-bottom:1px solid #e9d5ff">
+          <div style="width:26px;height:26px;background:#fdf4ff;border-radius:50%;flex-shrink:0;
+                      display:flex;align-items:center;justify-content:center;
+                      font-size:.72rem;font-weight:700;color:#7c3aed">1</div>
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.7;flex:1">
+            เข้าสู่หน้าตั้งค่าบัญชี (Profile) —
+            <a href="https://oauth.dhammakaya.network/profile" target="_blank"
+              style="display:inline-flex;align-items:center;gap:5px;margin-left:6px;
+                      background:#7c3aed;color:white;border-radius:6px;
+                      padding:3px 10px;font-size:.76rem;font-weight:600;text-decoration:none;
+                      vertical-align:middle">
+              เปิด Profile →
+            </a>
+          </div>
+        </div>
+        <!-- Step 3.2 -->
+        <div style="display:flex;gap:14px;padding:14px 16px;border-bottom:1px solid #e9d5ff;
+                    background:var(--clr-bg)">
+          <div style="width:26px;height:26px;background:#fdf4ff;border-radius:50%;flex-shrink:0;
+                      display:flex;align-items:center;justify-content:center;
+                      font-size:.72rem;font-weight:700;color:#7c3aed">2</div>
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.7">
+            ในส่วน <strong>"ข้อมูลส่วนตัว"</strong> ให้กดแก้ไขที่ช่อง
+            <span style="background:#fdf4ff;color:#6b21a8;padding:2px 8px;border-radius:4px;
+                        font-weight:600;font-size:.82rem">อีเมล ✱</span>
+            แล้วพิมพ์ Email ใหม่ที่ต้องการ
+          </div>
+        </div>
+        <!-- Step 3.3 -->
+        <div style="display:flex;gap:14px;padding:14px 16px;border-bottom:1px solid #e9d5ff">
+          <div style="width:26px;height:26px;background:#fdf4ff;border-radius:50%;flex-shrink:0;
+                      display:flex;align-items:center;justify-content:center;
+                      font-size:.72rem;font-weight:700;color:#7c3aed">3</div>
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.7">
+            กดปุ่ม <strong style="background:#4f46e5;color:white;padding:2px 10px;border-radius:6px;font-size:.82rem">
+            บันทึกการเปลี่ยนแปลง</strong> เพื่อยืนยัน
+          </div>
+        </div>
+        <!-- Step 3.4 -->
+        <div style="display:flex;gap:14px;padding:14px 16px;background:#fdf4ff">
+          <div style="width:26px;height:26px;background:#7c3aed;border-radius:50%;flex-shrink:0;
+                      display:flex;align-items:center;justify-content:center;
+                      color:white;font-size:.72rem;font-weight:700">✓</div>
+          <div style="font-size:.85rem;color:#581c87;line-height:1.7">
+            Email ถูกอัปเดตทันที — สามารถใช้ <strong>Email ใหม่รีเซตรหัสผ่าน</strong>ได้เลย
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider + วิธีที่ 2 ขั้นตอนออนไลน์ (ฟอร์มต่ออายุ) -->
+      <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
+                  color:var(--clr-text-muted);margin-bottom:12px">ขั้นตอน — วิธีฟอร์มต่ออายุออนไลน์</div>
 
       <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:20px">
         <!-- Step 2.1 -->
@@ -1476,7 +1540,7 @@ $all_services = [
             กรอกข้อมูลผ่านฟอร์มต่ออายุ Account —
             ใส่ <strong>Email ใหม่</strong> ที่ต้องการในช่อง Email Address
             <a href="https://fdnet.dhammakaya.network/register_renew.php" target="_blank"
-               style="display:inline-flex;align-items:center;gap:5px;margin-left:6px;
+              style="display:inline-flex;align-items:center;gap:5px;margin-left:6px;
                       background:var(--clr-primary);color:white;border-radius:6px;
                       padding:3px 10px;font-size:.76rem;font-weight:600;text-decoration:none;
                       vertical-align:middle">
@@ -1493,7 +1557,7 @@ $all_services = [
           <div style="font-size:.85rem;color:var(--clr-text);line-height:1.7">
             ในช่อง <strong>"ใช้งานเกี่ยวกับ"</strong> ให้ระบุว่า
             <span style="background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:4px;
-                         font-weight:600;font-size:.82rem">"ขอเปลี่ยน Email ใหม่"</span>
+                        font-weight:600;font-size:.82rem">"ขอเปลี่ยน Email ใหม่"</span>
           </div>
         </div>
         <!-- Step 2.3 -->
