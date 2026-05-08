@@ -112,10 +112,8 @@ function get_navigation(): array
             'url'   => "$b/pages/support.php",
             'icon'  => '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>',
             'children' => [
-                ['label' => 'Account ถูกระงับการใช้งาน',      'url' => "$b/pages/support.php?cat=accountSupport"],
-                ['label' => 'แจ้งปัญหาการใช้งานระบบเฉพาะทาง', 'url' => "$b/pages/support.php?cat=specialSupport"],
-                ['label' => 'แจ้งปัญหาการใช้งานระบบเครือข่าย', 'url' => "$b/pages/support.php?cat=networkSupport"],
-                ['label' => 'แจ้งปัญหาการใช้งานอื่นๆ',        'url' => "$b/pages/support.php?cat=otherSupport"],
+                ['label' => 'เข้าหน้าแดงไม่ได้', 'url' => "$b/pages/support.php?cat=redlogin"],
+                ['label' => 'เข้าเว็บ HR ไม่ได้', 'url' => "$b/pages/support.php?cat=hrweb"],
             ],
         ],
     ];

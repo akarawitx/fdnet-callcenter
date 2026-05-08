@@ -66,29 +66,41 @@ window.SITE_SEARCH_INDEX = [
     keywords: 'โควต้า quota อินเทอร์เน็ต internet ตรวจสอบ sophos user portal cyberoam เน็ตเหลือ เน็ตหมด ใช้ไปเท่าไหร่ ดูโควต้า'
   },
 
-  // ── แจ้งปัญหา ───────────────────────────────────────────────
+  // ── แจ้งปัญหา / FAQ ─────────────────────────────────────────
   {
-    title: 'Account ถูกระงับการใช้งาน', desc: 'ไม่สามารถเข้าระบบหรือล็อกอินได้ เนื่องจาก Account ถูกระงับหรือหมดอายุ',
-    url: '../pages/support.php?cat=accountSupport', section: 'แจ้งปัญหา',
-    keywords: 'ระงับ account ล็อค lock ล็อกอิน login ไม่ได้ ถูกระงับ suspend เข้าไม่ได้ บล็อก blocked หมดอายุ ใช้งานไม่ได้'
+    title: 'เข้าหน้าแดงไม่ได้ / เข้าใช้อินเทอร์เน็ตไม่ได้', desc: 'รวมปัญหาที่พบบ่อยเมื่อไม่สามารถ Login หน้าแดง FD-NET หรือใช้งานอินเทอร์เน็ตไม่ได้',
+    url: '../pages/support.php?cat=redlogin', section: 'แจ้งปัญหา',
+    keywords: 'หน้าแดง fdnet เข้าไม่ได้ login ล็อกอิน อินเทอร์เน็ต ใช้งานไม่ได้ ล็อค รหัสผ่าน หมดอายุ โควต้า ระงับ account disabled'
   },
 
   {
-    title: 'แจ้งปัญหาระบบเฉพาะทาง', desc: 'พบปัญหาระบบบุคคล ทะเบียนพระ บัญชีกรรม หรือรับ-ส่งหนังสือ',
-    url: '../pages/support.php?cat=specialSupport', section: 'แจ้งปัญหา',
-    keywords: 'ระบบ บุคคล ทะเบียนพระ บัญชีกรรม รับส่งหนังสือ ปัญหา เฉพาะทาง ระบบใน intranet ระบบภายใน error'
+    title: 'บัญชีถูกล็อคชั่วคราว', desc: 'ใส่รหัสผ่านผิดติดต่อกัน 30 ครั้งใน 1 ชั่วโมง บัญชีจะถูกล็อคอัตโนมัติ',
+    url: '../pages/support.php?cat=redlogin', section: 'แจ้งปัญหา',
+    keywords: 'ล็อค lock บัญชี ใส่รหัสผิด หลายครั้ง 30 ครั้ง ชั่วโมง ล็อคอัตโนมัติ ปลดล็อค'
   },
 
   {
-    title: 'แจ้งปัญหาระบบเครือข่าย', desc: 'อินเทอร์เน็ตช้า Wi-Fi ขาดหาย VPN เชื่อมต่อไม่ได้',
-    url: '../pages/support.php?cat=networkSupport', section: 'แจ้งปัญหา',
-    keywords: 'เครือข่าย wifi อินเทอร์เน็ต vpn ช้า ขาด หาย เชื่อมต่อ network ปัญหา สัญญาณ ไม่มีสัญญาณ เน็ตหลุด ออฟไลน์ offline'
+    title: 'รหัสผ่านหมดอายุ หรือจำรหัสผ่านไม่ได้', desc: 'รีเซทรหัสผ่านด้วยตัวเองได้ตลอด 24 ชั่วโมง ผ่านระบบ OTP Email',
+    url: '../pages/support.php?cat=redlogin', section: 'แจ้งปัญหา',
+    keywords: 'รหัสผ่าน หมดอายุ ลืม จำไม่ได้ reset รีเซท otp email password expire forgot'
   },
 
   {
-    title: 'แจ้งปัญหาอื่นๆ', desc: 'ปัญหา Hardware Printer Email หรือซอฟต์แวร์ทั่วไป',
-    url: '../pages/support.php?cat=otherSupport', section: 'แจ้งปัญหา',
-    keywords: 'ปัญหา printer เครื่องพิมพ์ hardware software email คอมพิวเตอร์ จอ ลำโพง คีย์บอร์ด เมาส์ virus ไวรัส พัง เสีย ซ่อม ช้า ค้าง แฮง hang crash'
+    title: 'Account ถูกระงับการใช้งาน', desc: 'ไม่ได้ต่ออายุ Account ประจำปี หรือสาเหตุอื่น บัญชีจึงถูกปิดการใช้งาน',
+    url: '../pages/support.php?cat=redlogin', section: 'แจ้งปัญหา',
+    keywords: 'ระงับ account disabled ปิดการใช้งาน ไม่ได้ต่ออายุ suspend บล็อก blocked ธันวาคม'
+  },
+
+  {
+    title: 'โควต้าอินเทอร์เน็ตหมด', desc: 'โควต้าการใช้งานอินเทอร์เน็ตรายวันหมด รอบใหม่จะเริ่มในวันถัดไป',
+    url: '../pages/support.php?cat=redlogin', section: 'แจ้งปัญหา',
+    keywords: 'โควต้า quota หมด อินเทอร์เน็ต เน็ตหมด รายวัน วันถัดไป sophos'
+  },
+
+  {
+    title: 'เข้าเว็บ HR ไม่ได้', desc: 'รวมปัญหาที่พบบ่อยเมื่อไม่สามารถ Login เข้าระบบ HR ได้',
+    url: '../pages/support.php?cat=hrweb', section: 'แจ้งปัญหา',
+    keywords: 'hr เว็บ hr ระบบ hr login เข้าไม่ได้ human resource บุคคล ปุ่ม login ผิด'
   },
 
   // ── คู่มือ ──────────────────────────────────────────────────
