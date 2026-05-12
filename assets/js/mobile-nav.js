@@ -1,11 +1,10 @@
-// assets/js/mobile-nav.js
 (function () {
   'use strict';
 
-  const overlay = document.getElementById('mobile-overlay');
-  const mobileNav = document.getElementById('mobile-nav');
-  const openBtn = document.getElementById('hamburger-btn');
-  const closeBtn = document.getElementById('mobile-close-btn');
+  var overlay  = document.getElementById('mobile-overlay');
+  var mobileNav = document.getElementById('mobile-nav');
+  var openBtn  = document.getElementById('hamburger-btn');
+  var closeBtn = document.getElementById('mobile-close-btn');
 
   function openNav() {
     mobileNav.classList.add('open');
@@ -19,18 +18,20 @@
     document.body.style.overflow = '';
   }
 
-  if (openBtn) openBtn.addEventListener('click', openNav);
+  if (openBtn)  openBtn.addEventListener('click', openNav);
   if (closeBtn) closeBtn.addEventListener('click', closeNav);
-  if (overlay) overlay.addEventListener('click', closeNav);
+  if (overlay)  overlay.addEventListener('click', closeNav);
 
-  // Accordion toggles inside mobile nav
   document.querySelectorAll('.mobile-toggle-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var submenu = btn.nextElementSibling;
-      if (!submenu || !submenu.classList.contains('mobile-submenu')) return;
-      var isOpen = btn.classList.contains('open');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      // หา .mobile-submenu ใน <li> เดียวกับปุ่ม
+      var li  = btn.closest('li');
+      var sub = li ? li.querySelector(':scope > .mobile-submenu') : null;
+      if (!sub) return;
+      var isOpen = sub.classList.contains('open');
+      sub.classList.toggle('open', !isOpen);
       btn.classList.toggle('open', !isOpen);
-      submenu.classList.toggle('open', !isOpen);
     });
   });
 })();

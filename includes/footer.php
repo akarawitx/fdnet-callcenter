@@ -26,28 +26,30 @@
     </div>
     <div class="footer__links">
       <div class="footer__col">
-        <div class="footer__col-title">บริการยอดนิยม</div>
+        <div class="footer__col-title">ยูสเซอร์หน้าแดง</div>
         <ul>
           <li><a href="pages/services.php?cat=account">ขอ Account ใหม่</a></li>
-          <li><a href="pages/services.php?cat=reset">รีเซ็ตรหัสผ่าน</a></li>
-          <li><a href="pages/services.php?cat=wifi">ขอใช้ Wi-Fi</a></li>
+          <li><a href="pages/services.php?cat=renew">ต่ออายุ Account</a></li>
+          <li><a href="pages/services.php?cat=status">เช็กสถานะ Account</a></li>
+          <li><a href="pages/services.php?cat=reset">รีเซทรหัสผ่าน</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <div class="footer__col-title">คู่มือยอดนิยม</div>
+        <div class="footer__col-title">คู่มือการใช้งาน</div>
         <ul>
-          <li><a href="pages/guides.php?cat=email">การตั้งค่า Email</a></li>
-          <li><a href="pages/guides.php?cat=teams">Microsoft Teams</a></li>
-          <li><a href="pages/guides.php?cat=wifi">การใช้งาน Wi-Fi</a></li>
-          <li><a href="pages/guides.php?cat=vpn">VPN</a></li>
+          <li><a href="pages/manual.php?cat=network">เครือข่ายและการเชื่อมต่อ</a></li>
+          <li><a href="pages/manual.php?cat=domain">การใช้งาน Domain</a></li>
+          <li><a href="pages/procurement.php?cat=vpn&mail">VPN & Mail องค์กร</a></li>
+          <li><a href="pages/procurement.php?cat=wifi&lan">Wi-Fi & LAN</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <div class="footer__col-title">ลิงก์ด่วน</div>
         <ul>
-          <li><a href="pages/network.php?cat=policy">นโยบาย IT</a></li>
-          <li><a href="#">ระบบบริหารบุคคล</a></li>
-          <li><a href="#">ระบบสารบรรณ</a></li>
+          <li><a href="pages/support.php?cat=redlogin">เข้าหน้าแดงไม่ได้</a></li>
+          <li><a href="pages/support.php?cat=hrweb">เข้าเว็บ HR ไม่ได้</a></li>
+          <li><a href="pages/network.php?cat=network">Wi-Fi ภายในองค์กร</a></li>
+          <li><a href="pages/procurement.php?cat=training">อบรมความรู้สารสนเทศ</a></li>
         </ul>
       </div>
     </div>
@@ -56,9 +58,6 @@
     <span>© <?= date('Y') ?> <?= SITE_NAME ?> · พัฒนาโดยทีมกองบริการสารสนเทศ</span>
   </div>
 </footer>
-
-<!-- MOBILE NAV JS -->
-<script src="assets/js/mobile-nav.js"></script>
 
 <!-- ───── LIGHTBOX ───── -->
 <div id="lb-overlay" style="display:none;position:fixed;inset:0;z-index:9999;
