@@ -39,8 +39,8 @@
         <ul>
           <li><a href="pages/manual.php?cat=network">เครือข่ายและการเชื่อมต่อ</a></li>
           <li><a href="pages/manual.php?cat=domain">การใช้งาน Domain</a></li>
-          <li><a href="pages/procurement.php?cat=vpn&mail">VPN & Mail องค์กร</a></li>
-          <li><a href="pages/procurement.php?cat=wifi&lan">Wi-Fi & LAN</a></li>
+          <li><a href="pages/procurement.php?cat=vpn%26mail">VPN & Mail องค์กร</a></li>
+          <li><a href="pages/procurement.php?cat=wifi%26lan">Wi-Fi & LAN</a></li>
         </ul>
       </div>
       <div class="footer__col">
