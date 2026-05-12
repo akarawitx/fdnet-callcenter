@@ -19,23 +19,23 @@ $quick_services = [
 
 // ---- Featured guides (Procurement) ----
 $featured_guides = [
-  // ['title' => 'Access Control',                                      'desc' => 'ขั้นตอนการขอใช้งาน Access Control',                          'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=accessControl'],
-  // ['title' => 'CCTV',                                                'desc' => 'ขั้นตอนการขอติดตั้งกล้องวงจรปิด',                           'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=cctv'],
+  ['title' => 'Access Control',                                      'desc' => 'ขั้นตอนการขอใช้งาน Access Control',                          'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=accessControl'],
+  ['title' => 'CCTV',                                                'desc' => 'ขั้นตอนการขอติดตั้งกล้องวงจรปิด',                           'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=cctv'],
   ['title' => 'VPN & Mail องค์กร',                                   'desc' => 'ขั้นตอนการขอใช้งาน VPN และอีเมลองค์กร',                     'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=vpn&mail'],
   // ['title' => 'กล่องสัญญาณ GBN',                                    'desc' => 'ขั้นตอนการขอใช้งานกล่องสัญญาณ GBN',                         'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=gbn'],
   // ['title' => 'จอ LED',                                              'desc' => 'ขั้นตอนการขอใช้งานจอ LED',                                   'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=led'],
   ['title' => 'Server / IP Address',                                 'desc' => 'ขั้นตอนการขอ IP Address ถาวร',                               'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=server'],
-  // ['title' => 'Wi-Fi & LAN',                                         'desc' => 'ขั้นตอนการขอใช้งาน Wi-Fi และ LAN',                           'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=wifi&lan'],
+  ['title' => 'Wi-Fi & LAN',                                         'desc' => 'ขั้นตอนการขอใช้งาน Wi-Fi และ LAN',                           'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=wifi&lan'],
   // ['title' => 'ค่าบริการโทรศัพท์',                                  'desc' => 'ขั้นตอนการขอเบิกค่าบริการโทรศัพท์',                          'tags' => ['บริการ'],        'url' => 'pages/procurement.php?cat=telephonebill'],
   // ['title' => 'ถ่ายเอกสาร',                                         'desc' => 'ขั้นตอนการขอใช้บริการถ่ายเอกสาร',                            'tags' => ['บริการ'],        'url' => 'pages/procurement.php?cat=printDocument'],
   ['title' => 'File Share',                                          'desc' => 'ขั้นตอนการขอใช้งาน File Share',                               'tags' => ['บริการ'],        'url' => 'pages/procurement.php?cat=fileShred'],
-  // ['title' => 'อบรมความรู้สารสนเทศ',                                'desc' => 'ขั้นตอนการสมัครอบรมความรู้ด้านสารสนเทศ',                     'tags' => ['อบรม'],          'url' => 'pages/procurement.php?cat=training'],
+  ['title' => 'อบรมความรู้สารสนเทศ',                                'desc' => 'ขั้นตอนการสมัครอบรมความรู้ด้านสารสนเทศ',                     'tags' => ['อบรม'],          'url' => 'pages/procurement.php?cat=training'],
   ['title' => 'ยืม คืน ซ่อมอุปกรณ์คอมพิวเตอร์',                   'desc' => 'ขั้นตอนการยืม คืน และแจ้งซ่อมอุปกรณ์คอมพิวเตอร์',           'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=it&com'],
-  // ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์มัลติมีเดีย',      'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์มัลติมีเดีย',            'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=video'],
-  // ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์เครื่องเสียง',     'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์เครื่องเสียง',           'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=audio'],
-  // ['title' => 'ยืม-คืน/แจ้งซ่อมวิทยุสื่อสาร',                     'desc' => 'ขั้นตอนการยืม คืน และแจ้งซ่อมวิทยุสื่อสาร',                  'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=radio'],
-  ['title' => 'การขอใช้งานอุปกรณ์',                                 'desc' => 'ขั้นตอนการขอใช้งานอุปกรณ์ภายในองค์กร',                       'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=equipment'],
-  ['title' => 'การขอใช้งานสถานที่',                                 'desc' => 'ขั้นตอนการขอใช้พื้นที่ภายในองค์กร',                           'tags' => ['สถานที่'],       'url' => 'pages/procurement.php?cat=location'],
+  ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์มัลติมีเดีย',      'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์มัลติมีเดีย',            'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=video'],
+  ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์เครื่องเสียง',     'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์เครื่องเสียง',           'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=audio'],
+  ['title' => 'ยืม-คืน/แจ้งซ่อมวิทยุสื่อสาร',                     'desc' => 'ขั้นตอนการยืม คืน และแจ้งซ่อมวิทยุสื่อสาร',                  'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=radio'],
+  // ['title' => 'การขอใช้งานอุปกรณ์',                                 'desc' => 'ขั้นตอนการขอใช้งานอุปกรณ์ภายในองค์กร',                       'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=equipment'],
+  // ['title' => 'การขอใช้งานสถานที่',                                 'desc' => 'ขั้นตอนการขอใช้พื้นที่ภายในองค์กร',                           'tags' => ['สถานที่'],       'url' => 'pages/procurement.php?cat=location'],
 ];
 
 require_once 'includes/header.php';
