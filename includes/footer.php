@@ -25,31 +25,35 @@
       </div>
     </div>
     <div class="footer__links">
+      <!-- footer.php — แก้ไข href ทุกตัว -->
+
       <div class="footer__col">
         <div class="footer__col-title">ยูสเซอร์หน้าแดง</div>
         <ul>
-          <li><a href="pages/services.php?cat=account">ขอ Account ใหม่</a></li>
-          <li><a href="pages/services.php?cat=renew">ต่ออายุ Account</a></li>
-          <li><a href="pages/services.php?cat=status">เช็กสถานะ Account</a></li>
-          <li><a href="pages/services.php?cat=reset">รีเซทรหัสผ่าน</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/services.php?cat=account">ขอ Account ใหม่</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/services.php?cat=renew">ต่ออายุ Account</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/services.php?cat=status">เช็กสถานะ Account</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/services.php?cat=reset">รีเซทรหัสผ่าน</a></li>
         </ul>
       </div>
+
       <div class="footer__col">
         <div class="footer__col-title">คู่มือการใช้งาน</div>
         <ul>
-          <li><a href="pages/manual.php?cat=network">เครือข่ายและการเชื่อมต่อ</a></li>
-          <li><a href="pages/manual.php?cat=domain">การใช้งาน Domain</a></li>
-          <li><a href="pages/procurement.php?cat=vpn%26mail">VPN & Mail องค์กร</a></li>
-          <li><a href="pages/procurement.php?cat=wifi%26lan">Wi-Fi & LAN</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/manual.php?cat=network">เครือข่ายและการเชื่อมต่อ</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/manual.php?cat=domain">การใช้งาน Domain</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/procurement.php?cat=vpn%26mail">VPN & Mail องค์กร</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/procurement.php?cat=wifi%26lan">Wi-Fi & LAN</a></li>
         </ul>
       </div>
+
       <div class="footer__col">
         <div class="footer__col-title">ลิงก์ด่วน</div>
         <ul>
-          <li><a href="pages/support.php?cat=redlogin">เข้าหน้าแดงไม่ได้</a></li>
-          <li><a href="pages/support.php?cat=hrweb">เข้าเว็บ HR ไม่ได้</a></li>
-          <li><a href="pages/network.php?cat=network">Wi-Fi ภายในองค์กร</a></li>
-          <li><a href="pages/procurement.php?cat=training">อบรมความรู้สารสนเทศ</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/support.php?cat=redlogin">เข้าหน้าแดงไม่ได้</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/support.php?cat=hrweb">เข้าเว็บ HR ไม่ได้</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/network.php?cat=network">Wi-Fi ภายในองค์กร</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/procurement.php?cat=training">อบรมความรู้สารสนเทศ</a></li>
         </ul>
       </div>
     </div>
@@ -119,7 +123,9 @@
   function lbShow() {
     var img = document.getElementById('lb-img');
     img.src = _lbImgs[_lbIdx];
-    _lbScale = 1; _panX = 0; _panY = 0;
+    _lbScale = 1;
+    _panX = 0;
+    _panY = 0;
     _applyTransform();
     document.getElementById('lb-imgwrap').style.cursor = 'grab';
     document.getElementById('lb-counter').textContent =
@@ -149,7 +155,7 @@
     _panY = 0;
     _applyTransform();
   }
-  
+
   document.addEventListener('keydown', function(e) {
     if (document.getElementById('lb-overlay').style.display === 'none') return;
     if (e.key === 'Escape') lbClose();

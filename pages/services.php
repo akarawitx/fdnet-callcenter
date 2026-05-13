@@ -54,7 +54,7 @@ $all_services = [
 
       <!-- ───── ภาพตัวอย่างฟอร์ม ───── -->
       <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
-                  color:var(--clr-text-muted);margin-bottom:10px">ตัวอย่างหน้าฟอร์ม</div>
+                  color:var(--clr-text-muted);margin-bottom:10px">ตัวอย่างการกรอกข้อมูลขอ account ใหม่</div>
       <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:24px;
                   box-shadow:0 2px 12px rgba(0,0,0,.07)">
         <!-- header bar จำลอง browser -->
@@ -113,7 +113,7 @@ $all_services = [
           </div>
           <div style="display:flex;gap:8px">
             <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
-            <span><strong>Email Address</strong> (นามใช้เมล์องค์กร), <strong>เบอร์ภายใน</strong>, <strong>เบอร์มือถือ</strong></span>
+            <span><strong>Email Address</strong> (ห้ามใช้เมลองค์กร), <strong>เบอร์ภายใน</strong>, <strong>เบอร์มือถือ</strong></span>
           </div>
           <div style="display:flex;gap:8px">
             <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
@@ -164,7 +164,7 @@ $all_services = [
         <div style="padding:14px 16px;font-size:.85rem;color:var(--clr-text);line-height:1.75">
           ระบบจะส่ง <strong>Username และ Password เริ่มต้น</strong> ไปยัง Email ที่ระบุไว้
           กรุณา<strong>เปลี่ยนรหัสผ่านทันที</strong>หลังล็อกอินครั้งแรก
-          (ต้องประกอบด้วยตัวอักษร + ตัวเลข อย่างน้อย 8 ตัว)
+          (ต้องประกอบด้วยตัวอักษรภาษาอังกฤษ , อักขระพิเศษ เเละตัวเลข อย่างน้อย 8 ตัวอักษรขึ้นไป)
         </div>
       </div>
 
@@ -359,7 +359,7 @@ $all_services = [
 
       <!-- ───── ภาพตัวอย่างฟอร์ม ───── -->
       <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
-                  color:var(--clr-text-muted);margin-bottom:10px">ตัวอย่างหน้าฟอร์มต่ออายุ</div>
+                  color:var(--clr-text-muted);margin-bottom:10px">ตัวอย่างการกรอกข้อมูล ต่ออายุ Account</div>
       <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:24px;
         box-shadow:0 2px 12px rgba(0,0,0,.07)">
         <!-- browser bar จำลอง -->
@@ -698,8 +698,8 @@ $all_services = [
                  onclick="lbOpen([\'../assets/images/status_step1.png\'], 0)"
                  style="width:100%;border-radius:8px;display:block;cursor:pointer">
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;
-                      gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;
+            gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
               <span>เปิดลิงก์ระบบเช็กสถานะด้านบน</span>
@@ -738,7 +738,7 @@ $all_services = [
                  onclick="lbOpen([\'../assets/images/status_step2.png\'], 0)"
                  style="width:100%;border-radius:8px;display:block;cursor:pointer">
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;gap:8px">
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px">
             <div style="background:#dcfce7;border-radius:10px;padding:12px 14px;
                         font-size:.84rem;color:#166534;line-height:1.7">
               ✅ ระบบส่งผลการตรวจสอบไปยัง <strong>Email ของท่านใน HR</strong> เรียบร้อยแล้ว
@@ -769,11 +769,15 @@ $all_services = [
               onclick="lbOpen([\'../assets/images/status_step1.png\',\'../assets/images/status_step2.png\',\'../assets/images/status_email.png\'], 2)"
               style="width:100%;border-radius:8px;display:block;cursor:pointer">
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;
-                      gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;
+            gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
             <div style="display:flex;gap:8px">
               <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
-              <span>อีเมลจาก <strong>fdnet4141@dhammakaya.center</strong></span>
+              <span>ชื่ออีเมล <strong>OAuthDKC</strong></span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
+              <span>อีเมล <strong>fdnet4141@dhammakaya.center</strong></span>
             </div>
             <div style="display:flex;gap:8px">
               <span style="color:#16a34a;font-weight:700;flex-shrink:0">•</span>
@@ -957,8 +961,7 @@ $all_services = [
               reset_step1.png
             </div>
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;gap:8px;
-                      font-size:.84rem;color:var(--clr-text);line-height:1.7">
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.7">
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
               <span>พิมพ์ <strong>Username หน้าแดง</strong> ในช่อง</span>
@@ -999,11 +1002,14 @@ $all_services = [
               reset_email_otp.png
             </div>
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;gap:8px;
-                      font-size:.84rem;color:var(--clr-text);line-height:1.7">
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.7">
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
               <span>ระบบส่ง Email หัวข้อ <strong>"แจ้งตั้งค่ารหัสผ่านใหม่ (AD Reset)"</strong></span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>ชื่ออีเมลจาก <strong>OAuthDKC</strong></span>
             </div>
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
@@ -1045,8 +1051,7 @@ $all_services = [
               reset_step3.png
             </div>
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;gap:8px;
-                      font-size:.84rem;color:var(--clr-text);line-height:1.7">
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.7">
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
               <span>กรอก <strong>รหัสยืนยัน 6 หลัก</strong> จาก Email</span>
@@ -1089,7 +1094,7 @@ $all_services = [
               reset_success.png
             </div>
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;gap:8px">
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px">
             <div style="background:#dcfce7;border-radius:10px;padding:12px 14px;
                         font-size:.84rem;color:#166534;line-height:1.7">
               ✅ ระบบส่งรหัสยืนยันและลิงก์ตั้งค่าใหม่ไปยัง Email ของท่านเรียบร้อยแล้ว
@@ -1290,7 +1295,7 @@ $all_services = [
         </div>
         <div style="flex:1">
           <div style="font-weight:700;font-size:.93rem;color:var(--clr-text);margin-bottom:8px">
-            รอรับ Computer Name ทาง Email
+            รอรับ Computer Name ทาง Mail
           </div>
           <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;
                       padding:14px 16px;font-size:.85rem;color:#166534;line-height:1.75">
@@ -1528,7 +1533,7 @@ $all_services = [
 
       <!-- Divider + วิธีที่ 2 ขั้นตอนออนไลน์ (ฟอร์มต่ออายุ) -->
       <div style="font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;
-                  color:var(--clr-text-muted);margin-bottom:12px">ขั้นตอน — วิธีฟอร์มต่ออายุออนไลน์</div>
+                  color:var(--clr-text-muted);margin-bottom:12px">ขั้นตอน — การเปลี่ยน Email ออน์ไลน</div>
 
       <div style="border:1px solid var(--clr-border);border-radius:14px;overflow:hidden;margin-bottom:20px">
         <!-- Step 2.1 -->
@@ -1745,8 +1750,8 @@ $all_services = [
               quota_login.png
             </div>
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;
-                      gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;
+            gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
               <span>เปิดลิงก์ <strong>Sophos User Portal</strong> ด้านบน</span>
@@ -1788,8 +1793,8 @@ $all_services = [
               quota_usage.png
             </div>
           </div>
-          <div style="padding:16px;display:flex;flex-direction:column;justify-content:center;
-                      gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
+          <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;
+            gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.75">
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
               <span>ในเมนูซ้าย คลิก <strong>"Internet usage"</strong></span>

@@ -226,7 +226,6 @@ $guides = [
         2. <a href="https://fdnet.dhammakaya.network/fdcom/system/form.php?&sidebarId=12&autocat=5" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> เพื่อขออนุมัติ สำหรับ LAN<br>
         3. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้<br><br>
         สอบถามรายละเอียดเพิ่มเติมที่<br>
-        เบอร์ภายใน: 02-831-1000 ต่อ 2820<br>
         พระพงษ์สันต์ กุลเชฏฺโฐ: 086-822-8849
       </p>
     ',

@@ -264,7 +264,7 @@ $manual_items = [
         ],
       ]) . '
       <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:14px 18px;font-size:.88rem;color:#166534;line-height:1.7;margin-top:20px">
-        📞 หากตั้งค่าไม่สำเร็จ กรุณาติดต่อกองบริหารสารสนเทศ โทร <strong>4141</strong>
+        📞 หากตั้งค่าไม่สำเร็จ กรุณาติดต่อกองบริหารสารสนเทศ โทร <strong>14141</strong>
       </div>
     ',
   ],
@@ -562,7 +562,7 @@ $manual_items = [
                       • <strong>Password</strong> เช่น p+123456<br>
                       • <strong>Computer Name</strong> เช่น b307-sw<br><br>
                       <span style="color:#dc2626"><strong>หมายเหตุ:</strong></span> สำหรับ Notebook ต้องนำเครื่องเข้า Domain ผ่านสายแลนให้เรียบร้อยก่อน จึงจะสามารถปรับไปใช้งานผ่าน WiFi ได้<br><br>
-                      หากมีข้อสงสัย ติดต่อได้ที่เบอร์โทร. <strong>4141</strong>',
+                      หากมีข้อสงสัย ติดต่อได้ที่เบอร์โทร. <strong>14141</strong>',
           'img'     => '../assets/images/manual/domain/win8/win8-0.png',
           'caption' => 'ข้อมูลที่ต้องเตรียมก่อนเริ่ม Join Domain',
         ],
@@ -734,7 +734,7 @@ $manual_items = [
         ],
       ]) . '
       <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:14px 18px;font-size:.88rem;color:#1e3a8a;line-height:1.7;margin-top:20px">
-        💡 หากพบปัญหาระหว่างการเข้า Domain เช่น เครื่องไม่พบ Domain หรือ Credentials ไม่ถูกต้อง กรุณาติดต่อกองบริหารสารสนเทศ โทร <strong>4141</strong>
+        💡 หากพบปัญหาระหว่างการเข้า Domain เช่น เครื่องไม่พบ Domain หรือ Credentials ไม่ถูกต้อง กรุณาติดต่อกองบริหารสารสนเทศ โทร <strong>14141</strong>
       </div>
     ',
   ],
