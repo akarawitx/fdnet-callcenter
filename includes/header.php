@@ -939,6 +939,9 @@ function render_nav_items(array $items, int $depth = 0): void
     </ul>
   </div>
 
+  <script>
+    window.BASE_URL = "<?= BASE_URL ?>";
+  </script>
   <script src="<?= BASE_URL ?>/assets/js/search-index.js"></script>
   <script>
     (function() {
