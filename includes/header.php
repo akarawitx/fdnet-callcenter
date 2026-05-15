@@ -36,6 +36,7 @@ function render_nav_items(array $items, int $depth = 0): void
 
 <head>
   <meta charset="UTF-8">
+  <script>window.BASE_URL = "<?= BASE_URL ?>";</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= htmlspecialchars($page_title) ?> — <?= SITE_NAME ?></title>
   <meta name="description" content="<?= htmlspecialchars($page_description) ?>">
@@ -940,7 +941,6 @@ function render_nav_items(array $items, int $depth = 0): void
   </div>
 
   <script>
-    window.BASE_URL = "<?= BASE_URL ?>";
   </script>
   <script src="<?= BASE_URL ?>/assets/js/search-index.js"></script>
   <script>
