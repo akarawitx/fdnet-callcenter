@@ -10,15 +10,16 @@ define('SITE_EMAIL', 'noc@dhammakaya.center');
 define('SITE_HOURS', 'เปิดทำการ วันจันทร์–เสาร์ เวลา 09:00–17:30 น.');
 
 $host = $_SERVER['HTTP_HOST'] ?? '';
-define(
-    'BASE_URL',
-    (str_starts_with($host, 'localhost') || $host === '127.0.0.1')
-        ? ''                            // localhost
-        : (str_contains($host, 'vm14')
-            ? '/itdiv/makarawit-services'  // vm14 ที่ทำงาน
-            : ''                           // AwardSpace / domain อื่น
-        )
-);
+$script_name = $_SERVER['SCRIPT_NAME'] ?? '';
+
+// ตรวจสอบจาก path จริงของไฟล์แทน hostname
+if (str_starts_with($host, 'localhost') || $host === '127.0.0.1') {
+    define('BASE_URL', '');  // localhost:8000
+} elseif (str_contains($script_name, '/itdiv/makarawit-services')) {
+    define('BASE_URL', '/itdiv/makarawit-services');  // vm14
+} else {
+    define('BASE_URL', '');  // อื่นๆ
+}
 
 // ==============================
 // Navigation Menu Structure

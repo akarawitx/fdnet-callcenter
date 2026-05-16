@@ -7,35 +7,35 @@ $page_title = 'หน้าหลัก';
 
 // ---- Quick services ----
 $quick_services = [
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg>', 'label' => 'ขอ Account ใหม่', 'sub' => 'สมัครบัญชีใหม่', 'url' => 'pages/services.php?cat=account'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>', 'label' => 'ต่ออายุ Account', 'sub' => 'ขยายอายุการใช้งาน', 'url' => 'pages/services.php?cat=renew'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>', 'label' => 'เช็กสถานะ Account', 'sub' => 'ตรวจสอบ / รหัสผ่าน', 'url' => 'pages/services.php?cat=status'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>', 'label' => 'รีเซทรหัสผ่าน', 'sub' => 'ลืม / เปลี่ยน password', 'url' => 'pages/services.php?cat=reset'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>', 'label' => 'ขอ Join Domain', 'sub' => 'เชื่อมคอมกับ Domain', 'url' => 'pages/services.php?cat=domain'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>', 'label' => 'ขอสิทธิ์เข้า Computer', 'sub' => 'ขอสิทธิ์ใช้งาน', 'url' => 'pages/services.php?cat=access'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>', 'label' => 'ขอเปลี่ยน Email', 'sub' => 'แก้ไขอีเมลองค์กร', 'url' => 'pages/services.php?cat=email'],
-  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>', 'label' => 'ขอเพิ่มอินเทอร์เน็ต', 'sub' => 'เพิ่มปริมาณการใช้งาน', 'url' => 'pages/services.php?cat=internet'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg>', 'label' => 'ขอ Account ใหม่', 'sub' => 'สมัครบัญชีใหม่', 'url' => BASE_URL . '/pages/services.php?cat=account'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>', 'label' => 'ต่ออายุ Account', 'sub' => 'ขยายอายุการใช้งาน', 'url' => BASE_URL . '/pages/services.php?cat=renew'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>', 'label' => 'เช็กสถานะ Account', 'sub' => 'ตรวจสอบ / รหัสผ่าน', 'url' => BASE_URL . '/pages/services.php?cat=status'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>', 'label' => 'รีเซทรหัสผ่าน', 'sub' => 'ลืม / เปลี่ยน password', 'url' => BASE_URL . '/pages/services.php?cat=reset'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>', 'label' => 'ขอ Join Domain', 'sub' => 'เชื่อมคอมกับ Domain', 'url' => BASE_URL . '/pages/services.php?cat=domain'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>', 'label' => 'ขอสิทธิ์เข้า Computer', 'sub' => 'ขอสิทธิ์ใช้งาน', 'url' => BASE_URL . '/pages/services.php?cat=access'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>', 'label' => 'ขอเปลี่ยน Email', 'sub' => 'แก้ไขอีเมลองค์กร', 'url' => BASE_URL . '/pages/services.php?cat=email'],
+  ['icon' => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>', 'label' => 'ขอเพิ่มอินเทอร์เน็ต', 'sub' => 'เพิ่มปริมาณการใช้งาน', 'url' => BASE_URL . '/pages/services.php?cat=internet'],
 ];
 
 // ---- Featured guides (Procurement) ----
 $featured_guides = [
-  ['title' => 'Access Control',                                      'desc' => 'ขั้นตอนการขอใช้งาน Access Control',                          'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=accessControl'],
-  ['title' => 'CCTV',                                                'desc' => 'ขั้นตอนการขอติดตั้งกล้องวงจรปิด',                           'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=cctv'],
-  ['title' => 'VPN & Mail องค์กร',                                   'desc' => 'ขั้นตอนการขอใช้งาน VPN และอีเมลองค์กร',                     'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=vpn&mail'],
-  // ['title' => 'กล่องสัญญาณ GBN',                                    'desc' => 'ขั้นตอนการขอใช้งานกล่องสัญญาณ GBN',                         'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=gbn'],
-  // ['title' => 'จอ LED',                                              'desc' => 'ขั้นตอนการขอใช้งานจอ LED',                                   'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=led'],
-  ['title' => 'Server / IP Address',                                 'desc' => 'ขั้นตอนการขอ IP Address ถาวร',                               'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=server'],
-  ['title' => 'Wi-Fi & LAN',                                         'desc' => 'ขั้นตอนการขอใช้งาน Wi-Fi และ LAN',                           'tags' => ['Network'],       'url' => 'pages/procurement.php?cat=wifi&lan'],
-  // ['title' => 'ค่าบริการโทรศัพท์',                                  'desc' => 'ขั้นตอนการขอเบิกค่าบริการโทรศัพท์',                          'tags' => ['บริการ'],        'url' => 'pages/procurement.php?cat=telephonebill'],
-  // ['title' => 'ถ่ายเอกสาร',                                         'desc' => 'ขั้นตอนการขอใช้บริการถ่ายเอกสาร',                            'tags' => ['บริการ'],        'url' => 'pages/procurement.php?cat=printDocument'],
-  ['title' => 'File Share',                                          'desc' => 'ขั้นตอนการขอใช้งาน File Share',                               'tags' => ['บริการ'],        'url' => 'pages/procurement.php?cat=fileShred'],
-  ['title' => 'อบรมความรู้สารสนเทศ',                                'desc' => 'ขั้นตอนการสมัครอบรมความรู้ด้านสารสนเทศ',                     'tags' => ['อบรม'],          'url' => 'pages/procurement.php?cat=training'],
-  ['title' => 'ยืม คืน ซ่อมอุปกรณ์คอมพิวเตอร์',                   'desc' => 'ขั้นตอนการยืม คืน และแจ้งซ่อมอุปกรณ์คอมพิวเตอร์',           'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=it&com'],
-  ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์มัลติมีเดีย',      'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์มัลติมีเดีย',            'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=video'],
-  ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์เครื่องเสียง',     'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์เครื่องเสียง',           'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=audio'],
-  ['title' => 'ยืม-คืน/แจ้งซ่อมวิทยุสื่อสาร',                     'desc' => 'ขั้นตอนการยืม คืน และแจ้งซ่อมวิทยุสื่อสาร',                  'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=radio'],
-  // ['title' => 'การขอใช้งานอุปกรณ์',                                 'desc' => 'ขั้นตอนการขอใช้งานอุปกรณ์ภายในองค์กร',                       'tags' => ['อุปกรณ์'],       'url' => 'pages/procurement.php?cat=equipment'],
-  // ['title' => 'การขอใช้งานสถานที่',                                 'desc' => 'ขั้นตอนการขอใช้พื้นที่ภายในองค์กร',                           'tags' => ['สถานที่'],       'url' => 'pages/procurement.php?cat=location'],
+  ['title' => 'Access Control',                                      'desc' => 'ขั้นตอนการขอใช้งาน Access Control',                          'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=accessControl'],
+  ['title' => 'CCTV',                                                'desc' => 'ขั้นตอนการขอติดตั้งกล้องวงจรปิด',                           'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=cctv'],
+  ['title' => 'VPN & Mail องค์กร',                                   'desc' => 'ขั้นตอนการขอใช้งาน VPN และอีเมลองค์กร',                     'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=vpn&mail'],
+  // ['title' => 'กล่องสัญญาณ GBN',                                    'desc' => 'ขั้นตอนการขอใช้งานกล่องสัญญาณ GBN',                         'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=gbn'],
+  // ['title' => 'จอ LED',                                              'desc' => 'ขั้นตอนการขอใช้งานจอ LED',                                   'tags' => ['อุปกรณ์'],       'url' => BASE_URL . '/pages/procurement.php?cat=led'],
+  ['title' => 'Server / IP Address',                                 'desc' => 'ขั้นตอนการขอ IP Address ถาวร',                               'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=server'],
+  ['title' => 'Wi-Fi & LAN',                                         'desc' => 'ขั้นตอนการขอใช้งาน Wi-Fi และ LAN',                           'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=wifi&lan'],
+  // ['title' => 'ค่าบริการโทรศัพท์',                                  'desc' => 'ขั้นตอนการขอเบิกค่าบริการโทรศัพท์',                          'tags' => ['บริการ'],        'url' => BASE_URL . '/pages/procurement.php?cat=telephonebill'],
+  // ['title' => 'ถ่ายเอกสาร',                                         'desc' => 'ขั้นตอนการขอใช้บริการถ่ายเอกสาร',                            'tags' => ['บริการ'],        'url' => BASE_URL . '/pages/procurement.php?cat=printDocument'],
+  ['title' => 'File Share',                                          'desc' => 'ขั้นตอนการขอใช้งาน File Share',                               'tags' => ['บริการ'],        'url' => BASE_URL . '/pages/procurement.php?cat=fileShred'],
+  ['title' => 'อบรมความรู้สารสนเทศ',                                'desc' => 'ขั้นตอนการสมัครอบรมความรู้ด้านสารสนเทศ',                     'tags' => ['อบรม'],          'url' => BASE_URL . '/pages/procurement.php?cat=training'],
+  ['title' => 'ยืม คืน ซ่อมอุปกรณ์คอมพิวเตอร์',                   'desc' => 'ขั้นตอนการยืม คืน และแจ้งซ่อมอุปกรณ์คอมพิวเตอร์',           'tags' => ['อุปกรณ์'],       'url' => BASE_URL . '/pages/procurement.php?cat=it&com'],
+  ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์มัลติมีเดีย',      'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์มัลติมีเดีย',            'tags' => ['อุปกรณ์'],       'url' => BASE_URL . '/pages/procurement.php?cat=video'],
+  ['title' => 'จัดซื้อ ยืม คืน แจ้งซ่อมอุปกรณ์เครื่องเสียง',     'desc' => 'ขั้นตอนการจัดซื้อและแจ้งซ่อมอุปกรณ์เครื่องเสียง',           'tags' => ['อุปกรณ์'],       'url' => BASE_URL . '/pages/procurement.php?cat=audio'],
+  ['title' => 'ยืม-คืน/แจ้งซ่อมวิทยุสื่อสาร',                     'desc' => 'ขั้นตอนการยืม คืน และแจ้งซ่อมวิทยุสื่อสาร',                  'tags' => ['อุปกรณ์'],       'url' => BASE_URL . '/pages/procurement.php?cat=radio'],
+  // ['title' => 'การขอใช้งานอุปกรณ์',                                 'desc' => 'ขั้นตอนการขอใช้งานอุปกรณ์ภายในองค์กร',                       'tags' => ['อุปกรณ์'],       'url' => BASE_URL . '/pages/procurement.php?cat=equipment'],
+  // ['title' => 'การขอใช้งานสถานที่',                                 'desc' => 'ขั้นตอนการขอใช้พื้นที่ภายในองค์กร',                           'tags' => ['สถานที่'],       'url' => BASE_URL . '/pages/procurement.php?cat=location'],
 ];
 
 require_once 'includes/header.php';
@@ -67,90 +67,93 @@ require_once 'includes/header.php';
     </div>
   </div>
 
-  <!-- INTRO SECTION -->
+  <!-- INTRO SECTION (Carousel) -->
   <section class="page-section intro-section">
-    <div class="intro-wrap">
-      <div class="intro-img">
-        <img src="<?= BASE_URL ?>/assets/images/redlogin.png" alt="กองบริหารสารสนเทศ">
+    <div class="intro-carousel" id="introCarousel">
+
+      <!-- ─── Slide 1 ─── -->
+      <div class="intro-slide active">
+        <div class="intro-wrap">
+          <div class="intro-img">
+            <img src="<?= BASE_URL ?>/assets/images/redlogin.png" alt="Login หน้าแดง">
+          </div>
+          <div class="intro-body">
+            <div class="intro-eyebrow">เกี่ยวกับเรา</div>
+            <h2 class="intro-title">Login หน้าแดง</h2>
+            <p class="intro-desc">
+              ให้บริการอินเทอร์เน็ตและระบบเครือข่ายภายในวัด พร้อมทั้งให้คำปรึกษาและแก้ไขปัญหาด้านสารสนเทศต่างๆ แก่พระภิกษุสามเณรและเจ้าหน้าที่ของวัด
+            </p>
+            <ul class="intro-list">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>ให้บริการอินเทอร์เน็ตผ่านระบบ Wi-Fi และ LAN ภายในวัด</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>ให้คำปรึกษาและแก้ไขปัญหาด้านสารสนเทศ เช่น การเข้าใช้อินเทอร์เน็ต</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>เปิดทำการ วันจันทร์–เสาร์ เวลา 09:00–17:30 น.</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>ติดต่อสอบถามเพิ่มเติมได้ที่ โทร. 02-831-1441 หรือ 02 831 1000 ต่อ 14141</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>ลิงก์เข้าใช้อินเทอร์เน็ต: <a href="https://cyberoam.dhammakaya.network:8090/" target="_blank" rel="noopener" style="color:#1e73be;text-decoration:underline;">cyberoam.dhammakaya.network</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="intro-body">
-        <div class="intro-eyebrow">เกี่ยวกับเรา</div>
-        <h2 class="intro-title">Login หน้าเเดง</h2>
-        <p class="intro-desc">
-          ให้บริการอินเทอร์เน็ตและระบบเครือข่ายภายในวัด พร้อมทั้งให้คำปรึกษาและแก้ไขปัญหาด้านสารสนเทศต่างๆ แก่พระภิกษุสามเณรและเจ้าหน้าที่ของวัด
-        </p>
-        <ul class="intro-list">
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            ให้บริการอินเทอร์เน็ตผ่านระบบ Wi-Fi และ LAN ภายในวัด
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            ให้คำปรึกษาและแก้ไขปัญหาด้านสารสนเทศ เช่น การเข้าใช้อินเทอร์เน็ต
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            เปิดทำการ วันจันทร์–เสาร์ เวลา 09:00–17:30 น.
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            ติดต่อสอบถามเพิ่มเติมได้ที่ โทร. 02-831-1441 หรือ 02 831 1000 ต่อ 14141
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            ลิงก์เข้าใช้อินเทอร์เน็ต: <a href="https://cyberoam.dhammakaya.network:8090/" target="_blank" rel="noopener" style="color:#1e73be;text-decoration:underline;">cyberoam.dhammakaya.network</a>
-          </li>
-        </ul>
+
+      <!-- ─── Slide 2 ─── -->
+      <div class="intro-slide">
+        <div class="intro-wrap">
+          <div class="intro-img">
+            <img src="<?= BASE_URL ?>/assets/images/fdnet.png" alt="ระบบบริการฝ่ายสารสนเทศ">
+          </div>
+          <div class="intro-body">
+            <div class="intro-eyebrow">บริการของเรา</div>
+            <h2 class="intro-title">ระบบบริการฝ่ายสารสนเทศ</h2>
+            <p class="intro-desc">
+              ให้บริการด้านระบบการตรวจสอบสถานะการต่ออายุ Account เเละให้คำปรึกษาเเก้ไขปัญหาด้านสารสนเทศต่างๆ เช่น การเข้าใช้อินเทอร์เน็ต การเชื่อมต่อ Wi-Fi และ LAN รวมถึงบริการ VPN สำหรับการทำงานนอกสถานที่
+            </p>
+            <ul class="intro-list">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>การกรอกข้อมูลขอ Account ใหม่ หรือ ต่ออายุ Account</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>เช็คสถานะ Account หรือ การรีเซตรหัสผ่าน</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>ให้บริการขอ Join Domain หรือ ให้สิทธิ์เข้า Computer</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>ให้บริการขอเปลี่ยน Email เเละ เพิ่มปริมาณอินเตอร์เน็ต</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>ลิงก์เข้าใช้บริการ: <a href="https://fdnet.dhammakaya.network" target="_blank" rel="noopener" style="color:#1e73be;text-decoration:underline;">fdnet.dhammakaya.network</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+      <!-- ─── ลูกศร ─── -->
+      <button class="intro-arrow intro-arrow--prev" onclick="introMove(-1)" aria-label="ก่อนหน้า">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <button class="intro-arrow intro-arrow--next" onclick="introMove(1)" aria-label="ถัดไป">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+
+      <!-- ─── Dots ─── -->
+      <div class="intro-dots" id="introDots"></div>
+
     </div>
   </section>
-
-  <!-- INTRO SECTION 2
-  <section class="page-section intro-section">
-    <div class="intro-wrap intro-wrap--reverse">
-      <div class="intro-body">
-        <div class="intro-eyebrow">บริการของเรา</div>
-        <h2 class="intro-title">กองบริการสารสนเทศ</h2>
-        <p class="intro-desc">
-          ให้บริการด้านระบบเครือข่ายภายในองค์กร ครอบคลุมทั้ง Wi-Fi, LAN, VPN
-          รวมถึงการดูแลและซ่อมบำรุงอุปกรณ์คอมพิวเตอร์ทุกประเภท
-        </p>
-        <ul class="intro-list">
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            ติดตั้งและดูแลระบบเครือข่าย LAN / Wi-Fi
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            บริการ VPN สำหรับการทำงานนอกสถานที่
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            ซ่อมบำรุงและยืม-คืนอุปกรณ์คอมพิวเตอร์
-          </li>
-        </ul>
-      </div>
-      <div class="intro-img">
-        <img src="/assets/images/fdnet.png" alt="ระบบเครือข่าย">
-      </div>
-    </div>
-  </section> -->
 
   <!-- GUIDE SECTION -->
   <div>
@@ -178,6 +181,57 @@ require_once 'includes/header.php';
     </section>
 
 </main>
+
+<script>
+  (function() {
+    const carousel = document.getElementById('introCarousel');
+    if (!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll('.intro-slide'));
+    const dotsEl = document.getElementById('introDots');
+    let current = 0;
+    let timer = null;
+    const DELAY = 20000; // 20 วินาที
+
+    /* ── สร้าง dots อัตโนมัติ ── */
+    slides.forEach((_, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'intro-dot' + (i === 0 ? ' active' : '');
+      btn.setAttribute('aria-label', 'slide ' + (i + 1));
+      btn.addEventListener('click', () => {
+        goTo(i);
+        resetTimer();
+      });
+      dotsEl.appendChild(btn);
+    });
+
+    /* ── เปลี่ยน slide ── */
+    function goTo(n) {
+      if (n === current) return;
+
+      const prev = current;
+      current = (n + slides.length) % slides.length;
+
+      // เพิ่ม class leaving ให้ slide เก่า → เลื่อนออกซ้าย
+      slides[prev].classList.add('leaving');
+      slides[prev].classList.remove('active');
+
+      // slide ใหม่เข้ามาจากขวา
+      slides[current].classList.add('active');
+      dotsEl.children[prev].classList.remove('active');
+      dotsEl.children[current].classList.add('active');
+
+      // ลบ leaving หลัง transition จบ
+      setTimeout(() => {
+        slides[prev].classList.remove('leaving');
+      }, 650);
+    }
+
+    window.introMove = (dir) => {
+      goTo(current + dir);
+    };
+  })();
+</script>
 
 <?php require_once 'includes/footer.php'; ?>
 
@@ -556,6 +610,15 @@ require_once 'includes/header.php';
   .intro-section {
     margin-top: 100px;
     margin-bottom: 100px;
+    padding: 0 48px;
+    /* กันเนื้อหาไม่ให้ล้นขอบ */
+  }
+
+  @media (max-width: 768px) {
+    .intro-section {
+      padding: 0 40px;
+      /* มือถือเว้นน้อยลงหน่อย */
+    }
   }
 
   /* สลับรูปไปขวา */
@@ -680,6 +743,118 @@ require_once 'includes/header.php';
       flex: 0 0 25%;
       /* 4 คอลัมน์บนมือถือ */
       border-bottom: 1px solid var(--clr-border, #e2e8f0);
+    }
+  }
+
+  /* ── Intro Carousel ── */
+  .intro-carousel {
+    position: relative;
+  }
+
+  /* ซ่อน slide ที่ล้นออกนอกกรอบ โดยไม่กระทบลูกศร */
+  .intro-slides-wrap {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+  }
+
+  /* ซ่อน slide ด้วย opacity + transform แทน display:none */
+  .intro-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    /* ต้องกำหนดความสูงขั้นต่ำ หรือให้ active เป็นตัวกำหนด */
+  }
+
+  .intro-slide.active {
+    position: relative;
+    /* ดันความสูง carousel ตาม slide นี้ */
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  /* slide ที่กำลังออก (ไปซ้าย) */
+  .intro-slide.leaving {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateX(-40px);
+    pointer-events: none;
+  }
+
+  /* ลูกศร */
+  .intro-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    color: var(--clr-primary);
+    transition: background .2s, box-shadow .2s;
+    z-index: 5;
+  }
+
+  .intro-arrow:hover {
+    background: var(--clr-primary-pale);
+    box-shadow: var(--shadow-md);
+  }
+
+  .intro-arrow--prev {
+    left: -24px;
+    /* ชิดขอบซ้ายของ padding */
+  }
+
+  .intro-arrow--next {
+    right: -24px;
+    /* ชิดขอบขวาของ padding */
+  }
+
+  /* Dots */
+  .intro-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .intro-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--clr-border);
+    border: none;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+    padding: 0;
+  }
+
+  .intro-dot.active {
+    background: var(--clr-primary);
+    transform: scale(1.3);
+  }
+
+  @media (max-width: 700px) {
+    .intro-arrow--prev {
+      left: -16px;
+    }
+
+    .intro-arrow--next {
+      right: -16px;
     }
   }
 </style>
