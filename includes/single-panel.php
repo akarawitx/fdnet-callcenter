@@ -68,11 +68,11 @@ if ($current) {
       <p>ติดต่อเจ้าหน้าที่โดยตรง</p>
 
       <!-- โทรศัพท์ -->
-      <a href="tel:<?= SITE_PHONE ?>" class="btn btn--primary btn--sm sp-contact__btn" style="margin-bottom:8px">
+      <a href="tel: 028311441" class="btn btn--primary btn--sm sp-contact__btn" style="margin-bottom:8px">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
         </svg>
-        <?= SITE_PHONE ?>
+        028311441
       </a>
 
       <!-- Email -->

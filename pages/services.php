@@ -824,7 +824,7 @@ $all_services = [
           <div style="width:11px;height:11px;border-radius:50%;background:#ef4444;flex-shrink:0"></div>
           <div>
             <span style="font-weight:600;font-size:.87rem">หมดอายุ / ถูกระงับ</span>
-            <span style="font-size:.8rem;color:var(--clr-text-muted);margin-left:8px">ต้องต่ออายุหรือรีเซตรหัสผ่านก่อนใช้งาน</span>
+            <span style="font-size:.8rem;color:var(--clr-text-muted);margin-left:8px">ต้องต่ออายุหรือรีเซทรหัสผ่านก่อนใช้งาน</span>
           </div>
         </div>
       </div>
@@ -855,8 +855,8 @@ $all_services = [
             <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
           </svg>
           <div>
-            <div style="font-weight:700;font-size:.87rem;color:white">รีเซตรหัสผ่าน</div>
-            <div style="font-size:.73rem;color:rgba(255,255,255,.8);margin-top:1px">ไปที่หน้ารีเซต</div>
+            <div style="font-weight:700;font-size:.87rem;color:white">รีเซทรหัสผ่าน</div>
+            <div style="font-size:.73rem;color:rgba(255,255,255,.8);margin-top:1px">ไปที่หน้ารีเซท</div>
           </div>
         </a>
       </div>
@@ -1436,11 +1436,11 @@ $all_services = [
     'cat'   => 'email',
     'icon'  => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
     'title' => 'ขอเปลี่ยน Email',
-    'desc'  => 'ขอเปลี่ยนอีเมลที่ผูกกับ Account หน้าแดง เพื่อใช้รีเซตรหัสผ่านในอนาคต',
+    'desc'  => 'ขอเปลี่ยนอีเมลที่ผูกกับ Account หน้าแดง เพื่อใช้รีเซทรหัสผ่านในอนาคต',
     'extra_html' => '
 
       <p style="font-size:.93rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        Email ที่ผูกกับ Account ใช้สำหรับ<strong>รีเซตรหัสผ่าน</strong>และรับการแจ้งเตือนจากระบบ
+        Email ที่ผูกกับ Account ใช้สำหรับ<strong>รีเซทรหัสผ่าน</strong>และรับการแจ้งเตือนจากระบบ
         หากต้องการเปลี่ยนเป็น Email ใหม่ สามารถทำได้ <strong>3 วิธี</strong>
       </p>
 
@@ -1526,7 +1526,7 @@ $all_services = [
                       display:flex;align-items:center;justify-content:center;
                       color:white;font-size:.72rem;font-weight:700">✓</div>
           <div style="font-size:.85rem;color:#581c87;line-height:1.7">
-            Email ถูกอัปเดตทันที — สามารถใช้ <strong>Email ใหม่รีเซตรหัสผ่าน</strong>ได้เลย
+            Email ถูกอัปเดตทันที — สามารถใช้ <strong>Email ใหม่รีเซทรหัสผ่าน</strong>ได้เลย
           </div>
         </div>
       </div>
@@ -1867,7 +1867,7 @@ $all_services = [
             </tr>
             <tr>
               <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);font-weight:600;white-space:nowrap">Data transfer cycle renewal</td>
-              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);color:var(--clr-text)">วันที่รีเซตยอด Data รายเดือน</td>
+              <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);color:var(--clr-text)">วันที่รีเซทยอด Data รายเดือน</td>
             </tr>
             <tr style="background:var(--clr-bg)">
               <td style="padding:9px 14px;border-bottom:1px solid var(--clr-border);font-weight:600;white-space:nowrap">Internet usage time</td>

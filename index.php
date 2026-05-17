@@ -122,7 +122,7 @@ require_once 'includes/header.php';
                 </svg>การกรอกข้อมูลขอ Account ใหม่ หรือ ต่ออายุ Account</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
-                </svg>เช็กสถานะ Account หรือ การรีเซตรหัสผ่าน</li>
+                </svg>เช็กสถานะ Account หรือ การรีเซทรหัสผ่าน</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>ให้บริการขอ Join Domain หรือ ให้สิทธิ์เข้า Computer</li>
