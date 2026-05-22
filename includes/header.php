@@ -39,7 +39,7 @@ function render_nav_items(array $items, int $depth = 0): void
   <script>
     window.BASE_URL = "<?= BASE_URL ?>";
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
   <title><?= htmlspecialchars($page_title) ?> — <?= SITE_NAME ?></title>
   <meta name="description" content="<?= htmlspecialchars($page_description) ?>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,6 +92,7 @@ function render_nav_items(array $items, int $depth = 0): void
     html {
       scroll-behavior: smooth;
       font-size: 15px;
+      overflow-x: hidden;
     }
 
     body {
@@ -102,6 +103,8 @@ function render_nav_items(array $items, int $depth = 0): void
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      overflow-x: hidden;
+      max-width: 100vw;
     }
 
     a {
@@ -376,6 +379,14 @@ function render_nav_items(array $items, int $depth = 0): void
       margin: 0 auto;
       padding: 32px 24px 48px;
       width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+      .layout__main {
+        padding: 20px 16px 40px;
+      }
     }
 
     .layout--with-sidebar .layout__main {
@@ -670,7 +681,7 @@ function render_nav_items(array $items, int $depth = 0): void
       }
     }
 
-    @media (max-width: 580px) {
+    @media (max-width: 900px) {
       .site-header__search {
         display: none;
       }
@@ -773,9 +784,8 @@ function render_nav_items(array $items, int $depth = 0): void
       font-size: .87rem;
       font-weight: 600;
       color: var(--clr-text);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      white-space: normal;
+      word-break: break-word;
     }
 
     .srch-item__title mark {
@@ -790,9 +800,10 @@ function render_nav_items(array $items, int $depth = 0): void
       font-size: .76rem;
       color: var(--clr-text-muted);
       margin-top: 2px;
-      white-space: nowrap;
+      display: -webkit-box;
+      /* -webkit-line-clamp: 2; */
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      text-overflow: ellipsis;
     }
 
     .srch-item__badge {
@@ -843,8 +854,61 @@ function render_nav_items(array $items, int $depth = 0): void
     @media (max-width: 580px) {
       .search-dropdown {
         width: calc(100vw - 32px);
-        right: -16px
+        right: -16px;
       }
+    }
+
+    /* Mobile sidebar search */
+    .mobile-search-wrap {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--clr-border);
+    }
+
+    .mobile-search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--clr-bg);
+      border: 1px solid var(--clr-border);
+      border-radius: 8px;
+      padding: 0 12px;
+    }
+
+    .mobile-search-box input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-family: var(--font-th);
+      font-size: .88rem;
+      color: var(--clr-text);
+      padding: 10px 0;
+      width: 100%;
+    }
+
+    .mobile-search-box input::placeholder {
+      color: var(--clr-text-light);
+    }
+
+    #mobile-search-box .search-dropdown {
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: calc(100% + 6px);
+    }
+
+    #mobile-search-box .srch-item__title {
+      white-space: normal;
+      word-break: break-word;
+      overflow: visible;
+      text-overflow: unset;
+    }
+
+    #mobile-search-box .srch-item__desc {
+      white-space: normal;
+      word-break: break-word;
+      overflow: visible;
+      display: block;
     }
   </style>
 </head>
@@ -903,6 +967,26 @@ function render_nav_items(array $items, int $depth = 0): void
       </div>
       <button class="mobile-nav__close" id="mobile-close-btn">✕</button>
     </div>
+    <div class="mobile-search-wrap">
+      <div class="mobile-search-box" id="mobile-search-box" style="position:relative">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="search" placeholder="ค้นหาคู่มือ, บริการ..." id="mobile-search-input" autocomplete="off">
+        <div class="search-dropdown" id="mobile-search-dropdown" role="listbox">
+          <div class="search-dropdown__inner" id="mobile-search-results"></div>
+          <div class="search-dropdown__empty" id="mobile-search-empty" style="display:none">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <span>ไม่พบผลลัพธ์</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <ul class="mobile-menu-list">
       <?php foreach (get_navigation() as $item):
         $has = !empty($item['children']);
@@ -1127,6 +1211,75 @@ function render_nav_items(array $items, int $depth = 0): void
   </script>
 
   <script>
+    // Mobile sidebar search
+    (function() {
+      var input = document.getElementById('mobile-search-input');
+      var dropdown = document.getElementById('mobile-search-dropdown');
+      var results = document.getElementById('mobile-search-results');
+      var empty = document.getElementById('mobile-search-empty');
+      var box = document.getElementById('mobile-search-box');
+      if (!input) return;
+      var index = window.SITE_SEARCH_INDEX || [];
+
+      function render(q) {
+        var tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+        var scored;
+        if (!tokens.length) {
+          scored = index.slice(0, 6).map(function(item) {
+            return {
+              item: item,
+              s: 1
+            };
+          });
+        } else {
+          scored = index.map(function(item) {
+              var s = 0;
+              tokens.forEach(function(t) {
+                if (item.title.toLowerCase().indexOf(t) !== -1) s += 10;
+                if (item.desc.toLowerCase().indexOf(t) !== -1) s += 3;
+              });
+              return {
+                item: item,
+                s: s
+              };
+            }).filter(function(r) {
+              return r.s > 0;
+            })
+            .sort(function(a, b) {
+              return b.s - a.s;
+            })
+            .slice(0, 8);
+        }
+        if (!scored.length) {
+          results.innerHTML = '';
+          empty.style.display = 'flex';
+          return;
+        }
+        empty.style.display = 'none';
+        results.innerHTML = scored.map(function(r) {
+          return '<a class="srch-item" href="' + r.item.url + '">' +
+            '<div class="srch-item__body">' +
+            '<div class="srch-item__title">' + r.item.title + '</div>' +
+            '<div class="srch-item__desc">' + r.item.desc + '</div>' +
+            '</div>' +
+            '<span class="srch-item__badge">' + r.item.section + '</span>' +
+            '</a>';
+        }).join('');
+      }
+
+      input.addEventListener('input', function() {
+        dropdown.classList.add('is-open');
+        render(input.value.trim());
+      });
+      input.addEventListener('focus', function() {
+        dropdown.classList.add('is-open');
+        render(input.value.trim());
+      });
+      document.addEventListener('click', function(e) {
+        if (!box.contains(e.target)) dropdown.classList.remove('is-open');
+      });
+    })();
+
     document.addEventListener('DOMContentLoaded', function() {
       var overlay = document.getElementById('mobile-overlay');
       var mobileNav = document.getElementById('mobile-nav');

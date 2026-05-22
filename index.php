@@ -21,11 +21,11 @@ $quick_services = [
 $featured_guides = [
   ['title' => 'Access Control',                                      'desc' => 'ขั้นตอนการขอใช้งาน Access Control',                          'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=accessControl'],
   ['title' => 'CCTV',                                                'desc' => 'ขั้นตอนการขอติดตั้งกล้องวงจรปิด',                           'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=cctv'],
-  ['title' => 'VPN & Mail องค์กร',                                   'desc' => 'ขั้นตอนการขอใช้งาน VPN และอีเมลองค์กร',                     'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=vpn&mail'],
+  ['title' => 'VPN & Mail องค์กร',                                   'desc' => 'ขั้นตอนการขอใช้งาน VPN และอีเมลองค์กร',                     'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=vpn%26mail'],
   // ['title' => 'กล่องสัญญาณ GBN',                                    'desc' => 'ขั้นตอนการขอใช้งานกล่องสัญญาณ GBN',                         'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=gbn'],
   // ['title' => 'จอ LED',                                              'desc' => 'ขั้นตอนการขอใช้งานจอ LED',                                   'tags' => ['อุปกรณ์'],       'url' => BASE_URL . '/pages/procurement.php?cat=led'],
   ['title' => 'Server / IP Address',                                 'desc' => 'ขั้นตอนการขอ IP Address ถาวร',                               'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=server'],
-  ['title' => 'Wi-Fi & LAN',                                         'desc' => 'ขั้นตอนการขอใช้งาน Wi-Fi และ LAN',                           'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=wifi&lan'],
+  ['title' => 'Wi-Fi & LAN',                                         'desc' => 'ขั้นตอนการขอใช้งาน Wi-Fi และ LAN',                           'tags' => ['Network'],       'url' => BASE_URL . '/pages/procurement.php?cat=wifi%26lan'],
   // ['title' => 'ค่าบริการโทรศัพท์',                                  'desc' => 'ขั้นตอนการขอเบิกค่าบริการโทรศัพท์',                          'tags' => ['บริการ'],        'url' => BASE_URL . '/pages/procurement.php?cat=telephonebill'],
   // ['title' => 'ถ่ายเอกสาร',                                         'desc' => 'ขั้นตอนการขอใช้บริการถ่ายเอกสาร',                            'tags' => ['บริการ'],        'url' => BASE_URL . '/pages/procurement.php?cat=printDocument'],
   ['title' => 'File Share',                                          'desc' => 'ขั้นตอนการขอใช้งาน File Share',                               'tags' => ['บริการ'],        'url' => BASE_URL . '/pages/procurement.php?cat=fileShred'],
@@ -608,16 +608,43 @@ require_once 'includes/header.php';
   }
 
   .intro-section {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding: 0 48px;
-    /* กันเนื้อหาไม่ให้ล้นขอบ */
+    margin-top: 80px;
+    margin-bottom: 60px;
+    padding: 0 40px;
   }
 
   @media (max-width: 768px) {
     .intro-section {
-      padding: 0 40px;
-      /* มือถือเว้นน้อยลงหน่อย */
+      margin-top: 60px;
+      margin-bottom: 40px;
+      padding: 0 24px;
+    }
+
+    .intro-arrow--prev {
+      left: -12px;
+    }
+
+    .intro-arrow--next {
+      right: -12px;
+    }
+
+    .intro-arrow {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .intro-section {
+      padding: 0 16px;
+    }
+
+    .intro-arrow--prev {
+      left: -8px;
+    }
+
+    .intro-arrow--next {
+      right: -8px;
     }
   }
 
@@ -727,22 +754,42 @@ require_once 'includes/header.php';
 
   @media (max-width: 768px) {
     .hero__strip-outer {
-      width: calc(100% - 32px);
+      width: calc(100% - 24px);
       bottom: -28px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .hero-wrapper {
-      margin-bottom: 52px;
+      margin-bottom: 56px;
     }
 
     .hero__strip {
       flex-wrap: wrap;
+      border-radius: var(--radius-lg, 12px);
     }
 
     .hero__strip-item {
       flex: 0 0 25%;
-      /* 4 คอลัมน์บนมือถือ */
       border-bottom: 1px solid var(--clr-border, #e2e8f0);
+      padding: 12px 6px;
+      min-width: 0;
+    }
+
+    .hero__strip-label {
+      font-size: 0.65rem;
+      line-height: 1.3;
+    }
+
+    .hero__strip-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .hero__strip-item {
+      flex: 0 0 33.333%;
     }
   }
 
@@ -764,28 +811,25 @@ require_once 'includes/header.php';
     left: 0;
     width: 100%;
     opacity: 0;
-    transform: translateX(40px);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-      transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(0);
+    transition: opacity 0.5s ease;
     pointer-events: none;
-    /* ต้องกำหนดความสูงขั้นต่ำ หรือให้ active เป็นตัวกำหนด */
   }
 
   .intro-slide.active {
     position: relative;
-    /* ดันความสูง carousel ตาม slide นี้ */
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
   }
 
-  /* slide ที่กำลังออก (ไปซ้าย) */
+  /* slide ที่กำลังออก */
   .intro-slide.leaving {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translateX(0);
     pointer-events: none;
   }
 

@@ -945,14 +945,14 @@ $all_services = [
                       display:flex;align-items:center;justify-content:center;
                       color:white;font-size:.72rem;font-weight:700">1</div>
           <span style="font-weight:600;font-size:.9rem;color:var(--clr-primary-dark)">
-            กรอก Username แล้วกด "ขอรีเซ็ตรหัสผ่าน"
+            กรอก Username แล้วกด "ขอรีเซ็ทรหัสผ่าน"
           </span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
           <div style="padding:12px;border-right:1px solid var(--clr-border)">
             <img src="../assets/images/reset_step1.png"
               alt="หน้าจอกรอก Username เพื่อรีเซทรหัสผ่าน"
-              onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_email_otp.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 0)"
+              onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_step2.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 0)"
               style="width:100%;border-radius:8px;display:block;cursor:pointer"
               onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#f0f4ff;border-radius:8px;padding:20px;min-height:80px;
@@ -972,7 +972,7 @@ $all_services = [
             </div>
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
-              <span>กดปุ่ม <strong>"ขอรีเซ็ตรหัสผ่าน"</strong></span>
+              <span>กดปุ่ม <strong>"ขอรีเซ็ทรหัสผ่าน"</strong></span>
             </div>
           </div>
         </div>
@@ -986,20 +986,20 @@ $all_services = [
                       display:flex;align-items:center;justify-content:center;
                       color:white;font-size:.72rem;font-weight:700">2</div>
           <span style="font-weight:600;font-size:.9rem;color:var(--clr-primary-dark)">
-            เปิด Email แล้วคัดลอกรหัส OTP 6 หลัก
+            รับรหัสยืนยัน 6 หลักทาง Email แล้วกรอกในระบบ
           </span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
           <div style="padding:12px;border-right:1px solid var(--clr-border)">
-            <img src="../assets/images/reset_email_otp.png"
-              alt="Email OTP รีเซทรหัสผ่าน"
-              onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_email_otp.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 1)"
+            <img src="../assets/images/reset_step2.png"
+              alt="หน้าจอรับรหัสยืนยัน OTP ทาง Email"
+              onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_step2.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 1)"
               style="width:100%;border-radius:8px;display:block;cursor:pointer"
               onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#f0f4ff;border-radius:8px;padding:20px;min-height:80px;
                         flex-direction:column;align-items:center;justify-content:center;
                         gap:4px;color:#94a3b8;font-size:.75rem">
-              reset_email_otp.png
+              reset_step2.png
             </div>
           </div>
           <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.7">
@@ -1009,15 +1009,15 @@ $all_services = [
             </div>
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
-              <span>ชื่ออีเมลจาก <strong>OAuthDKC</strong></span>
+              <span>ส่งจาก <strong>OAuthDKC</strong> (fdnet4141@dhammakaya.center)</span>
             </div>
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
-              <span>จาก <strong>fdnet4141@dhammakaya.center</strong></span>
+              <span>กรอก <strong>รหัสยืนยัน 6 หลัก</strong> ในช่อง แล้วกด <strong>"ยืนยันรหัส"</strong></span>
             </div>
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
-              <span>คัดลอก <strong>รหัส 6 หลัก</strong> ที่แสดงในเมล</span>
+              <span>หากไม่พบ Email ให้ตรวจสอบโฟลเดอร์ <strong>Junk / Spam</strong></span>
             </div>
             <div style="background:#fef3c7;border:1px solid #fde68a;border-radius:8px;
                         padding:8px 10px;font-size:.79rem;color:#92400e">
@@ -1035,14 +1035,14 @@ $all_services = [
                       display:flex;align-items:center;justify-content:center;
                       color:white;font-size:.72rem;font-weight:700">3</div>
           <span style="font-weight:600;font-size:.9rem;color:var(--clr-primary-dark)">
-            กรอกรหัส OTP และตั้งรหัสผ่านใหม่
+            ตั้งรหัสผ่านใหม่ให้ครบเงื่อนไข แล้วกด "บันทึกรหัสผ่านใหม่"
           </span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
           <div style="padding:12px;border-right:1px solid var(--clr-border)">
             <img src="../assets/images/reset_step3.png"
-              alt="หน้าจอกรอก OTP และรหัสผ่านใหม่"
-              onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_email_otp.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 2)"
+              alt="หน้าจอตั้งรหัสผ่านใหม่"
+              onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_step2.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 2)"
               style="width:100%;border-radius:8px;display:block;cursor:pointer"
               onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#f0f4ff;border-radius:8px;padding:20px;min-height:80px;
@@ -1054,11 +1054,7 @@ $all_services = [
           <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px;font-size:.84rem;color:var(--clr-text);line-height:1.7">
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
-              <span>กรอก <strong>รหัสยืนยัน 6 หลัก</strong> จาก Email</span>
-            </div>
-            <div style="display:flex;gap:8px">
-              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
-              <span>ตั้ง <strong>รหัสผ่านใหม่</strong> ตามเงื่อนไข</span>
+              <span>กรอก <strong>รหัสผ่านใหม่</strong> ในช่อง</span>
             </div>
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
@@ -1066,7 +1062,15 @@ $all_services = [
             </div>
             <div style="display:flex;gap:8px">
               <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
-              <span>กด <strong>"บันทึกรหัสผ่านใหม่"</strong></span>
+              <span>ระบบแสดง <strong>ระดับความปลอดภัย</strong> ของรหัสผ่านแบบ Real-time</span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <span style="color:var(--clr-primary);font-weight:700;flex-shrink:0">•</span>
+              <span>กด <strong>"บันทึกรหัสผ่านใหม่"</strong> เมื่อครบทุกเงื่อนไข</span>
+            </div>
+            <div style="background:#fef3c7;border:1px solid #fde68a;border-radius:8px;
+                        padding:8px 10px;font-size:.79rem;color:#92400e">
+              ⚠️ หลีกเลี่ยงรหัสที่มีรูปแบบปีที่เดาได้ง่าย เช่น 2024, 2567
             </div>
           </div>
         </div>
@@ -1079,13 +1083,13 @@ $all_services = [
           <div style="width:24px;height:24px;background:#16a34a;border-radius:50%;flex-shrink:0;
                       display:flex;align-items:center;justify-content:center;
                       color:white;font-size:.72rem;font-weight:700">✓</div>
-          <span style="font-weight:600;font-size:.9rem;color:#166534">เสร็จสิ้น — ส่งรหัสสำเร็จ</span>
+          <span style="font-weight:600;font-size:.9rem;color:#166534">เสร็จสิ้น — เปลี่ยนรหัสสำเร็จ</span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
           <div style="padding:12px;border-right:1px solid #bbf7d0">
             <img src="../assets/images/reset_success.png"
-                 alt="หน้าจอส่งรหัสสำเร็จ"
-                 onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_email_otp.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 3)"
+                 alt="หน้าจอเปลี่ยนรหัสสำเร็จ"
+                 onclick="lbOpen([\'../assets/images/reset_step1.png\',\'../assets/images/reset_step2.png\',\'../assets/images/reset_step3.png\',\'../assets/images/reset_success.png\'], 3)"
                  style="width:100%;border-radius:8px;display:block;cursor:pointer"
                  onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">
             <div style="display:none;background:#f0fdf4;border-radius:8px;padding:20px;min-height:80px;
@@ -1097,7 +1101,8 @@ $all_services = [
           <div style="padding:16px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px">
             <div style="background:#dcfce7;border-radius:10px;padding:12px 14px;
                         font-size:.84rem;color:#166534;line-height:1.7">
-              ✅ ระบบส่งรหัสยืนยันและลิงก์ตั้งค่าใหม่ไปยัง Email ของท่านเรียบร้อยแล้ว
+              ✅ <strong>เปลี่ยนรหัสสำเร็จ</strong><br>
+              รีเซ็ทรหัสผ่าน AD สำเร็จแล้ว ท่านสามารถเข้าใช้งานระบบได้ทันที
             </div>
             <div style="font-size:.82rem;color:var(--clr-text-muted);line-height:1.6">
               สามารถล็อกอินด้วยรหัสผ่านใหม่ได้ทันทีหลังบันทึกสำเร็จ
@@ -1127,9 +1132,13 @@ $all_services = [
           <span style="color:#22c55e;font-weight:700;font-size:1rem;flex-shrink:0">✔</span>
           <span>มี<strong>อักขระพิเศษ</strong>อย่างน้อย 1 ตัว</span>
         </div>
-        <div style="display:flex;align-items:center;gap:8px;grid-column:1/-1">
+        <div style="display:flex;align-items:center;gap:8px">
           <span style="color:#ef4444;font-weight:700;font-size:1rem;flex-shrink:0">✘</span>
           <span><strong>ห้ามใช้รหัสผ่านเดิม</strong>ซ้ำ</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="color:#ef4444;font-weight:700;font-size:1rem;flex-shrink:0">✘</span>
+          <span><strong>ห้ามใช้รูปแบบปี</strong> เช่น 2024, 2567</span>
         </div>
       </div>
 
@@ -1154,6 +1163,12 @@ $all_services = [
             <td style="padding:9px 14px;border:1px solid var(--clr-border);text-align:center;
                        color:#ef4444;font-weight:700">✘</td>
             <td style="padding:9px 14px;border:1px solid var(--clr-border)">ไม่มีอักขระพิเศษ</td>
+          </tr>
+          <tr>
+            <td style="padding:9px 14px;border:1px solid var(--clr-border);font-family:monospace">Hello@2024</td>
+            <td style="padding:9px 14px;border:1px solid var(--clr-border);text-align:center;
+                       color:#ef4444;font-weight:700">✘</td>
+            <td style="padding:9px 14px;border:1px solid var(--clr-border)">มีรูปแบบปีที่เดาได้ง่าย</td>
           </tr>
         </tbody>
       </table>

@@ -39,6 +39,23 @@ if ($current) {
 }
 ?>
 
+<!-- MOBILE CATEGORY MENU (แสดงเฉพาะมือถือ) -->
+<div class="sp-mobile-cats">
+  <div class="sp-mobile-cats__label">เลือกหมวดหมู่</div>
+  <div class="sp-mobile-cats__scroll">
+    <a href="<?= htmlspecialchars($panel_base) ?>"
+       class="sp-mobile-cat-btn <?= $current === '' ? 'sp-mobile-cat-btn--active' : '' ?>">
+      ทั้งหมด
+    </a>
+    <?php foreach ($panel_menu as $key => $item): ?>
+      <a href="<?= htmlspecialchars($panel_base) ?>?cat=<?= urlencode($key) ?>"
+         class="sp-mobile-cat-btn <?= $current === $key ? 'sp-mobile-cat-btn--active' : '' ?>">
+        <?= htmlspecialchars($item['label']) ?>
+      </a>
+    <?php endforeach; ?>
+  </div>
+</div>
+
 <div class="sp-layout">
 
   <!-- SIDEBAR -->
@@ -198,11 +215,17 @@ if ($current) {
     grid-template-columns: 210px 1fr;
     gap: 28px;
     align-items: start;
+    min-width: 0;
   }
 
   @media (max-width: 800px) {
     .sp-layout {
       grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .sp-sidebar {
+      display: none;
     }
   }
 
@@ -291,8 +314,76 @@ if ($current) {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    /* เต็มความกว้าง */
     width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    .sp-single {
+      padding: 20px 16px;
+      gap: 18px;
+      border-radius: 12px;
+    }
+
+    /* ครอบทุกอย่างใน extra ไม่ให้ล้น */
+    .sp-single__extra {
+      overflow: hidden !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .sp-single__extra * {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      word-break: break-word !important;
+    }
+
+    /* ยุบ grid ทุกแบบ */
+    .sp-single__extra [style*="display:grid"],
+    .sp-single__extra [style*="display: grid"] {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    /* ยุบ flex row ที่มีรูป+ข้อความ */
+    .sp-single__extra [style*="display:grid"][style*="grid-template-columns"] {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .sp-single__extra img {
+      max-width: 100% !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    /* ปุ่มใหญ่ให้ wrap */
+    .sp-single__extra a[style*="justify-content:space-between"] {
+      flex-wrap: wrap !important;
+      gap: 8px !important;
+    }
+
+    /* border-right ระหว่างรูป+ข้อความ ให้เอาออก */
+    .sp-single__extra [style*="border-right:1px solid"],
+    .sp-single__extra [style*="border-right: 1px solid"] {
+      border-right: none !important;
+    }
+
+    /* table scroll แทนล้น */
+    .sp-single__extra table {
+      display: block !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      width: 100% !important;
+    }
+
+    /* width fixed ใน inline style ให้ reset */
+    .sp-single__extra [style*="width:130px"],
+    .sp-single__extra [style*="width: 130px"] {
+      width: 100% !important;
+      min-height: unset !important;
+    }
   }
 
   .sp-single__head {
@@ -455,6 +546,25 @@ if ($current) {
     text-overflow: ellipsis;
   }
 
+  @media (max-width: 768px) {
+    .sp-grid-card {
+      padding: 14px 16px;
+    }
+
+    .sp-grid-card__title {
+      font-size: .9rem;
+    }
+
+    .sp-grid-card__desc {
+      white-space: normal;
+      font-size: .78rem;
+      display: -webkit-box;
+      /* -webkit-line-clamp: 2; */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
   .sp-grid-card__time {
     font-size: .75rem;
     color: var(--clr-text-muted);
@@ -463,5 +573,71 @@ if ($current) {
     border-radius: 20px;
     white-space: nowrap;
     flex-shrink: 0;
+  }
+
+  /* ============================================================
+   MOBILE CATEGORY SCROLL MENU
+   ============================================================ */
+  .sp-mobile-cats {
+    display: none;
+    margin-bottom: 16px;
+  }
+
+  .sp-mobile-cats__label {
+    font-size: .72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: var(--clr-text-muted);
+    margin-bottom: 8px;
+    padding: 0 2px;
+  }
+
+  .sp-mobile-cats__scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .sp-mobile-cats__scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sp-mobile-cat-btn {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: .82rem;
+    font-weight: 500;
+    background: var(--clr-surface);
+    border: 1.5px solid var(--clr-border);
+    color: var(--clr-text-muted);
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: background .15s, border-color .15s, color .15s;
+  }
+
+  .sp-mobile-cat-btn:hover {
+    background: var(--clr-primary-pale);
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+  }
+
+  .sp-mobile-cat-btn--active {
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  @media (max-width: 800px) {
+    .sp-mobile-cats {
+      display: block;
+    }
   }
 </style>
