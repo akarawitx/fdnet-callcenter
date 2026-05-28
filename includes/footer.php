@@ -365,6 +365,9 @@
     opacity: .5;
   }
 </style>
+
+<script defer src='<?= BASE_URL ?>/assets/js/footer.js'></script>
+
 </body>
 
 </html>
