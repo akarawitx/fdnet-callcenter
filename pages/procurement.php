@@ -624,7 +624,7 @@ $guides = [
   ],
 ];
 
-$display_guides = $cat ? array_filter($guides, fn($g) => $g['cat'] === $cat) : $guides;
+$display_guides = $cat ? array_filter($guides, function($g) use ($cat) { return $g['cat'] === $cat; }) : $guides;
 $display_guides = array_values($display_guides);
 
 require_once '../includes/header.php';

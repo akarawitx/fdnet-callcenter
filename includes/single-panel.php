@@ -22,18 +22,21 @@
 /** @var array   $panel_items */
 /** @var bool    $panel_contact */
 
-$panel_cat     = $panel_cat     ?? '';
-$panel_title   = $panel_title   ?? '';
-$panel_base    = $panel_base    ?? '';
-$panel_menu    = $panel_menu    ?? [];
-$panel_items   = $panel_items   ?? [];
-$panel_contact = $panel_contact ?? true;
+$panel_cat     = isset($panel_cat)     ? $panel_cat     : '';
+$panel_title   = isset($panel_title)   ? $panel_title   : '';
+$panel_base    = isset($panel_base)    ? $panel_base    : '';
+$panel_menu    = isset($panel_menu)    ? $panel_menu    : array();
+$panel_items   = isset($panel_items)   ? $panel_items   : array();
+$panel_contact = isset($panel_contact) ? $panel_contact : true;
 
 $current = $panel_cat;
 
 // กรองรายการตาม cat
 if ($current) {
-  $filtered = array_values(array_filter($panel_items, fn($x) => $x['cat'] === $current));
+  $current_cat = $current;
+  $filtered = array_values(array_filter($panel_items, function ($x) use ($current_cat) {
+    return $x['cat'] === $current_cat;
+  }));
 } else {
   $filtered = array_values($panel_items);
 }
@@ -44,12 +47,12 @@ if ($current) {
   <div class="sp-mobile-cats__label">เลือกหมวดหมู่</div>
   <div class="sp-mobile-cats__scroll">
     <a href="<?= htmlspecialchars($panel_base) ?>"
-       class="sp-mobile-cat-btn <?= $current === '' ? 'sp-mobile-cat-btn--active' : '' ?>">
+      class="sp-mobile-cat-btn <?= $current === '' ? 'sp-mobile-cat-btn--active' : '' ?>">
       ทั้งหมด
     </a>
     <?php foreach ($panel_menu as $key => $item): ?>
       <a href="<?= htmlspecialchars($panel_base) ?>?cat=<?= urlencode($key) ?>"
-         class="sp-mobile-cat-btn <?= $current === $key ? 'sp-mobile-cat-btn--active' : '' ?>">
+        class="sp-mobile-cat-btn <?= $current === $key ? 'sp-mobile-cat-btn--active' : '' ?>">
         <?= htmlspecialchars($item['label']) ?>
       </a>
     <?php endforeach; ?>

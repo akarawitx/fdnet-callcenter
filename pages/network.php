@@ -47,7 +47,7 @@ $network_items = [
             </tr>
             <tr style="background:#f2f2f2">
               <td style="padding:10px">อาคารพระผู้ปราบมาร1-2</td>
-              <td style="padding:10px">PIM-LANWAT-1-2-CNA</td>
+              <td style="padding:10px">PM-LANWAT-1-2-CNA</td>
             </tr>
             <tr style="background:#f2f2f2">
               <td style="padding:10px">อาคารพระผู้ปราบมาร1-2</td>

@@ -10,7 +10,7 @@ $sections = [
 ];
 
 // ── Helper: สร้าง accordion item ──────────────────────────────────
-function faq_accordion(string $id, string $title, string $body_html): string
+function faq_accordion($id, $title, $body_html)
 {
   return '
     <div class="faq-acc" id="faq-' . $id . '">
@@ -31,7 +31,7 @@ function faq_accordion(string $id, string $title, string $body_html): string
 }
 
 // ── Helper: inline action button ─────────────────────────────────
-function faq_action_btn(string $url, string $label, string $color = 'primary'): string
+function faq_action_btn($url, $label, $color = 'primary')
 {
   $styles = [
     'primary' => 'background:var(--clr-primary);color:#fff;border:1.5px solid var(--clr-primary);',
@@ -50,7 +50,7 @@ function faq_action_btn(string $url, string $label, string $color = 'primary'): 
 }
 
 // ── Helper: สร้างกล่อง "สาเหตุที่พบบ่อย" ──────────────────────
-function faq_cause_box(string $title, string $desc, string $type = 'info'): string
+function faq_cause_box($title, $desc, $type = 'info')
 {
   $colors = [
     'info'    => ['border' => '#cbd5e1', 'dot' => '#64748b'],
@@ -72,7 +72,7 @@ function faq_cause_box(string $title, string $desc, string $type = 'info'): stri
 }
 
 // ── Helper: divider label ─────────────────────────────────────────
-function faq_divider(string $label): string
+function faq_divider($label)
 {
   return '<div style="margin:16px 0 12px"></div>';
 }

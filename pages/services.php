@@ -1920,7 +1920,7 @@ $all_services = [
   ],
 ];
 
-$display_services = $cat ? array_filter($all_services, fn($s) => $s['cat'] === $cat) : $all_services;
+$display_services = $cat ? array_filter($all_services, function($s) use ($cat) { return $s['cat'] === $cat; }) : $all_services;
 $display_services = array_values($display_services);
 
 require_once '../includes/header.php';

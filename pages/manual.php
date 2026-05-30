@@ -15,7 +15,7 @@ $sections = [
 // ───────────────────────────────────────────────────────────────────
 // Helper: สร้าง accordion item พร้อมรูปภาพขั้นตอน
 // ───────────────────────────────────────────────────────────────────
-function make_accordion(string $id, string $title, string $icon, array $steps): string
+function make_accordion($id, $title, $icon, $steps)
 {
   $steps_html = '';
   foreach ($steps as $i => $step) {

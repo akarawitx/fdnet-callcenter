@@ -7,7 +7,7 @@ if (!isset($page_title))       $page_title       = SITE_NAME;
 if (!isset($page_description)) $page_description = 'ศูนย์บริการสารสนเทศ วัดพระธรรมกาย — บริการให้คำปรึกษา ติดตั้ง และแก้ไขปัญหาด้านสารสนเทศ';
 
 // Recursive helper: render one level of nav items
-function render_nav_items(array $items, int $depth = 0): void
+function render_nav_items($items, $depth = 0)
 {
   $class = $depth === 0 ? 'nav__list' : 'nav__dropdown';
   echo '<ul class="' . $class . '">';

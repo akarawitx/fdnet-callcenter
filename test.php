@@ -3,7 +3,7 @@
  * test_server.php
  * วางไฟล์นี้ไว้ที่ root ของโปรเจกต์ เช่น \\vm14\itdiv\makarawit-services\test_server.php
  * เข้าผ่าน http://vm14/itdiv/makarawit-services/test_server.php
- * 
+ *
  * ไฟล์นี้ทดสอบว่า vm14 รองรับอะไรบ้างสำหรับระบบ Analytics
  * ลบออกหลังทดสอบเสร็จแล้ว
  */
@@ -15,7 +15,7 @@ header('Content-Type: text/html; charset=utf-8');
 // ============================================================
 // Helper
 // ============================================================
-function check(string $label, bool $pass, string $detail = ''): string
+function check($label, $pass, $detail = '')
 {
     $icon  = $pass ? '✅' : '❌';
     $color = $pass ? '#166534' : '#991b1b';
@@ -33,7 +33,7 @@ function check(string $label, bool $pass, string $detail = ''): string
     </div>';
 }
 
-function section(string $title): string
+function section($title)
 {
     return '<h2 style="font-size:1rem;font-weight:600;color:#1e293b;
                 margin:28px 0 12px;padding-bottom:8px;
@@ -105,7 +105,8 @@ $json_ok  = false;
 $json_msg = '';
 $json_file = __DIR__ . '/analytics/_test_log.json';
 
-$log_entry = ['ts' => date('c'), 'page' => 'test', 'ip' => $_SERVER['REMOTE_ADDR'] ?? ''];
+$remote_addr = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
+$log_entry = array('ts' => date('c'), 'page' => 'test', 'ip' => $remote_addr);
 if (file_put_contents($json_file, json_encode($log_entry) . "\n", FILE_APPEND | LOCK_EX) !== false) {
     $json_ok  = true;
     $json_msg = 'เขียน JSON log ได้: ' . $json_file;
@@ -118,18 +119,25 @@ if (file_put_contents($json_file, json_encode($log_entry) . "\n", FILE_APPEND | 
 // ข้อมูล PHP / Server
 // ============================================================
 $php_version = PHP_VERSION;
-$php_ok      = version_compare($php_version, '7.4', '>=');
+$php_ok      = version_compare($php_version, '5.4', '>=');
 $extensions  = get_loaded_extensions();
 sort($extensions);
 
-$server_info = [
-    'SERVER_SOFTWARE' => $_SERVER['SERVER_SOFTWARE'] ?? 'ไม่ทราบ',
-    'SERVER_NAME'     => $_SERVER['SERVER_NAME']     ?? 'ไม่ทราบ',
-    'DOCUMENT_ROOT'   => $_SERVER['DOCUMENT_ROOT']   ?? 'ไม่ทราบ',
-    'SCRIPT_FILENAME' => $_SERVER['SCRIPT_FILENAME'] ?? 'ไม่ทราบ',
-    'HTTP_HOST'       => $_SERVER['HTTP_HOST']       ?? 'ไม่ทราบ',
-    'REMOTE_ADDR'     => $_SERVER['REMOTE_ADDR']     ?? 'ไม่ทราบ',
-];
+$server_software = isset($_SERVER['SERVER_SOFTWARE']) ? $_SERVER['SERVER_SOFTWARE'] : 'ไม่ทราบ';
+$server_name     = isset($_SERVER['SERVER_NAME'])     ? $_SERVER['SERVER_NAME']     : 'ไม่ทราบ';
+$document_root   = isset($_SERVER['DOCUMENT_ROOT'])   ? $_SERVER['DOCUMENT_ROOT']   : 'ไม่ทราบ';
+$script_filename = isset($_SERVER['SCRIPT_FILENAME']) ? $_SERVER['SCRIPT_FILENAME'] : 'ไม่ทราบ';
+$http_host       = isset($_SERVER['HTTP_HOST'])       ? $_SERVER['HTTP_HOST']       : 'ไม่ทราบ';
+$remote_addr     = isset($_SERVER['REMOTE_ADDR'])     ? $_SERVER['REMOTE_ADDR']     : 'ไม่ทราบ';
+
+$server_info = array(
+    'SERVER_SOFTWARE' => $server_software,
+    'SERVER_NAME'     => $server_name,
+    'DOCUMENT_ROOT'   => $document_root,
+    'SCRIPT_FILENAME' => $script_filename,
+    'HTTP_HOST'       => $http_host,
+    'REMOTE_ADDR'     => $remote_addr,
+);
 
 // ============================================================
 // สรุปผล: รองรับ analytics แบบไหน?
@@ -207,47 +215,47 @@ if ($sqlite_write_ok && $write_ok) {
   <h1>🔬 Server Capability Test</h1>
   <p>ทดสอบว่า vm14 รองรับระบบ Analytics ด้วยตัวเองได้หรือไม่</p>
   <p style="margin-top:6px;opacity:.7;font-size:.78rem">
-    เวลา: <?= date('d/m/Y H:i:s') ?> | PHP <?= $php_version ?>
+    เวลา: <?php echo date('d/m/Y H:i:s'); ?> | PHP <?php echo $php_version; ?>
   </p>
 </div>
 
 <!-- สรุป -->
 <div class="summary-box">
   <div class="label">วิธีที่แนะนำสำหรับเซิร์ฟเวอร์นี้</div>
-  <div class="value"><?= htmlspecialchars($method) ?></div>
+  <div class="value"><?php echo htmlspecialchars($method); ?></div>
 </div>
 
 <div class="card">
-  <?= section('1. PHP Version') ?>
-  <?= check('PHP ' . $php_version . ' (' . ($php_ok ? 'รองรับ' : 'เวอร์ชันเก่าเกินไป') . ')', $php_ok, 'ต้องการ PHP 7.4+') ?>
+  <?php echo section('1. PHP Version'); ?>
+  <?php echo check('PHP ' . $php_version . ' (' . ($php_ok ? 'รองรับ' : 'เวอร์ชันเก่าเกินไป') . ')', $php_ok, 'ต้องการ PHP 5.4+'); ?>
 
-  <?= section('2. SQLite Extension') ?>
-  <?= check('SQLite Extension โหลดได้', $sqlite_ok, $sqlite_msg) ?>
-  <?= check('SQLite เขียน/อ่านไฟล์ .db ได้จริง', $sqlite_write_ok, $sqlite_write_msg) ?>
+  <?php echo section('2. SQLite Extension'); ?>
+  <?php echo check('SQLite Extension โหลดได้', $sqlite_ok, $sqlite_msg); ?>
+  <?php echo check('SQLite เขียน/อ่านไฟล์ .db ได้จริง', $sqlite_write_ok, $sqlite_write_msg); ?>
 
-  <?= section('3. File System (เขียนไฟล์)') ?>
-  <?= check('สร้าง folder analytics/ ได้', $write_ok, $write_msg) ?>
-  <?= check('เขียน JSON log ได้ (fallback)', $json_ok, $json_msg) ?>
+  <?php echo section('3. File System (เขียนไฟล์)'); ?>
+  <?php echo check('สร้าง folder analytics/ ได้', $write_ok, $write_msg); ?>
+  <?php echo check('เขียน JSON log ได้ (fallback)', $json_ok, $json_msg); ?>
 
-  <?= section('4. Server Info') ?>
+  <?php echo section('4. Server Info'); ?>
   <table>
     <tr><th>Key</th><th>Value</th></tr>
     <?php foreach ($server_info as $k => $v): ?>
-    <tr><td><?= $k ?></td><td><?= htmlspecialchars($v) ?></td></tr>
+    <tr><td><?php echo $k; ?></td><td><?php echo htmlspecialchars($v); ?></td></tr>
     <?php endforeach; ?>
   </table>
 
-  <?= section('5. PHP Extensions ที่โหลดอยู่') ?>
+  <?php echo section('5. PHP Extensions ที่โหลดอยู่'); ?>
   <p style="font-size:.82rem;color:#64748b;margin-bottom:8px">
     Extensions ที่สำคัญสำหรับระบบ Analytics จะแสดงเป็นสีน้ำเงิน
   </p>
   <div class="ext-list">
     <?php
-    $important = ['pdo', 'pdo_sqlite', 'sqlite3', 'json', 'mbstring', 'curl', 'openssl', 'fileinfo'];
+    $important = array('pdo', 'pdo_sqlite', 'sqlite3', 'json', 'mbstring', 'curl', 'openssl', 'fileinfo');
     foreach ($extensions as $ext):
       $hi = in_array(strtolower($ext), $important) ? ' highlight' : '';
     ?>
-    <span class="ext-pill<?= $hi ?>"><?= htmlspecialchars($ext) ?></span>
+    <span class="ext-pill<?php echo $hi; ?>"><?php echo htmlspecialchars($ext); ?></span>
     <?php endforeach; ?>
   </div>
 </div>

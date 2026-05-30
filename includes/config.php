@@ -9,22 +9,22 @@ define('SITE_PHONE', '14141');
 define('SITE_EMAIL', 'noc@dhammakaya.center');
 define('SITE_HOURS', 'เปิดทำการ วันจันทร์–เสาร์ เวลา 09:00–17:30 น.');
 
-$host = $_SERVER['HTTP_HOST'] ?? '';
-$script_name = $_SERVER['SCRIPT_NAME'] ?? '';
+$host        = isset($_SERVER['HTTP_HOST'])   ? $_SERVER['HTTP_HOST']   : '';
+$script_name = isset($_SERVER['SCRIPT_NAME']) ? $_SERVER['SCRIPT_NAME'] : '';
 
 // ตรวจสอบจาก path จริงของไฟล์แทน hostname
-if (str_starts_with($host, 'localhost') || $host === '127.0.0.1') {
-    define('BASE_URL', '');  // localhost:8000
-} elseif (str_contains($script_name, '/itdiv/makarawit-services')) {
-    define('BASE_URL', '/itdiv/makarawit-services');  // vm14
+if (strpos($host, 'localhost') === 0 || $host === '127.0.0.1') {
+    define('BASE_URL', '');
+} elseif (strpos($script_name, '/itdiv/makarawit-services') !== false) {
+    define('BASE_URL', '/itdiv/makarawit-services');
 } else {
-    define('BASE_URL', '');  // อื่นๆ
+    define('BASE_URL', '');
 }
 
 // ==============================
 // Navigation Menu Structure
 // ==============================
-function get_navigation(): array
+function get_navigation()
 {
     $b = BASE_URL;
     return [
@@ -123,7 +123,7 @@ function get_navigation(): array
 // ==============================
 // Helper: Active menu check
 // ==============================
-function is_active(string $url): bool
+function is_active($url)
 {
     $current = basename($_SERVER['PHP_SELF']);
     $target  = basename(strtok($url, '?'));
