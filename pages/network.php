@@ -2,7 +2,7 @@
 // pages/network.php — Network & Security
 require_once '../includes/config.php';
 $page_title = 'ระบบเครือข่าย & ความปลอดภัย';
-$cat = $_GET['cat'] ?? '';
+$cat = $_GET['cat'] ? $_GET['cat'] : '';
 
 $sections = [
   'network'  => ['label' => 'WiFi ภายในองค์กร'],

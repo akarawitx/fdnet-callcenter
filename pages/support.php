@@ -2,7 +2,7 @@
 // pages/support.php — ปัญหาที่พบบ่อย (FAQ)
 require_once '../includes/config.php';
 $page_title = 'ปัญหาที่พบบ่อย';
-$cat = $_GET['cat'] ?? '';
+$cat = $_GET['cat'] ? $_GET['cat'] : '';
 
 $sections = [
   'redlogin'  => ['label' => 'เข้าหน้าแดงไม่ได้'],
@@ -37,7 +37,7 @@ function faq_action_btn($url, $label, $color = 'primary')
     'primary' => 'background:var(--clr-primary);color:#fff;border:1.5px solid var(--clr-primary);',
     'outline' => 'background:transparent;color:var(--clr-primary);border:1.5px solid var(--clr-primary);',
   ];
-  $s = $styles[$color] ?? $styles['primary'];
+  $s = $styles[$color] ? $styles[$color] : $styles['primary'];
   return '<a href="' . htmlspecialchars($url) . '"
      style="display:inline-flex;align-items:center;gap:7px;padding:8px 18px;
             border-radius:7px;font-size:.84rem;font-weight:600;text-decoration:none;
@@ -57,7 +57,7 @@ function faq_cause_box($title, $desc, $type = 'info')
     'warning' => ['border' => '#fbbf24', 'dot' => '#d97706'],
     'danger'  => ['border' => '#fca5a5', 'dot' => '#dc2626'],
   ];
-  $c = $colors[$type] ?? $colors['info'];
+  $c = $colors[$type] ? $colors[$type] : $colors['info'];
   return '<div style="border:1px solid ' . $c['border'] . ';border-radius:10px;
               padding:14px 16px;margin-bottom:10px">
     <div style="display:flex;align-items:flex-start;gap:10px">

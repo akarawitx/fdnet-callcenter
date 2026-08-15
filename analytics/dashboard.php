@@ -1,5 +1,6 @@
 <?php
-
+ini_set('display_errors',1);
+error_reporting(E_ALL);
 /**
  * analytics/dashboard.php
  * หน้าแดชบอร์ดดูสถิติการเข้าชม
@@ -713,7 +714,7 @@ $brow_data   = array_values($browsers);
       <?php if (empty($top_pages)): ?>
         <p style="color:var(--muted);font-size:.85rem">ยังไม่มีข้อมูล</p>
       <?php else: ?>
-        <?php $max_views = $top_pages[0]['views'] ?? 1; ?>
+        <?php $max_views = $top_pages[0]['views'] ? $top_pages[0]['views'] : 1; ?>
         <div class="page-list">
           <?php foreach ($top_pages as $i => $p): ?>
             <div class="page-item">
@@ -759,7 +760,7 @@ $brow_data   = array_values($browsers);
                     <?= htmlspecialchars($r['page']) ?>
                   </td>
                   <td style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)">
-                    <?= htmlspecialchars($r['title'] ?? '') ?>
+                    <?= htmlspecialchars($r['title'] ? $r['title'] : '') ?>
                   </td>
                   <td>
                     <span class="badge badge-<?= $r['device'] ?>">

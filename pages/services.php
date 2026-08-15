@@ -3,7 +3,7 @@
 require_once '../includes/config.php';
 
 $page_title = 'บริการ IT';
-$cat = $_GET['cat'] ?? '';
+$cat = $_GET['cat'] ? $_GET['cat'] : '';
 
 $categories = [
   'account'  => ['label' => 'ขอ Account ใหม่'],

@@ -4,6 +4,7 @@
  * โหลดครั้งเดียวใน footer.php แทน Cloudflare beacon
  */
 (function () {
+  console.log('analytics test');
   'use strict';
 
   // BASE_URL มาจาก config.php ที่ inject ใน header.php แล้ว

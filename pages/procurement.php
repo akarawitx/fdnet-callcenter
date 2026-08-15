@@ -3,7 +3,7 @@
 require_once '../includes/config.php';
 
 $page_title = 'ระบบจัดหาอุปกรณ์สารสนเทศ';
-$cat = $_GET['cat'] ?? '';
+$cat = $_GET['cat'] ? $_GET['cat'] : '';
 
 $categories = [
   'accessControl'     => ['label' => 'Access Control'],
@@ -282,6 +282,14 @@ $guides = [
       <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:0">
         4. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
       </p>
+      <br>
+      <div style="padding:14px 16px;background:var(--clr-bg);border-radius:10px;border:1px solid var(--clr-border);font-size:.9rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
+        <p style="margin:0 0 8px;font-weight:600">สอบถามรายละเอียดเพิ่มเติมที่</p>
+        <div style="display:flex;align-items:center;gap:8px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>กัลฯ กรกมล (เพียร): <a href="tel:0814959540" style="color:#1e73be;font-weight:600;text-decoration:none">081-495-9540</a></span>
+        </div>
+      </div>
     ',
   ],
 

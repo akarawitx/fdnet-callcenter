@@ -1,5 +1,6 @@
 <!-- // index.php -->
 <?php
+
 // index.php — Home Page
 require_once 'includes/config.php';
 

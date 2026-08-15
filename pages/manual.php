@@ -2,7 +2,7 @@
 // pages/manual.php — คู่มือการใช้งานระบบ
 require_once '../includes/config.php';
 $page_title = 'คู่มือการใช้งานระบบ';
-$cat = $_GET['cat'] ?? '';
+$cat = $_GET['cat'] ? $_GET['cat'] : '';
 
 $sections = [
   'network'   => ['label' => 'เครือข่ายและการเชื่อมต่อ'],
@@ -30,14 +30,14 @@ function make_accordion($id, $title, $icon, $steps)
           <p class="step-desc">' . $step['desc'] . '</p>
           <div class="step-img-wrap">
             ' . (isset($step['img'])
-      ? '<img src="' . htmlspecialchars($step['img']) . '" alt="' . htmlspecialchars($step['caption'] ?? $step['title']) . '" style="max-width:100%;border-radius:10px;border:1px solid #e5e7eb;" loading="lazy">'
+      ? '<img src="' . htmlspecialchars($step['img']) . '" alt="' . htmlspecialchars($step['caption'] ? $step['caption'] : $step['title']) . '" style="max-width:100%;border-radius:10px;border:1px solid #e5e7eb;" loading="lazy">'
       : '<div class="step-img-placeholder">
                   <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                   <span class="step-img-label">รูปภาพประกอบขั้นตอนที่ ' . $num . '</span>
                   <span class="step-img-hint">[ แทนที่ด้วยภาพจริง ]</span>
                 </div>'
     ) . '
-            <p class="step-img-caption">ภาพที่ ' . $num . ': ' . htmlspecialchars($step['caption'] ?? $step['title']) . '</p>
+            <p class="step-img-caption">ภาพที่ ' . $num . ': ' . htmlspecialchars($step['caption'] ? $step['caption'] : $step['title']) . '</p>
           </div>
         </div>
       </div>';

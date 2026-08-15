@@ -366,7 +366,7 @@
   }
 </style>
 
-<script src='<?= BASE_URL ?>/assets/js/analytics.js'></script>
+<script defer src='<?= BASE_URL ?>/assets/js/analytics.js'></script>
 
 </body>
 

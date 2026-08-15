@@ -920,13 +920,12 @@ function render_nav_items($items, $depth = 0)
     <button class="hamburger" id="hamburger-btn" aria-label="เมนู">
       <span></span><span></span><span></span>
     </button>
-    <div class="site-header__logo">
-      <img src="<?= BASE_URL ?>/assets/images/logo.png" alt="<?= SITE_NAME ?>" class="site-header__logo-img">
-    </div>
-    <div class="site-header__brand">
+    <a href="<?= BASE_URL ?>/index.php" class="site-header__logo"> <img src="<?= BASE_URL ?>/assets/images/logo.png" alt="<?= SITE_NAME ?>" class="site-header__logo-img">
+    </a>
+    <a href="<?= BASE_URL ?>/index.php" class="site-header__brand">
       <div class="site-header__name"><?= SITE_NAME_EN ?></div>
       <div class="site-header__sub"><?= SITE_NAME ?></div>
-    </div>
+    </a>
     <div class="site-header__search" id="search-box" style="position:relative">
       <button type="button" aria-label="ค้นหา" id="search-icon-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -994,7 +993,7 @@ function render_nav_items($items, $depth = 0)
         <?php if ($has): ?>
           <li class="mobile-has-sub">
             <button class="mobile-toggle-btn">
-              <span><?= $item['icon'] ?? '' ?></span>
+              <span><?= $item['icon'] ?></span>
               <?= htmlspecialchars($item['label']) ?>
               <span class="mobile-chevron">›</span>
             </button>
@@ -1021,7 +1020,7 @@ function render_nav_items($items, $depth = 0)
             </ul>
           </li>
         <?php else: ?>
-          <li><a href="<?= htmlspecialchars($item['url']) ?>"><span><?= $item['icon'] ?? '' ?></span> <?= htmlspecialchars($item['label']) ?></a></li>
+          <li><a href="<?= htmlspecialchars($item['url']) ?>"><span><?= $item['icon'] ?></span> <?= htmlspecialchars($item['label']) ?></a></li>
         <?php endif; ?>
       <?php endforeach; ?>
     </ul>
