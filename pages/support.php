@@ -7,6 +7,7 @@ $cat = $_GET['cat'] ? $_GET['cat'] : '';
 $sections = [
   'redlogin'  => ['label' => 'เข้าหน้าแดงไม่ได้'],
   'hrweb'     => ['label' => 'เข้าเว็บ HR ไม่ได้'],
+  'fileshare' => ['label' => 'เข้าไฟล์แชร์ไม่ได้'],
 ];
 
 // ── Helper: สร้าง accordion item ──────────────────────────────────
@@ -291,7 +292,242 @@ $support_items = [
     ',
   ],
 
+  // ──────────────────────────────────────────────────────────────
+  // 3. เข้าไฟล์แชร์ไม่ได้
+  // ──────────────────────────────────────────────────────────────
+  [
+    'cat'   => 'fileshare',
+    'icon'  => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                  <line x1="12" y1="11" x2="12" y2="17" stroke="#dc2626" stroke-width="2.5"/>
+                  <line x1="9" y1="14" x2="15" y2="14" stroke="#dc2626" stroke-width="2.5"/>
+                </svg>',
+    'title' => 'เข้าไฟล์แชร์ไม่ได้ (Network File Share)',
+    'desc'  => 'รวมวิธีแก้ไขปัญหาไม่สามารถเข้าถึงโฟลเดอร์แชร์ผ่านเครือข่ายบนเครื่อง Windows',
+    'extra_html' => '
+
+      <p style="font-size:.9rem;line-height:1.8;color:var(--clr-text-muted);margin-bottom:20px">
+        ปัญหานี้มักเกิดจากการที่ระบบปฏิบัติการ Windows รุ่นใหม่ตั้งค่าความปลอดภัยเริ่มต้นให้ปิดกั้นการเชื่อมต่อ
+        แบบ Guest หรือแบบไม่ใช้การยืนยันตัวตนขั้นสูง (Insecure Guest Authentication) ซึ่งอุปกรณ์แชร์ไฟล์บางประเภท
+        ในเครือข่ายยังใช้การเชื่อมต่อรูปแบบนี้อยู่ กรุณาแก้ไขตามลำดับขั้นตอนด้านล่าง
+      </p>
+
+      <div class="faq-group">' .
+
+        faq_accordion('fs1', 'สาเหตุของปัญหา', '
+          ' . faq_cause_box(
+            'ข้อความ Error ที่พบ',
+            'เมื่อพยายามเข้าถึงโฟลเดอร์แชร์ ระบบจะแจ้งข้อผิดพลาดในลักษณะไม่สามารถเชื่อมต่อได้
+             ซึ่งเกิดจากนโยบายความปลอดภัยของ Windows ที่ปิดการอนุญาตให้เชื่อมต่อแบบไม่ปลอดภัย (Insecure Guest Auth)
+             เป็นค่าเริ่มต้น',
+            'warning'
+          ) . '
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-top:14px">
+            <img src="../assets/images/support/fileshare/fs1.png"
+                alt="ตัวอย่างข้อความ Error เมื่อเข้าไฟล์แชร์ไม่ได้"
+                style="width:100%;display:block">
+          </div>
+        ') .
+
+        faq_accordion('fs2', 'วิธีที่ 1: แก้ไขผ่าน Registry Editor', '
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.8;margin-bottom:16px">
+            เปิดโปรแกรม Registry Editor โดยกดปุ่ม Start พิมพ์คำว่า <strong>regedit</strong> แล้วเลือกเปิดโปรแกรม
+          </div>
+          ' . faq_divider('ขั้นตอน') . '
+          <ol style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:16px">
+            <li>ไล่ไปตามลำดับหัวข้อในแถบด้านซ้าย:<br>
+              <code style="background:var(--clr-bg);padding:2px 6px;border-radius:4px;font-size:.8rem">
+                Computer\\HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters
+              </code>
+            </li>
+            <li>มองหารายการชื่อ <strong>AllowInsecureGuestAuth</strong> ในช่องด้านขวามือ</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs2.png" alt="ตำแหน่ง Registry Path" style="width:100%;display:block">
+          </div>
+          <ol start="3" style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:16px">
+            <li>หากพบรายการแล้ว ให้ดับเบิลคลิก แล้วแก้ไขค่า Value data จาก <strong>0</strong> เป็น <strong>1</strong> จากนั้นกด OK</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs3.png" alt="แก้ไขค่า Value จาก 0 เป็น 1" style="width:100%;display:block">
+          </div>
+          ' . faq_cause_box(
+            'กรณีไม่พบรายการ AllowInsecureGuestAuth',
+            'คลิกขวาที่พื้นที่ว่างในช่องด้านขวา เลือก New > DWORD (32-bit) Value',
+            'info'
+          ) . '
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs4.png" alt="สร้างค่า DWORD ใหม่" style="width:100%;display:block">
+          </div>
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.8;margin-bottom:14px">
+            ตั้งชื่อค่าที่สร้างใหม่เป็น <strong>AllowInsecureGuestAuth</strong> จากนั้นดับเบิลคลิกเพื่อแก้ไข
+            Value data จาก 0 เป็น 1 แล้วกด OK
+          </div>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden">
+            <img src="../assets/images/support/fileshare/fs5.png" alt="ตั้งชื่อและกำหนดค่า" style="width:100%;display:block">
+          </div>
+        ') .
+
+        faq_accordion('fs3', 'วิธีที่ 2: แก้ไขผ่าน Group Policy Editor (สำหรับผู้ที่ไม่ถนัดแก้ Registry โดยตรง)', '
+          <ol style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>กดปุ่ม Start พิมพ์คำว่า <strong>gpedit.msc</strong> แล้วเปิดโปรแกรม</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs6.png" alt="เปิด gpedit.msc" style="width:100%;display:block">
+          </div>
+          <ol start="2" style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>ไปที่ Computer Configuration > Administrative Templates > Network > Lanman Workstation
+                แล้วมองหารายการ <strong>Enable insecure guest logons</strong> ทางด้านขวามือ จากนั้นดับเบิลคลิก</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs7.png" alt="ตำแหน่งนโยบาย Enable insecure guest logons" style="width:100%;display:block">
+          </div>
+          <ol start="3" style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>เลือก <strong>Enabled</strong> แล้วกด OK จากนั้นลองเข้าโฟลเดอร์ที่แชร์อีกครั้ง</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden">
+            <img src="../assets/images/support/fileshare/fs8.png" alt="ตั้งค่าเป็น Enabled" style="width:100%;display:block">
+          </div>
+        ') .
+
+        faq_accordion('fs4', 'วิธีที่ 3: นำเข้าไฟล์ Registry (.reg) — สำหรับ Windows 11', '
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.8;margin-bottom:14px">
+            เปิดโปรแกรม Notepad แล้วคัดลอกข้อความด้านล่างวางลงไป
+          </div>
+          <pre style="background:#1e2c3a;color:#e2e8f0;padding:16px;border-radius:8px;font-size:.78rem;
+                       overflow-x:auto;margin-bottom:16px;line-height:1.6">Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters]
+"EnablePlainTextPassword"=dword:00000000
+"EnableSecuritySignature"=dword:00000001
+"RequireSecuritySignature"=dword:00000000
+"AllowInsecureGuestAuth"=dword:00000001</pre>
+          <ol style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>บันทึกไฟล์เป็นนามสกุล <strong>.reg</strong> (เช่น <code>fix-fileshare.reg</code>) เก็บไว้ที่ Desktop
+                หรือตำแหน่งใดก็ได้ในเครื่อง</li>
+            <li>ดับเบิลคลิกไฟล์ .reg ที่บันทึกไว้ เมื่อมีข้อความยืนยัน ให้กด <strong>Yes</strong></li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs9.png" alt="ยืนยันการนำเข้า Registry" style="width:100%;display:block">
+          </div>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs10.png" alt="ผลลัพธ์การนำเข้าไฟล์ Registry" style="width:100%;display:block">
+          </div>
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.8">
+            เมื่อขึ้นข้อความยืนยันว่าดำเนินการสำเร็จ ให้กด OK แล้วลองเข้าโฟลเดอร์ที่แชร์อีกครั้ง
+          </div>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-top:14px">
+            <img src="../assets/images/support/fileshare/fs11.png" alt="ข้อความยืนยันการดำเนินการสำเร็จ" style="width:100%;display:block">
+          </div>
+        ') .
+
+        faq_accordion('fs5', 'วิธีที่ 4: แก้ไขผ่าน Windows PowerShell', '
+          <ol style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>กดปุ่ม Start พิมพ์คำว่า <strong>PowerShell</strong> คลิกขวาที่ Windows PowerShell แล้วเลือก
+                <strong>Run as Administrator</strong></li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs12.png" alt="เปิด PowerShell แบบ Administrator" style="width:100%;display:block">
+          </div>
+          <ol start="2" style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>คัดลอกคำสั่งด้านล่างไปวางในหน้าต่าง PowerShell แล้วกด Enter</li>
+          </ol>
+          <pre style="background:#1e2c3a;color:#e2e8f0;padding:16px;border-radius:8px;font-size:.78rem;
+                       overflow-x:auto;margin-bottom:14px;line-height:1.6">reg.exe add HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters /v AllowInsecureGuestAuth /t REG_DWORD /d 1</pre>
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.8;margin-bottom:14px">
+            หากมีค่าเดิมอยู่แล้ว ระบบจะถามยืนยันการเขียนทับ ให้พิมพ์ <strong>Y</strong> แล้วกด Enter
+            เมื่อขึ้นข้อความ <em>The operation completed successfully</em> ให้ปิดหน้าต่างแล้วลองเข้าโฟลเดอร์ที่แชร์อีกครั้ง
+          </div>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden">
+            <img src="../assets/images/support/fileshare/fs13.png" alt="ผลลัพธ์คำสั่ง PowerShell" style="width:100%;display:block">
+          </div>
+        ') .
+
+        faq_accordion('fs6', 'หากยังไม่สำเร็จ: ปรับตั้งค่า Security Policy เพิ่มเติม', '
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.8;margin-bottom:14px">
+            หากดำเนินการตามวิธีข้างต้นแล้วยังไม่สามารถเข้าถึงได้ ให้ปรับตั้งค่าความปลอดภัยเพิ่มเติมผ่าน gpedit.msc
+          </div>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs14.png" alt="เปิด gpedit.msc" style="width:100%;display:block">
+          </div>
+          <ol style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>ไปที่ Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options</li>
+            <li>มองหารายการ <strong>Microsoft network client: Digitally sign communications (always)</strong>
+                ทางด้านขวามือ แล้วดับเบิลคลิก</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs15.png" alt="ตำแหน่งนโยบาย Digitally sign communications" style="width:100%;display:block">
+          </div>
+          <ol start="3" style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>เลือก <strong>Disabled</strong> แล้วกด OK จากนั้น Restart เครื่อง 1 ครั้ง</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden">
+            <img src="../assets/images/support/fileshare/fs16.png" alt="ตั้งค่าเป็น Disabled" style="width:100%;display:block">
+          </div>
+        ') .
+
+        faq_accordion('fs7', 'กรณีเคยแก้ไขสำเร็จแล้ว แต่กลับมาเป็นปัญหาอีกครั้งหลังอัปเดต Windows', '
+          ' . faq_cause_box(
+            'สาเหตุ',
+            'Windows Update บางรุ่น (เช่น ตัวอัปเดตที่มีรหัส KB5065426) อาจปรับเปลี่ยนค่าความปลอดภัยกลับไปเป็นค่าเริ่มต้น
+             ทำให้ปัญหาเข้าไฟล์แชร์ไม่ได้กลับมาอีกครั้ง แม้จะเคยแก้ไขไปแล้วก็ตาม',
+            'warning'
+          ) . '
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.8;margin:14px 0">
+            วิธีแก้เบื้องต้นคือถอนการติดตั้งอัปเดตดังกล่าวออกชั่วคราว จนกว่าจะมีตัวแก้ไขปัญหาอย่างเป็นทางการ
+          </div>
+          ' . faq_divider('วิธีที่ 1: ผ่าน Control Panel') . '
+          <ol style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>เปิด Control Panel ตั้งค่า View เป็น Small Icons แล้วเลือก Programs and Features</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs17.png" alt="เปิด Programs and Features" style="width:100%;display:block">
+          </div>
+          <ol start="2" style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>เลือก View installed updates</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs18.png" alt="View installed updates" style="width:100%;display:block">
+          </div>
+          <ol start="3" style="font-size:.85rem;color:var(--clr-text);line-height:2;padding-left:20px;margin-bottom:14px">
+            <li>มองหาอัปเดตรหัส <strong>KB5065426</strong> หากพบให้ Uninstall แล้ว Restart เครื่อง 1 ครั้ง</li>
+          </ol>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:20px">
+            <img src="../assets/images/support/fileshare/fs19.png" alt="ถอนการติดตั้งอัปเดต" style="width:100%;display:block">
+          </div>
+          ' . faq_divider('วิธีที่ 2: ผ่าน Command Prompt (Run as Administrator)') . '
+          <pre style="background:#1e2c3a;color:#e2e8f0;padding:16px;border-radius:8px;font-size:.78rem;
+                       overflow-x:auto;margin-bottom:14px;line-height:1.6">wusa /uninstall /kb:5065426 /norestart</pre>
+          <div style="font-size:.85rem;color:var(--clr-text);line-height:1.8;margin-bottom:14px">
+            หากพบอัปเดตรหัส <strong>KB5064081</strong> ในรายการด้วย แนะนำให้ถอนการติดตั้งเพิ่มอีกรายการหนึ่งด้วยวิธีเดียวกัน
+            คำสั่งนี้จะถอนการติดตั้งโดยไม่ต้อง Restart ทันที แต่หากลองเข้าโฟลเดอร์แล้วยังไม่ได้ ให้ Restart เครื่อง 1 ครั้ง
+          </div>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs20.png" alt="เปิด Command Prompt แบบ Administrator" style="width:100%;display:block">
+          </div>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden;margin-bottom:14px">
+            <img src="../assets/images/support/fileshare/fs21.png" alt="ผลลัพธ์การถอนการติดตั้ง" style="width:100%;display:block">
+          </div>
+          <div style="border:1px solid var(--clr-border);border-radius:10px;overflow:hidden">
+            <img src="../assets/images/support/fileshare/fs22.png" alt="ทดสอบเข้าโฟลเดอร์อีกครั้ง" style="width:100%;display:block">
+          </div>
+        ') .
+
+      '</div>
+
+      <div style="margin-top:24px;padding:14px 16px;border-top:1px dashed var(--clr-border);
+                  font-size:.78rem;color:var(--clr-text-light);line-height:1.7">
+        เนื้อหาและขั้นตอนการแก้ไขปัญหาส่วนนี้เรียบเรียงโดยอ้างอิงจากกระทู้
+        <a href="https://pantip.com/topic/43099888" target="_blank" rel="noopener noreferrer"
+           style="color:var(--clr-primary);text-decoration:underline">Pantip: topic 43099888</a>
+      </div>
+    ',
+  ],
+
 ];
+
+
 
 require_once '../includes/header.php';
 ?>

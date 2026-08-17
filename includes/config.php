@@ -112,6 +112,7 @@ function get_navigation()
             'children' => [
                 ['label' => 'เข้าหน้าแดงไม่ได้', 'url' => "$b/pages/support.php?cat=redlogin"],
                 ['label' => 'เข้าเว็บ HR ไม่ได้', 'url' => "$b/pages/support.php?cat=hrweb"],
+                ['label' => 'เข้าไฟล์แชร์ไม่ได้', 'url' => "$b/pages/support.php?cat=fileshare"],
             ],
         ],
     ];
