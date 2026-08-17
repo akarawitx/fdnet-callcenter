@@ -144,6 +144,48 @@ window.SITE_SEARCH_INDEX = [
     section: 'แจ้งปัญหา',
     keywords: 'hr login ปุ่มผิด กดผิด เข้าไม่ได้ hr web'
   },
+  {
+    title: 'เข้าไฟล์แชร์ไม่ได้ (Network File Share)',
+    desc: 'รวมวิธีแก้ไขปัญหาไม่สามารถเข้าถึงโฟลเดอร์แชร์ผ่านเครือข่ายบนเครื่อง Windows',
+    url: B + '/pages/support.php?cat=fileshare',
+    section: 'แจ้งปัญหา',
+    keywords: 'file share ไฟล์แชร์ เข้าไม่ได้ shared folder network drive windows insecure guest auth registry gpedit'
+  },
+  {
+    title: 'แก้ไขผ่าน Registry Editor — AllowInsecureGuestAuth',
+    desc: 'แก้ไขค่า AllowInsecureGuestAuth ใน Registry เป็น 1 เพื่อเข้าไฟล์แชร์ได้',
+    url: B + '/pages/support.php?cat=fileshare',
+    section: 'แจ้งปัญหา',
+    keywords: 'regedit registry AllowInsecureGuestAuth LanmanWorkstation DWORD ไฟล์แชร์ เข้าไม่ได้'
+  },
+  {
+    title: 'แก้ไขผ่าน Group Policy Editor — Enable insecure guest logons',
+    desc: 'เปิดใช้งาน Enable insecure guest logons ผ่าน gpedit.msc',
+    url: B + '/pages/support.php?cat=fileshare',
+    section: 'แจ้งปัญหา',
+    keywords: 'gpedit group policy enable insecure guest logons lanman workstation ไฟล์แชร์'
+  },
+  {
+    title: 'นำเข้าไฟล์ Registry (.reg) แก้ไฟล์แชร์ — Windows 11',
+    desc: 'สร้างและนำเข้าไฟล์ .reg เพื่อแก้ปัญหาเข้าไฟล์แชร์ไม่ได้บน Windows 11',
+    url: B + '/pages/support.php?cat=fileshare',
+    section: 'แจ้งปัญหา',
+    keywords: 'reg file merge registry windows 11 notepad ไฟล์แชร์ เข้าไม่ได้'
+  },
+  {
+    title: 'แก้ไขผ่าน Windows PowerShell — reg.exe add',
+    desc: 'ใช้คำสั่ง reg.exe add ผ่าน PowerShell (Run as Administrator) แก้ปัญหาไฟล์แชร์',
+    url: B + '/pages/support.php?cat=fileshare',
+    section: 'แจ้งปัญหา',
+    keywords: 'powershell reg.exe add administrator command ไฟล์แชร์ เข้าไม่ได้'
+  },
+  {
+    title: 'เข้าไฟล์แชร์ไม่ได้หลังอัปเดต Windows (KB5065426)',
+    desc: 'วิธีถอนการติดตั้งอัปเดต KB5065426 ที่ทำให้เข้าไฟล์แชร์ไม่ได้อีกครั้ง',
+    url: B + '/pages/support.php?cat=fileshare',
+    section: 'แจ้งปัญหา',
+    keywords: 'KB5065426 KB5064081 windows update ถอนการติดตั้ง uninstall wusa ไฟล์แชร์ เข้าไม่ได้ หลังอัปเดต'
+  },
 
   // ════════════════════════════════════════════
   // คู่มือการใช้งานระบบ — manual.php
