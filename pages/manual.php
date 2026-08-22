@@ -8,6 +8,7 @@ $sections = [
   'network'   => ['label' => 'เครือข่ายและการเชื่อมต่อ'],
   'security'  => ['label' => 'ระบบปฏิบัติการและความปลอดภัย'],
   'domain'    => ['label' => 'การใช้งาน Domain'],
+  'shared'    => ['label' => 'ไฟล์แชร์ (Shared Folder)'],
   'tools'     => ['label' => 'การตั้งค่าและเครื่องมือเพิ่มเติม'],
   'documents' => ['label' => 'เอกสารระบบ'],
 ];
@@ -445,6 +446,82 @@ $manual_items = [
           'caption' => 'หน้าจอ Login Mac หลังเข้า Domain สำเร็จ',
         ],
       ]) .
+            make_accordion('dom2', 'คู่มือการนำเครื่องเข้า Domain สำหรับ macOS Ventura', '', [
+        [
+          'title'   => 'เปิด Directory Utility ผ่าน Spotlight Search',
+          'desc'    => 'คลิกไอคอน <strong>แว่นขยาย (Spotlight Search)</strong> มุมบนขวาของหน้าจอ แล้วพิมพ์ <strong>Directory Utility</strong> จากนั้นเปิดโปรแกรม',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura1.png',
+          'caption' => 'ค้นหาและเปิด Directory Utility ผ่าน Spotlight Search',
+        ],
+        [
+          'title'   => 'คลิก "Click the lock to make changes" และใส่ Password เครื่อง',
+          'desc'    => 'คลิกไอคอนกุญแจ <strong>"Click the lock to make changes."</strong> ที่มุมล่างซ้าย แล้วกรอก <strong>Password ของ User เครื่อง</strong> เพื่อปลดล็อกการแก้ไข',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura2.png',
+          'caption' => 'ปลดล็อกการแก้ไขด้วย Password ของ User เครื่อง',
+        ],
+        [
+          'title'   => 'ดับเบิลคลิก Active Directory และยืนยัน Password เครื่อง',
+          'desc'    => 'ในหน้าต่าง Directory Utility ให้ดับเบิลคลิกที่ <strong>Active Directory</strong> จากนั้นกรอก <strong>Password ของ User เครื่อง</strong> อีกครั้งเพื่อยืนยัน',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura3.png',
+          'caption' => 'ดับเบิลคลิก Active Directory และยืนยัน Password',
+        ],
+        [
+          'title'   => 'กรอก Active Directory Domain และ Computer ID แล้วคลิก Bind',
+          'desc'    => 'ในช่อง <strong>Active Directory Domain</strong> ให้ใส่ <strong>dhammakaya.network</strong><br>
+                       ในช่อง <strong>Computer ID</strong> ให้ใส่ชื่อเครื่องที่ได้รับจากศูนย์คอมฯ<br>
+                       จากนั้นคลิก <strong>Bind…</strong> จะมี Pop up ขึ้นมาให้กรอก <strong>Username และ Password</strong> ที่ได้รับจากศูนย์คอมฯ แล้วคลิก <strong>OK</strong>',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura4.png',
+          'caption' => 'กรอก Domain, Computer ID และ Bind ด้วย Credentials จากศูนย์คอมฯ',
+        ],
+        [
+          'title'   => 'ยืนยัน Password ของ User เครื่อง 2 ครั้ง',
+          'desc'    => 'หลังจากคลิก <strong>OK</strong> แล้ว ระบบจะมี Pop up ขึ้นมาให้กรอก <strong>Password ของ User เครื่อง</strong> ยืนยันอีก 2 ครั้งติดต่อกัน',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura5.png',
+          'caption' => 'กรอก Password ของ User เครื่องเพื่อยืนยัน 2 ครั้ง',
+        ],
+        [
+          'title'   => 'คลิก Show Options',
+          'desc'    => 'เมื่อกรอก Password ครบตามขั้นตอนที่แล้ว ให้คลิกที่ <strong>Show Options</strong> เพื่อเปิดการตั้งค่าเพิ่มเติม',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura6.png',
+          'caption' => 'คลิก Show Options เพื่อดูการตั้งค่าเพิ่มเติม',
+        ],
+        [
+          'title'   => 'แท็บ User Experience — ติ๊ก Create mobile account at login',
+          'desc'    => 'คลิกแท็บ <strong>User Experience</strong> แล้วติ๊กถูกที่ช่อง <strong>Create mobile account at login</strong>',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura7.png',
+          'caption' => 'ตั้งค่าแท็บ User Experience',
+        ],
+        [
+          'title'   => 'แท็บ Administrative — ติ๊ก Prefer this domain server แล้วคลิก OK',
+          'desc'    => 'คลิกแท็บ <strong>Administrative</strong> แล้วติ๊กถูกที่ช่อง <strong>Prefer this domain server</strong> และใส่ <strong>dhammakaya.network</strong> จากนั้นคลิก <strong>OK</strong> เป็นอันเสร็จสิ้นขั้นตอนการ Join Domain',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura8.png',
+          'caption' => 'ตั้งค่าแท็บ Administrative และ Join Domain สำเร็จ',
+        ],
+        [
+          'title'   => 'เข้าที่ Users & Groups เพื่อเพิ่ม User หน้าแดง',
+          'desc'    => 'หลังจาก Join Domain สำเร็จแล้ว ให้เข้าไปที่ <strong>System Settings → Users & Groups</strong> แล้วเลือกหัวข้อ <strong>Options…</strong> เพื่อเพิ่ม Username และ Password (หน้าแดง) สำหรับใช้ Login เข้าเครื่อง',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura9.png',
+          'caption' => 'เข้าที่ Users & Groups และเลือก Options',
+        ],
+        [
+          'title'   => 'เพิ่ม Network Account Server และ User หน้าแดง',
+          'desc'    => 'ตรวจสอบและกรอกข้อมูล <strong>Network Account Server</strong> พร้อม <strong>Username หน้าแดง</strong> ที่ต้องการให้สามารถ Login เข้าเครื่องนี้ได้',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura10.png',
+          'caption' => 'เพิ่ม User หน้าแดงในส่วน Network Account Server',
+        ],
+        [
+          'title'   => 'Restart และ Log Out เครื่อง',
+          'desc'    => 'เมื่อเพิ่ม User หน้าแดงเรียบร้อยแล้ว ให้ทำการ <strong>Restart</strong> หรือ <strong>Log Out</strong> เครื่อง เพื่อให้การตั้งค่ามีผลสมบูรณ์',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura11.png',
+          'caption' => 'Restart หรือ Log Out เครื่องเพื่อให้การตั้งค่ามีผล',
+        ],
+        [
+          'title'   => 'Login ด้วย User หน้าแดง',
+          'desc'    => 'ที่หน้าจอ Login ให้เลือก User หน้าแดงตามที่เพิ่มไว้ แล้วกรอก <strong>Username และ Password (หน้าแดง)</strong> เพื่อเข้าใช้งาน Domain ได้ตามปกติ',
+          'img'     => '../assets/images/manual/domain/mac-ventura/mac-ventura12.png',
+          'caption' => 'หน้าจอ Login ด้วย User หน้าแดงหลัง Join Domain สำเร็จ',
+        ],
+      ]) .
       make_accordion('dom3', 'คู่มือการนำเครื่องเข้า Domain สำหรับ Windows 7', '', [
         [
           'title'   => 'ข้อกำหนดก่อนเริ่มต้น',
@@ -735,6 +812,64 @@ $manual_items = [
       ]) . '
       <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:14px 18px;font-size:.88rem;color:#1e3a8a;line-height:1.7;margin-top:20px">
         💡 หากพบปัญหาระหว่างการเข้า Domain เช่น เครื่องไม่พบ Domain หรือ Credentials ไม่ถูกต้อง กรุณาติดต่อกองบริหารสารสนเทศ โทร <strong>14141</strong>
+      </div>
+    ',
+  ],
+
+  // ════════════════════════════════════════════
+  // 4. ไฟล์แชร์ (Shared Folder)
+  // ════════════════════════════════════════════
+  [
+    'cat'   => 'shared',
+    'icon'  => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>',
+    'title' => 'ไฟล์แชร์ (Shared Folder)',
+    'desc'  => 'คู่มือการเข้าใช้งานไฟล์แชร์ newpr และ pr-center บนอุปกรณ์ iPhone, iPad และ Android',
+    'extra_html' => '
+      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:24px">
+        คู่มือหมวดนี้ช่วยให้บุคลากรสามารถเข้าใช้งานไฟล์แชร์ <strong>newpr</strong> และ <strong>pr-center</strong>
+        ผ่านอุปกรณ์เคลื่อนที่ได้อย่างถูกต้อง
+      </p>
+
+      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:24px">
+
+        <a href="../assets/images/manual/shared/เข้าใช้ไฟล์เเชร์-newpr-pr-center-ด้วย-iPhone-iPad.pdf"
+           target="_blank"
+           style="display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--clr-border);border-radius:12px;background:var(--clr-surface);text-decoration:none;transition:box-shadow .2s,border-color .2s;"
+           onmouseover="this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\';this.style.borderColor=\'var(--clr-primary)\'"
+           onmouseout="this.style.boxShadow=\'none\';this.style.borderColor=\'var(--clr-border)\'">
+          <span style="flex-shrink:0;width:40px;height:40px;background:#fee2e2;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span style="flex:1">
+            <span style="display:block;font-weight:600;font-size:.92rem;color:var(--clr-text)">เข้าใช้ไฟล์แชร์ newpr, pr-center ด้วย iPhone, iPad</span>
+            <span style="display:block;font-size:.8rem;color:var(--clr-text-muted);margin-top:2px">คู่มือการตั้งค่าเข้าใช้งานไฟล์แชร์บนอุปกรณ์ iOS</span>
+          </span>
+          <span style="flex-shrink:0;color:var(--clr-text-muted)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </span>
+        </a>
+
+        <a href="../assets/images/manual/shared/เข้าใช้-pr-center-newpr-ด้วย-Android.pdf"
+           target="_blank"
+           style="display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--clr-border);border-radius:12px;background:var(--clr-surface);text-decoration:none;transition:box-shadow .2s,border-color .2s;"
+           onmouseover="this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\';this.style.borderColor=\'var(--clr-primary)\'"
+           onmouseout="this.style.boxShadow=\'none\';this.style.borderColor=\'var(--clr-border)\'">
+          <span style="flex-shrink:0;width:40px;height:40px;background:#fee2e2;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span style="flex:1">
+            <span style="display:block;font-weight:600;font-size:.92rem;color:var(--clr-text)">เข้าใช้ pr-center, newpr ด้วย Android</span>
+            <span style="display:block;font-size:.8rem;color:var(--clr-text-muted);margin-top:2px">คู่มือการตั้งค่าเข้าใช้งานไฟล์แชร์บนอุปกรณ์ Android</span>
+          </span>
+          <span style="flex-shrink:0;color:var(--clr-text-muted)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </span>
+        </a>
+
+      </div>
+
+      <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:14px 18px;font-size:.88rem;color:#166534;line-height:1.7">
+        📞 หากเข้าใช้งานไม่ได้ กรุณาติดต่อกองบริหารสารสนเทศ โทร <strong>14141</strong>
       </div>
     ',
   ],

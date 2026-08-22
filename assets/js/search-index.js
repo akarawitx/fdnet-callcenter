@@ -254,6 +254,13 @@ window.SITE_SEARCH_INDEX = [
     keywords: 'mac join domain active directory directory utility bind macbook imac apple โดเมน'
   },
   {
+    title: 'คู่มือ Join Domain — macOS Ventura',
+    desc: 'ขั้นตอนนำเครื่อง macOS Ventura เข้า Domain dhammakaya.network ผ่าน Directory Utility',
+    url: B + '/pages/manual.php?cat=domain',
+    section: 'คู่มือ',
+    keywords: 'macos ventura join domain active directory directory utility bind macbook imac apple โดเมน mobile account หน้าแดง'
+  },
+  {
     title: 'คู่มือ Join Domain — Windows 7',
     desc: 'ขั้นตอนนำ Windows 7 เข้า Domain dhammakaya.network',
     url: B + '/pages/manual.php?cat=domain',
@@ -280,6 +287,27 @@ window.SITE_SEARCH_INDEX = [
     url: B + '/pages/manual.php?cat=domain',
     section: 'คู่มือ',
     keywords: 'windows 11 join domain settings about วินโดวส์ สิบเอ็ด เข้าโดเมน'
+  },
+  {
+    title: 'ไฟล์แชร์ (Shared Folder) — ภาพรวม',
+    desc: 'คู่มือการเข้าใช้งานไฟล์แชร์ newpr และ pr-center บนอุปกรณ์ iPhone, iPad และ Android',
+    url: B + '/pages/manual.php?cat=shared',
+    section: 'คู่มือ',
+    keywords: 'ไฟล์แชร์ shared folder newpr pr-center iphone ipad android คู่มือ เข้าใช้งาน มือถือ แท็บเล็ต'
+  },
+  {
+    title: 'เข้าใช้ไฟล์แชร์ newpr, pr-center ด้วย iPhone, iPad',
+    desc: 'คู่มือการตั้งค่าเข้าใช้งานไฟล์แชร์ newpr และ pr-center บนอุปกรณ์ iOS',
+    url: B + '/pages/manual.php?cat=shared',
+    section: 'คู่มือ',
+    keywords: 'iphone ipad newpr pr-center ไฟล์แชร์ ios apple มือถือ แท็บเล็ต เข้าใช้ shared folder pdf'
+  },
+  {
+    title: 'เข้าใช้ pr-center, newpr ด้วย Android',
+    desc: 'คู่มือการตั้งค่าเข้าใช้งานไฟล์แชร์ pr-center และ newpr บนอุปกรณ์ Android',
+    url: B + '/pages/manual.php?cat=shared',
+    section: 'คู่มือ',
+    keywords: 'android pr-center newpr ไฟล์แชร์ แอนดรอยด์ มือถือ เข้าใช้ shared folder pdf samsung'
   },
   {
     title: 'คู่มือการตั้งค่าและเครื่องมือเพิ่มเติม',
@@ -431,6 +459,31 @@ window.SITE_SEARCH_INDEX = [
     url: B + '/pages/procurement.php?cat=location',
     section: 'จัดหาอุปกรณ์',
     keywords: 'ห้องคอมพิวเตอร์ จอง อบรม L1M 100ปี location สถานที่ ห้องเรียน ห้องประชุม ปฏิทิน'
+  },
+
+  // ════════════════════════════════════════════
+  // โปรแกรมองค์กร — programs.php
+  // ════════════════════════════════════════════
+  {
+    title: 'โปรแกรมองค์กร — ภาพรวม',
+    desc: 'รวมโปรแกรมและระบบที่ใช้งานภายในองค์กร เช่น DKC Donate Online, WinBudget',
+    url: B + '/pages/programs.php',
+    section: 'โปรแกรมองค์กร',
+    keywords: 'โปรแกรม องค์กร program dkc donate winbudget ระบบ ภายใน'
+  },
+  {
+    title: 'DKC Donate Online',
+    desc: 'ระบบบริจาคออนไลน์ สำหรับร่วมบริจาคจตุปัจจัยแก่วัดพระธรรมกาย เพื่อการเผยแผ่พระพุทธศาสนา',
+    url: B + '/pages/programs.php?cat=donate',
+    section: 'โปรแกรมองค์กร',
+    keywords: 'dkc donate online บริจาค ออนไลน์ ระบบบริจาค เงินบริจาค program จตุปัจจัย เจ้าภาพ วัดพระธรรมกาย donate.dkcmain.org'
+  },
+  {
+    title: 'WinBudget',
+    desc: 'ระบบบริหารจัดการงบประมาณขององค์กร ติดตั้งผ่าน .NET Framework และ Internet Explorer',
+    url: B + '/pages/programs.php?cat=winbudget',
+    section: 'โปรแกรมองค์กร',
+    keywords: 'winbudget งบประมาณ budget เบิกจ่าย บริหารงบ program กองคลัง ติดตั้ง dotnet framework internet explorer สิรรัตน์ 13332'
   },
 
   // ════════════════════════════════════════════

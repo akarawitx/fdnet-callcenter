@@ -13,7 +13,7 @@ $categories = [
   'led'               => ['label' => 'จอ LED'],
   'server'            => ['label' => 'Server'],
   'wifi&lan'          => ['label' => 'Wi-Fi , LAN'],
-  'telephonebill'     => ['label' => 'ค่าบริการโทรศัพท์'],
+  'telephonebill'     => ['label' => 'โทรศัพท์'],
   'printDocument'     => ['label' => 'ถ่ายเอกสาร'],
   'fileShred'         => ['label' => 'File Share'],
   'training'          => ['label' => 'อบรมความรู้สารสนเทศ'],
@@ -231,14 +231,17 @@ $guides = [
     ',
   ],
 
-  // ค่าบริการโทรศัพท์
+  // โทรศัพท์
   [
     'cat'   => 'telephonebill',
     'icon'  => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
-    'title' => 'ค่าบริการโทรศัพท์',
-    'desc'  => 'ขั้นตอนการขอเบิกค่าบริการโทรศัพท์สำหรับบุคลากรภายในองค์กร',
+    'title' => 'โทรศัพท์',
+    'desc'  => 'ขั้นตอนการขอเบิกค่าบริการโทรศัพท์มือถือ และขอติดตั้งโทรศัพท์สำนักงาน (IP Phone) สำหรับบุคลากรภายในองค์กร',
     'extra_html' => '
-      <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:12px">โทรศัพท์มือถือ</p>
+      <!-- ═══════════════════════════════ -->
+      <!-- 1. โทรศัพท์มือถือ -->
+      <!-- ═══════════════════════════════ -->
+      <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:12px">1. โทรศัพท์มือถือ</p>
 
       <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:6px">
         1. Download ไฟล์ตามประเภทที่ต้องการ
@@ -282,12 +285,62 @@ $guides = [
       <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:0">
         4. รอหัวหน้ากองอนุมัติ แล้วเจ้าหน้าที่จะดำเนินการให้
       </p>
-      <br>
-      <div style="padding:14px 16px;background:var(--clr-bg);border-radius:10px;border:1px solid var(--clr-border);font-size:.9rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
+
+      <div style="padding:14px 16px;background:var(--clr-bg);border-radius:10px;border:1px solid var(--clr-border);font-size:.9rem;line-height:1.85;color:var(--clr-text);margin-top:16px;margin-bottom:32px">
         <p style="margin:0 0 8px;font-weight:600">สอบถามรายละเอียดเพิ่มเติมที่</p>
         <div style="display:flex;align-items:center;gap:8px">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           <span>กัลฯ กรกมล (เพียร): <a href="tel:0814959540" style="color:#1e73be;font-weight:600;text-decoration:none">081-495-9540</a></span>
+        </div>
+      </div>
+
+      <div style="border-top:1px dashed var(--clr-border);margin-bottom:32px"></div>
+
+      <!-- ═══════════════════════════════ -->
+      <!-- 2. โทรศัพท์สำนักงาน (IP Phone) -->
+      <!-- ═══════════════════════════════ -->
+      <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:12px">2. โทรศัพท์สำนักงาน (IP Phone)</p>
+
+      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
+        <a href="https://fdnet.dhammakaya.network/fdcom/login.php" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a>
+        ขอใช้บริการติดตั้งโทรศัพท์ภายใน
+      </p>
+
+      <p style="font-size:.95rem;font-weight:600;color:var(--clr-text);margin-bottom:12px">ตัวอย่างขั้นตอนการกรอกข้อมูล</p>
+
+      <div style="display:flex;flex-direction:column;gap:20px;font-size:.92rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
+
+        <div>
+          <p style="margin:0 0 8px"><strong>1.</strong> Login เข้าหน้า FDcom</p>
+          <img src="../assets/images/procurement/ipphone/step1.png" alt="Login FDcom"
+            onclick="lbOpen([\'../assets/images/procurement/ipphone/step1.png\',\'../assets/images/procurement/ipphone/step2.png\',\'../assets/images/procurement/ipphone/step3.png\'],0)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px"><strong>2.</strong> กดเลือกเมนู 1.2 กรอกใบ คพ.</p>
+          <img src="../assets/images/procurement/ipphone/step2.png" alt="เมนู 1.2"
+            onclick="lbOpen([\'../assets/images/procurement/ipphone/step1.png\',\'../assets/images/procurement/ipphone/step2.png\',\'../assets/images/procurement/ipphone/step3.png\'],1)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px"><strong>3.</strong> เลือกหมวดอุปกรณ์ "ขอติดตั้งโทรศัพท์ภายใน"</p>
+          <img src="../assets/images/procurement/ipphone/step3.png" alt="เลือกหมวดขอติดตั้งโทรศัพท์ภายใน"
+            onclick="lbOpen([\'../assets/images/procurement/ipphone/step1.png\',\'../assets/images/procurement/ipphone/step2.png\',\'../assets/images/procurement/ipphone/step3.png\'],2)"
+            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
+        </div>
+
+      </div>
+
+      <div style="padding:14px 16px;background:var(--clr-bg);border-radius:10px;border:1px solid var(--clr-border);font-size:.9rem;line-height:1.85;color:var(--clr-text)">
+        <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;color:var(--clr-text-muted)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>ติดต่อที่กองบริการสารสนเทศ อาคาร 100 ปีคุณยายฯ ตึก O ชั้น 11</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;color:var(--clr-text-muted)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>เบอร์โทรภายใน: <a href="tel:028311000" style="color:#1e73be;font-weight:600;text-decoration:none">02-831-1000</a> ต่อ 14141</span>
         </div>
       </div>
     ',

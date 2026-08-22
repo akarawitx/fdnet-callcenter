@@ -104,6 +104,17 @@ function get_navigation()
             ],
         ],
 
+        // โปรแกรมองค์กร
+        [
+            'label'    => 'โปรแกรมองค์กร',
+            'url'      => "$b/pages/programs.php",
+            'icon'     => '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>',
+            'children' => [
+                ['label' => 'DKC Donate Online', 'url' => "$b/pages/programs.php?cat=donate"],
+                ['label' => 'WinBudget',         'url' => "$b/pages/programs.php?cat=winbudget"],
+            ],
+        ],
+
         // แจ้งปัญหาการใช้งาน
         [
             'label' => 'แจ้งปัญหาการใช้งาน',

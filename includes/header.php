@@ -249,10 +249,31 @@ function render_nav_items($items, $depth = 0)
       margin: 0 auto;
       padding: 0 16px;
       position: relative;
+      overflow-x: auto;
+      overflow-y: hidden;
+      flex-wrap: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, .35) transparent;
+    }
+
+    .nav__list::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .nav__list::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, .35);
+      border-radius: 4px;
+    }
+
+    .nav__list::-webkit-scrollbar-track {
+      background: transparent;
     }
 
     .nav__item {
       position: relative;
+      flex-shrink: 0;
     }
 
     .nav__link {
@@ -1310,6 +1331,23 @@ function render_nav_items($items, $depth = 0)
           var isOpen = sub.classList.contains('open');
           sub.classList.toggle('open', !isOpen);
           btn.classList.toggle('open', !isOpen);
+        });
+      });
+    });
+  </script>
+
+  <!-- Fix: ป้องกัน dropdown โดนตัดเมื่อแถบเมนูเปิด horizontal scroll -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var topItems = document.querySelectorAll('.nav-bar > .nav__list > .nav__item--has-children');
+      topItems.forEach(function(li) {
+        var dropdown = li.querySelector(':scope > .nav__dropdown');
+        if (!dropdown) return;
+        li.addEventListener('mouseenter', function() {
+          var rect = li.getBoundingClientRect();
+          dropdown.style.position = 'fixed';
+          dropdown.style.top = rect.bottom + 'px';
+          dropdown.style.left = rect.left + 'px';
         });
       });
     });
