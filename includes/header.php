@@ -36,6 +36,7 @@ function render_nav_items($items, $depth = 0)
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="<?= BASE_URL ?>/assets/images/logo.png">
   <script>
     window.BASE_URL = "<?= BASE_URL ?>";
   </script>

@@ -504,6 +504,13 @@ window.SITE_SEARCH_INDEX = [
     keywords: 'wifi ภายใน วัด พระธรรมกาย DKC network สัญญาณ ชื่อ wifi รหัส ssid รายชื่อ wifi ทั้งหมด'
   },
   {
+    title: 'ทดสอบคุณภาพอินเทอร์เน็ต',
+    desc: 'ตรวจสอบคุณภาพเครือข่าย LAN และอินเทอร์เน็ตด้วยตัวเอง ผ่านเว็บไซต์ หรือเครื่องมือสำหรับ Windows / macOS',
+    url: B + '/pages/network.php?cat=speedtest',
+    section: 'เครือข่าย',
+    keywords: 'ทดสอบ speedtest speed test คุณภาพ อินเทอร์เน็ต เน็ตช้า checkall check net cna netinfo bat dmg macos windows ตรวจเช็คเน็ต ping'
+  },
+  {
     title: 'WiFi สำนักงานใหญ่ — DKC Network (HQ)',
     desc: 'DKC Network (HQ) — สำนักงานใหญ่',
     url: B + '/pages/network.php?cat=network',

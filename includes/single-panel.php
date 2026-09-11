@@ -221,6 +221,10 @@ if ($current) {
     min-width: 0;
   }
 
+  .sp-content {
+    min-width: 0;
+  }
+
   @media (max-width: 800px) {
     .sp-layout {
       grid-template-columns: 1fr;
