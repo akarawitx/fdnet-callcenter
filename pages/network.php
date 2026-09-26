@@ -355,6 +355,10 @@ $network_items = [
               <td style="padding:10px">อาคารพระผู้ปราบมาร1-2</td>
               <td style="padding:10px">PM-12-Dot1X-CNA</td>
             </tr>
+            <tr style="background:#f2f2f2">
+              <td style="padding:10px">อาคารพระผู้ปราบมาร3</td>
+              <td style="padding:10px">DKC Network (PM3)</td>
+            </tr>
             <tr>
               <td style="padding:10px">อาคารหนึ่งไม่มีสอง</td>
               <td style="padding:10px">DKC Network (UPK)</td>
@@ -367,7 +371,7 @@ $network_items = [
               <td style="padding:10px">อาคารบุญรักษา</td>
               <td style="padding:10px">Boonraksa</td>
             </tr>
-            <tr>
+            <tr style="background:#f2f2f2">
               <td style="padding:10px">อาคารร้อยสิบห้าปี</td>
               <td style="padding:10px">DKC Network (115Y)</td>
             </tr>

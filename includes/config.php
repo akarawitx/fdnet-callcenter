@@ -68,7 +68,7 @@ function get_navigation()
                         ['label' => 'Wi-Fi & LAN',                                 'url' => "$b/pages/procurement.php?cat=wifi&lan"],
                         ['label' => 'ค่าบริการโทรศัพท์',                          'url' => "$b/pages/procurement.php?cat=telephonebill"],
                         ['label' => 'ถ่ายเอกสาร',                                 'url' => "$b/pages/procurement.php?cat=printDocument"],
-                        ['label' => 'File Share',                                  'url' => "$b/pages/procurement.php?cat=fileShare"],
+                        ['label' => 'File Share',                                  'url' => "$b/pages/procurement.php?cat=fileShred"],
                         ['label' => 'อบรมความรู้สารสนเทศ',                        'url' => "$b/pages/procurement.php?cat=training"],
                         ['label' => 'ยืม คืน ซ่อมอุปกรณ์คอมพิวเตอร์',           'url' => "$b/pages/procurement.php?cat=it&com"],
                         ['label' => 'จัดซื้อ ยืม คืน เเจ้งซ่อมอุปกรณ์มัลติมีเดีย', 'url' => "$b/pages/procurement.php?cat=video"],
@@ -124,7 +124,7 @@ function get_navigation()
             'children' => [
                 ['label' => 'เข้าหน้าแดงไม่ได้', 'url' => "$b/pages/support.php?cat=redlogin"],
                 ['label' => 'เข้าเว็บ HR ไม่ได้', 'url' => "$b/pages/support.php?cat=hrweb"],
-                ['label' => 'เข้าไฟล์แชร์ไม่ได้', 'url' => "$b/pages/support.php?cat=fileshare"],
+                ['label' => 'เข้าไฟล์แชร์ไม่ได้', 'url' => "$b/pages/support.php?cat=fileShred"],
             ],
         ],
     ];
