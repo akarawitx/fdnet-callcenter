@@ -2,13 +2,14 @@
 // pages/manual.php — คู่มือการใช้งานระบบ
 require_once '../includes/config.php';
 $page_title = 'คู่มือการใช้งานระบบ';
-$cat = $_GET['cat'] ? $_GET['cat'] : '';
+$cat = isset($_GET['cat']) ? $_GET['cat'] : '';
 
 $sections = [
   'network'   => ['label' => 'เครือข่ายและการเชื่อมต่อ'],
   'security'  => ['label' => 'ระบบปฏิบัติการและความปลอดภัย'],
   'domain'    => ['label' => 'การใช้งาน Domain'],
   'shared'    => ['label' => 'ไฟล์แชร์ (Shared Folder)'],
+  'procurement' => ['label' => 'ระบบจัดซื้อจัดหาอุปกรณ์'],
   'tools'     => ['label' => 'การตั้งค่าและเครื่องมือเพิ่มเติม'],
   'documents' => ['label' => 'เอกสารระบบ'],
 ];
@@ -870,6 +871,170 @@ $manual_items = [
 
       <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:14px 18px;font-size:.88rem;color:#166534;line-height:1.7">
         📞 หากเข้าใช้งานไม่ได้ กรุณาติดต่อกองบริหารสารสนเทศ โทร <strong>14141</strong>
+      </div>
+    ',
+  ],
+
+    // ════════════════════════════════════════════
+  // ระบบจัดซื้อจัดหาอุปกรณ์
+  // ════════════════════════════════════════════
+  [
+    'cat'   => 'procurement',
+    'icon'  => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>',
+    'title' => 'ระบบจัดซื้อจัดหาอุปกรณ์',
+    'desc'  => 'คู่มือการกรอกข้อมูลขอจัดซื้อจัดหาอุปกรณ์ การส่งอีเมลให้หัวหน้ากองอนุมัติอีกครั้ง และขั้นตอนการอนุมัติของหัวหน้ากอง',
+    'extra_html' => '
+      <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:24px">
+        คู่มือหมวดนี้อธิบายขั้นตอนการขอจัดซื้อจัดหาอุปกรณ์ผ่านระบบจัดซื้อ
+        ตั้งแต่การกรอกข้อมูลของผู้ขอ ไปจนถึงขั้นตอนการอนุมัติของหัวหน้ากอง
+        กรุณาเตรียม <strong>Username และ Password (หน้าแดง)</strong> ที่ได้รับจากศูนย์คอมฯ ให้พร้อมก่อนเริ่ม
+      </p>
+      ' .
+      make_accordion('proc1', 'คู่มือการกรอกข้อมูลในระบบจัดซื้อจัดหาอุปกรณ์', '', [
+        [
+          'title'   => 'เข้าเว็บไซต์และเลือกระบบจัดซื้อ',
+          'desc'    => 'เข้าไปที่ <a href="https://fdnet.dhammakaya.network/" target="_blank" style="color:var(--clr-primary);font-weight:600">https://fdnet.dhammakaya.network/</a> หรือ <a href="https://it4141.com/" target="_blank" style="color:var(--clr-primary);font-weight:600">https://it4141.com/</a> แล้วเลือก <strong>ระบบจัดซื้อ</strong>',
+          'img'     => '../assets/images/procurement/procu/proc1.png',
+          'caption' => 'เลือกระบบจัดซื้อจากหน้าเว็บไซต์',
+        ],
+        [
+          'title'   => 'Login ด้วย User & Password หน้าแดง',
+          'desc'    => 'ล็อกอินด้วย <strong>Username</strong> และ <strong>Password (หน้าแดง)</strong> ที่ได้รับจากศูนย์คอมฯ',
+          'img'     => '../assets/images/procurement/procu/proc2.png',
+          'caption' => 'หน้า Login ระบบจัดซื้อ',
+        ],
+        [
+          'title'   => 'คลิกที่ "รายการขอล่าสุด"',
+          'desc'    => 'หลังจาก Login สำเร็จ ให้คลิกที่เมนู <strong>รายการขอล่าสุด</strong> ตามภาพ',
+          'img'     => '../assets/images/procurement/procu/proc3.png',
+          'caption' => 'คลิกเมนูรายการขอล่าสุด',
+        ],
+        [
+          'title'   => 'คลิกหัวข้อ "ขอใหม่ (เขียน คพ.)"',
+          'desc'    => 'จากนั้นคลิกที่หัวข้อ <strong>ขอใหม่ (เขียน คพ.)</strong> ตามภาพ',
+          'img'     => '../assets/images/procurement/procu/proc4.png',
+          'caption' => 'คลิกหัวข้อขอใหม่ (เขียน คพ.)',
+        ],
+        [
+          'title'   => 'กรอกข้อมูลที่ต้องการ (ส่วนที่ 1)',
+          'desc'    => 'กรอกข้อมูลรายละเอียดที่ต้องการขอจัดซื้อจัดหาอุปกรณ์ ตามภาพ',
+          'img'     => '../assets/images/procurement/procu/proc5.png',
+          'caption' => 'กรอกข้อมูลรายการขอ ส่วนที่ 1',
+        ],
+        [
+          'title'   => 'กรอกข้อมูลที่ต้องการ (ส่วนที่ 2)',
+          'desc'    => 'กรอกข้อมูลในส่วนที่เหลือให้ครบถ้วน ตามภาพ',
+          'img'     => '../assets/images/procurement/procu/proc6.png',
+          'caption' => 'กรอกข้อมูลรายการขอ ส่วนที่ 2',
+        ],
+        [
+          'title'   => 'คลิกที่ "แนบเอกสาร"',
+          'desc'    => 'หลังจากกรอกรายละเอียดเสร็จแล้ว ให้คลิกที่ <strong>แนบเอกสาร</strong> ระบบจะมี Popup ขึ้นมา',
+          'img'     => '../assets/images/procurement/procu/proc7.png',
+          'caption' => 'คลิกแนบเอกสาร',
+        ],
+        [
+          'title'   => 'ทำตามขั้นตอนใน Popup แล้วคลิก Open / เปิด',
+          'desc'    => 'ในหน้าต่าง Popup ให้เลือกไฟล์เอกสารที่ต้องการแนบ ตามภาพ แล้วคลิก <strong>Open / เปิด</strong>',
+          'img'     => '../assets/images/procurement/procu/proc8.png',
+          'caption' => 'เลือกไฟล์เอกสารและคลิก Open / เปิด',
+        ],
+        [
+          'title'   => 'กด Upload / อัพโหลด',
+          'desc'    => 'เมื่อคลิก Open / เปิด แล้ว ให้กด <strong>Upload / อัพโหลด</strong>',
+          'img'     => '../assets/images/procurement/procu/proc9.png',
+          'caption' => 'กด Upload / อัพโหลด',
+        ],
+        [
+          'title'   => 'กด "บันทึกรายการ"',
+          'desc'    => 'เมื่อกด Upload / อัพโหลด เรียบร้อยแล้ว ให้กด <strong>บันทึกรายการ</strong> เป็นอันเสร็จสิ้นการกรอกข้อมูล
+                       <div style="background:#fefce8;border:1px solid #fde68a;border-radius:12px;padding:14px 18px;font-size:.88rem;color:#713f12;line-height:1.7;margin-top:14px">
+                         ⚠️ เมื่อกรอกข้อมูลเสร็จแล้ว ต้องรอให้ <strong>หัวหน้ากอง</strong> และ <strong>ผอ.สำนัก</strong> อนุมัติ
+                         หลังจากท่านทั้ง 2 อนุมัติแล้ว ทางทีมงานสารสนเทศจะดำเนินการในขั้นตอนต่อไป
+                       </div>',
+          'img'     => '../assets/images/procurement/procu/proc10.png',
+          'caption' => 'กดบันทึกรายการ',
+        ],
+      ]) .
+      make_accordion('proc2', 'กรณีต้องการส่งอีเมลให้หัวหน้ากองอนุมัติอีกครั้ง', '', [
+        [
+          'title'   => 'เลือกรายการที่จะส่งอีเมลให้หัวหน้ากองอนุมัติอีกครั้ง',
+          'desc'    => 'เลือกรายการที่ต้องการส่งอีเมลให้หัวหน้ากองอนุมัติอีกครั้ง ตามภาพ',
+          'img'     => '../assets/images/procurement/procu/proc11.png',
+          'caption' => 'เลือกรายการที่ต้องการส่งอีเมลอีกครั้ง',
+        ],
+        [
+          'title'   => 'ดำเนินการตามภาพ',
+          'desc'    => 'ทำตามขั้นตอนในภาพเพื่อดำเนินการส่งอีเมลอีกครั้ง',
+          'img'     => '../assets/images/procurement/procu/proc12.png',
+          'caption' => 'ขั้นตอนการส่งอีเมลอีกครั้ง',
+        ],
+        [
+          'title'   => 'ยืนยันการส่งอีเมล',
+          'desc'    => 'ทำตามภาพเพื่อยืนยันการส่งอีเมลให้หัวหน้ากองอนุมัติอีกครั้ง',
+          'img'     => '../assets/images/procurement/procu/proc13.png',
+          'caption' => 'ยืนยันการส่งอีเมลให้หัวหน้ากอง',
+        ],
+      ]) .
+      make_accordion('proc3', 'ขั้นตอนการอนุมัติของหัวหน้ากอง (ระบบจัดซื้อจัดหาอุปกรณ์คอมฯ)', '', [
+        [
+          'title'   => 'วิธีที่ 1: ตรวจสอบอีเมลและเลือก Review',
+          'desc'    => 'ให้เข้าไปตรวจสอบที่อีเมลของหัวหน้ากอง แล้วเลือก <strong>Review</strong>',
+          'img'     => '../assets/images/procurement/procu/proc14.png',
+          'caption' => 'เลือก Review จากอีเมลของหัวหน้ากอง',
+        ],
+        [
+          'title'   => 'วิธีที่ 2: เข้าเว็บไซต์ระบบจัดซื้อ',
+          'desc'    => 'กรณีหัวหน้ากองไม่สะดวกดูที่อีเมล ให้เข้าไปที่ <a href="https://fdnet.dhammakaya.network/" target="_blank" style="color:var(--clr-primary);font-weight:600">https://fdnet.dhammakaya.network/</a> หรือ <a href="https://it4141.com/" target="_blank" style="color:var(--clr-primary);font-weight:600">https://it4141.com/</a>',
+          'img'     => '../assets/images/procurement/procu/proc15.png',
+          'caption' => 'เข้าเว็บไซต์ระบบจัดซื้อ',
+        ],
+        [
+          'title'   => 'Login ด้วย User & Password หน้าแดง',
+          'desc'    => 'ล็อกอินด้วย <strong>Username</strong> และ <strong>Password (หน้าแดง)</strong> ของหัวหน้ากอง',
+          'img'     => '../assets/images/procurement/procu/proc16.png',
+          'caption' => 'Login ด้วย User หน้าแดงของหัวหน้ากอง',
+        ],
+        [
+          'title'   => 'เลือกรายการที่จะอนุมัติ',
+          'desc'    => 'เมื่อเข้ามาในหน้านี้แล้ว ให้เลือกรายการที่ต้องการอนุมัติ',
+          'img'     => '../assets/images/procurement/procu/proc17.png',
+          'caption' => 'เลือกรายการที่ต้องการอนุมัติ',
+        ],
+        [
+          'title'   => 'กดอนุมัติ',
+          'desc'    => 'เมื่อเลือกรายการแล้ว จะได้หน้าจอตามภาพ ให้กดปุ่ม <strong style="color:#ea580c">สีส้ม</strong> เพื่ออนุมัติ หากไม่อนุมัติสามารถปิดหน้านี้ได้เลย',
+          'img'     => '../assets/images/procurement/procu/proc18.png',
+          'caption' => 'กดปุ่มสีส้มเพื่ออนุมัติรายการ',
+        ],
+      ]) . '
+      <div style="margin-top:24px;margin-bottom:8px;font-weight:600;font-size:.95rem;color:var(--clr-text)">
+        📎 เอกสารอ้างอิง
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:24px">
+
+        <a href="https://fdnet.dhammakaya.network/form/%E0%B8%84%E0%B8%B3%E0%B9%81%E0%B8%99%E0%B8%B0%E0%B8%99%E0%B8%B3-LAN-FDNET/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%20%E0%B8%84%E0%B8%9E.FDnet.pdf"
+           target="_blank"
+           style="display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--clr-border);border-radius:12px;background:var(--clr-surface);text-decoration:none;transition:box-shadow .2s,border-color .2s;"
+           onmouseover="this.style.boxShadow=\'0 4px 16px rgba(0,0,0,.08)\';this.style.borderColor=\'var(--clr-primary)\'"
+           onmouseout="this.style.boxShadow=\'none\';this.style.borderColor=\'var(--clr-border)\'">
+          <span style="flex-shrink:0;width:40px;height:40px;background:#fee2e2;border-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span style="flex:1">
+            <span style="display:block;font-weight:600;font-size:.92rem;color:var(--clr-text)">คู่มือเอกสาร คพ. FDnet</span>
+            <span style="display:block;font-size:.8rem;color:var(--clr-text-muted);margin-top:2px">คู่มืออ้างอิงสำหรับการเขียน คพ. และการใช้งานระบบ FDnet</span>
+          </span>
+          <span style="flex-shrink:0;color:var(--clr-text-muted)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </span>
+        </a>
+
+      </div>
+
+      <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:14px 18px;font-size:.88rem;color:#166534;line-height:1.7;margin-top:20px">
+        📞 หากพบปัญหาในการใช้งานระบบ กรุณาติดต่อกองบริหารสารสนเทศ โทร <strong>14141</strong>
       </div>
     ',
   ],

@@ -2,7 +2,7 @@
 // pages/support.php — ปัญหาที่พบบ่อย (FAQ)
 require_once '../includes/config.php';
 $page_title = 'ปัญหาที่พบบ่อย';
-$cat = $_GET['cat'] ? $_GET['cat'] : '';
+$cat = isset($_GET['cat']) ? $_GET['cat'] : '';
 
 $sections = [
   'redlogin'  => ['label' => 'เข้าหน้าแดงไม่ได้'],

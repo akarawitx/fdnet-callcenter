@@ -53,7 +53,7 @@
           <li><a href="<?= BASE_URL ?>/pages/support.php?cat=redlogin">เข้าหน้าแดงไม่ได้</a></li>
           <li><a href="<?= BASE_URL ?>/pages/support.php?cat=hrweb">เข้าเว็บ HR ไม่ได้</a></li>
           <li><a href="<?= BASE_URL ?>/pages/network.php?cat=network">Wi-Fi ภายในองค์กร</a></li>
-          <li><a href="<?= BASE_URL ?>/pages/procurement.php?cat=training">อบรมความรู้สารสนเทศ</a></li>
+          <li><a href="<?= BASE_URL ?>/pages/procurement.php?cat=training">อบรมคอมพิวเตอร์</a></li>
         </ul>
       </div>
     </div>

@@ -2,7 +2,7 @@
 // pages/programs.php — โปรแกรมองค์กร
 require_once '../includes/config.php';
 $page_title = 'โปรแกรมองค์กร';
-$cat = $_GET['cat'] ? $_GET['cat'] : '';
+$cat = isset($_GET['cat']) ? $_GET['cat'] : '';
 
 $sections = [
   'donate'    => ['label' => 'DKC Donate Online'],

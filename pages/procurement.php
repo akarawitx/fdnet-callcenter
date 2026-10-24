@@ -3,7 +3,7 @@
 require_once '../includes/config.php';
 
 $page_title = 'ระบบจัดหาอุปกรณ์สารสนเทศ';
-$cat = $_GET['cat'] ? $_GET['cat'] : '';
+$cat = isset($_GET['cat']) ? $_GET['cat'] : '';
 
 $categories = [
   'accessControl'     => ['label' => 'Access Control'],
@@ -16,13 +16,59 @@ $categories = [
   'telephonebill'     => ['label' => 'โทรศัพท์'],
   'printDocument'     => ['label' => 'ถ่ายเอกสาร'],
   'fileShred'         => ['label' => 'File Share'],
-  'training'          => ['label' => 'อบรมความรู้สารสนเทศ'],
+  'training'          => ['label' => 'อบรมคอมพิวเตอร์'],
   'it&com'            => ['label' => 'ยืม คืน ซ่อมอุปกรณ์คอมพิวเตอร์'],
   'video'             => ['label' => 'จัดซื้อ ยืม คืน เเจ้งซ่อมอุปกรณ์มัลติมีเดีย'],
   'audio'             => ['label' => 'จัดซื้อ ยืม คืน เเจ้งซ่อมอุปกรณ์เครื่องเสียง'],
   'radio'             => ['label' => 'ยืม-คืน/เเจ้งซ่อมวิทยุสื่อสาร'],
   'location'          => ['label' => 'การขอใช้งานสถานที่'],
 ];
+
+// ───────────────────────────────────────────────────────────────────
+// Helper: แสดงรูปทั้งหมดในโฟลเดอร์ (เรียงตามชื่อไฟล์ step1, step2, ..., step10)
+// เพิ่ม/ลบรูปได้โดยไม่ต้องแก้โค้ด
+// $steps (ไม่บังคับ) — คำอธิบายของแต่ละรูปตามลำดับ: [['title' => '...', 'desc' => 'HTML'], ...]
+// ───────────────────────────────────────────────────────────────────
+function image_gallery($folder, $title, $alt_prefix, $steps = array())
+{
+  $files = array();
+  foreach ((array) glob(__DIR__ . '/../' . $folder . '/*') as $f) {
+    if (preg_match('/\.(png|jpe?g|gif|webp)$/i', $f)) $files[] = $f;
+  }
+  if (!$files) return '';
+  natcasesort($files);
+  $files = array_values($files);
+
+  $urls = array();
+  foreach ($files as $f) {
+    $urls[] = '../' . $folder . '/' . rawurlencode(basename($f));
+  }
+  $js_list = "['" . implode("','", $urls) . "']";
+
+  $html = '<p style="font-size:.95rem;font-weight:600;color:var(--clr-text);margin-bottom:10px">' . htmlspecialchars($title) . '</p>
+      <div style="display:flex;flex-direction:column;gap:' . ($steps ? '24px' : '8px') . '">';
+  foreach ($urls as $i => $url) {
+    $step = isset($steps[$i]) ? $steps[$i] : null;
+    $alt  = $step ? $step['title'] : $alt_prefix . ' ' . ($i + 1);
+    $html .= '
+        <div>';
+    if ($step) {
+      $html .= '
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <span style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--clr-primary);color:#fff;font-size:.82rem;font-weight:700;display:flex;align-items:center;justify-content:center">' . ($i + 1) . '</span>
+            <span style="font-size:.95rem;font-weight:600;color:var(--clr-text)">' . htmlspecialchars($step['title']) . '</span>
+          </div>
+          <div style="font-size:.9rem;line-height:1.85;color:var(--clr-text);margin:0 0 10px 36px">' . $step['desc'] . '</div>';
+    }
+    $html .= '
+          <img src="' . htmlspecialchars($url) . '" alt="' . htmlspecialchars($alt) . '" loading="lazy"
+            onclick="lbOpen(' . htmlspecialchars($js_list) . ',' . $i . ')"
+            style="width:100%;max-width:' . ($steps ? '720px' : '460px') . ';border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer' . ($step ? ';margin-left:36px;width:calc(100% - 36px)' : '') . '">
+        </div>';
+  }
+  return $html . '
+      </div>';
+}
 
 $guides = [
   // Access Control
@@ -411,19 +457,18 @@ $guides = [
     ',
   ],
 
-  // อบรมความรู้สารสนเทศ
+  // อบรมคอมพิวเตอร์
   [
     'cat'   => 'training',
     'icon'  => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
-    'title' => 'อบรมความรู้สารสนเทศ',
-    'desc'  => 'ขั้นตอนการสมัครเข้าอบรมความรู้ด้านสารสนเทศสำหรับบุคลากรภายในองค์กร',
+    'title' => 'อบรมคอมพิวเตอร์',
+    'desc'  => 'ขั้นตอนการสมัครเข้าอบรมคอมพิวเตอร์สำหรับบุคลากรภายในองค์กร',
     'extra_html' => '
       <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:12px">ขออบรมโปรแกรมคอมพิวเตอร์</p>
       <p style="font-size:.88rem;color:var(--clr-text-muted);margin-bottom:14px">สำหรับผู้สนใจสมัครเรียนโปรแกรม</p>
 
       <div style="font-size:.92rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        <p style="margin:0 0 8px">1. <a href="https://form.jotform.com/231301336713444" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link ฟอร์ม</a> เข้ารับการอบรมคอมพิวเตอร์ และบันทึกเป็นไฟล์ PDF</p>
-        <p style="margin:0 0 8px">2. <a href="https://fdnet.dhammakaya.network/fdcom/system/form2.php?sidebarId=12&autocat=58&man=../../services/Training_computer.php&item=(%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%81)%20%E0%B8%82%E0%B8%AD%E0%B8%AA%E0%B8%A1%E0%B8%B1%E0%B8%84%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B8%A3%E0%B8%A1%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1...%20%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88...&purpose=(%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%81)%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%B3%E0%B9%84%E0%B8%9B%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99...%20/%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%97%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%B0" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a> และแนบไฟล์ PDF ที่บันทึกไว้ เพื่อขออนุมัติ</p>
+        <p style="margin:0 0 8px"><a href="https://form.jotform.com/231301336713444" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link ฟอร์ม</a> เข้ารับการอบรมคอมพิวเตอร์ และส่งเรื่องขออนุมัติหัวหน้ากองได้อัตโนมัติ</p>
         <p style="margin:0 0 4px">• ต้องมีความรู้พื้นฐานการใช้งานคอมพิวเตอร์เบื้องต้น <span style="color:var(--clr-text-muted)">(เฉพาะบางโปรแกรม)</span></p>
         <p style="margin:0 0 4px">• ทำแบบทดสอบที่กองบริการสารสนเทศ <span style="color:var(--clr-text-muted)">(เฉพาะบางโปรแกรม)</span></p>
         <p style="margin:0 0 4px">• อาคาร 100 ปี คุณยายฯ ตึก O ชั้น 11 เวลา 9.00-17.00 น.</p>
@@ -457,35 +502,34 @@ $guides = [
         </div>
       </div>
 
-      <p style="font-size:.95rem;font-weight:600;color:var(--clr-text);margin-bottom:10px">ตัวอย่างการกรอกใบสมัครอบรมคอมพิวเตอร์</p>
-
-      <div style="display:flex;flex-direction:column;gap:8px">
-        <img src="../assets/images/procurement/training/step1.png" alt="ตัวอย่างการกรอก 1"
-          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],0)"
-          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        <img src="../assets/images/procurement/training/step2.png" alt="ตัวอย่างการกรอก 2"
-          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],1)"
-          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        <img src="../assets/images/procurement/training/step3.png" alt="ตัวอย่างการกรอก 3"
-          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],2)"
-          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        <img src="../assets/images/procurement/training/step4.png" alt="ตัวอย่างการกรอก 4"
-          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],3)"
-          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        <img src="../assets/images/procurement/training/step5.png" alt="ตัวอย่างการกรอก 5"
-          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],4)"
-          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        <img src="../assets/images/procurement/training/step6.png" alt="ตัวอย่างการกรอก 6"
-          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\'],5)"
-          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        <img src="../assets/images/procurement/training/step7.png" alt="ตัวอย่างการกรอก 7"
-          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\',\'../assets/images/procurement/training/step8.png\'],6)"
-          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        <img src="../assets/images/procurement/training/step8.png" alt="ตัวอย่างการกรอก 8"
-          onclick="lbOpen([\'../assets/images/procurement/training/step1.png\',\'../assets/images/procurement/training/step2.png\',\'../assets/images/procurement/training/step3.png\',\'../assets/images/procurement/training/step4.png\',\'../assets/images/procurement/training/step5.png\',\'../assets/images/procurement/training/step6.png\',\'../assets/images/procurement/training/step7.png\',\'../assets/images/procurement/training/step8.png\'],7)"
-          style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-      </div>
-    ',
+    ' . image_gallery('assets/images/procurement/training', 'ขั้นตอนการสมัครอบรมคอมพิวเตอร์', 'ตัวอย่างการกรอก', [
+      [
+        'title' => 'กรอกข้อมูลในแบบฟอร์มสมัครอบรม',
+        'desc'  => 'กรอกข้อมูลผู้สมัครในแบบฟอร์มให้ครบถ้วนและถูกต้อง โดยเฉพาะช่องที่มีเครื่องหมาย <strong style="color:#dc2626">*</strong> ซึ่งเป็นข้อมูลที่จำเป็นต้องกรอก',
+      ],
+      [
+        'title' => 'เลือกประเภทสมาชิกองค์กร',
+        'desc'  => 'ประเภทสมาชิกที่เลือกจะมีผลต่อขั้นตอนการขออนุมัติ ดังนี้
+          <ul style="margin:6px 0 0;padding-left:20px">
+            <li><strong style="color:#1d4ed8">กรอบสีน้ำเงิน</strong> (บัณฑิตแก้ว, บัณฑิตอาสา, พระภิกษุ, ศรัทธาวาส, ศาสนูปถัมภ์, สามเณร, อาสาพันธ์ตะวัน, อาสาสมัคร, อุบาสก, อุบาสิกา) — หลังส่งแบบฟอร์ม ระบบจะให้ส่งคำขออนุมัติถึงหัวหน้ากองได้โดยอัตโนมัติ</li>
+            <li><strong style="color:#d97706">กรอบสีส้ม</strong> (ผู้มาบุญ สาธุชนทั่วไป อื่น ๆ) — ไม่มีขั้นตอนส่งคำขออนุมัติถึงหัวหน้ากอง</li>
+          </ul>',
+      ],
+      [
+        'title' => 'ตรวจสอบข้อมูลในหน้า "ขอบคุณ"',
+        'desc'  => 'เมื่อส่งแบบฟอร์มสำเร็จ ระบบจะแสดงหน้า <strong>"ขอบคุณ"</strong> พร้อมชื่อผู้สมัครและหลักสูตรที่สมัคร และสามารถสแกน QR Code เพื่อเข้ากลุ่ม LINE ของหลักสูตรได้
+          ส่วนด้านล่างคือ <strong>"ต้องการส่งคำขออนุมัติถึงหัวหน้ากองเลยไหม?"</strong> ซึ่งจะแสดงเฉพาะผู้ที่เลือกประเภทสมาชิกใน<strong style="color:#1d4ed8">กรอบสีน้ำเงิน</strong> (ขั้นตอนที่ 2) ให้กดปุ่ม <strong>ตกลง</strong> เพื่อดำเนินการต่อ',
+      ],
+      [
+        'title' => 'เข้าสู่ระบบด้วยบัญชี DKC (OAuth DKC)',
+        'desc'  => 'ระบบจะพาไปยังหน้าเข้าสู่ระบบ <strong>OAuth DKC</strong> ให้กรอก <strong>Username และ Password (หน้าแดง)</strong> ของท่านให้ถูกต้อง แล้วกด <strong>Login</strong>',
+      ],
+      [
+        'title' => 'ส่งคำขออนุมัติถึงหัวหน้ากองสำเร็จ',
+        'desc'  => 'เมื่อเข้าสู่ระบบสำเร็จ ระบบจะกลับมาที่หน้า "ขอบคุณ" และแสดงข้อความ <strong style="color:#15803d">"ส่งคำขออนุมัติถึงหัวหน้ากองแล้ว"</strong> พร้อมรายละเอียดของหัวหน้ากองผู้พิจารณา ได้แก่ ชื่อ อีเมล ตำแหน่ง และสังกัด
+          จากนั้นกรุณารอผลการพิจารณาจากหัวหน้ากอง',
+      ],
+    ]),
   ],
 
   // ยืม คืน ซ่อมอุปกรณ์คอมพิวเตอร์
