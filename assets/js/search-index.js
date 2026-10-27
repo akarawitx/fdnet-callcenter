@@ -419,11 +419,18 @@ window.SITE_SEARCH_INDEX = [
     keywords: 'wifi lan เครือข่าย ขอ ใช้งาน network สายแลน ติดตั้งเน็ต เดินสาย wi-fi wifi&lan'
   },
   {
-    title: 'ค่าบริการโทรศัพท์มือถือ',
+    title: 'โทรศัพท์มือถือ — ขอเบิกค่าบริการ',
     desc: 'ดาวน์โหลดแบบฟอร์ม ทศ.1 ขออนุมัติใหม่ / ทศ.2 เปลี่ยนเบอร์ ย้ายค่าย / ทศ.3 ย้ายหน่วยงาน',
     url: B + '/pages/procurement.php?cat=telephonebill',
     section: 'จัดหาอุปกรณ์',
     keywords: 'โทรศัพท์ ค่าบริการ เบิก telephone bill ค่าโทร มือถือ ซิม ทศ.1 ทศ.2 ทศ.3 เปลี่ยนเบอร์ ย้ายค่าย งบประมาณ ย้ายหน่วยงาน'
+  },
+  {
+    title: 'ขอติดตั้งโทรศัพท์สำนักงาน (IP Phone)',
+    desc: 'ขอใช้บริการติดตั้งโทรศัพท์ภายใน IP Phone ผ่านระบบ FDcom เมนู 1.2 กรอกใบ คพ. เลือกหมวด "ขอติดตั้งโทรศัพท์ภายใน"',
+    url: B + '/pages/procurement.php?cat=telephonebill',
+    section: 'จัดหาอุปกรณ์',
+    keywords: 'ip phone ipphone ip-phone ไอพีโฟน โทรศัพท์ภายใน โทรศัพท์สำนักงาน โทรศัพท์ตั้งโต๊ะ เบอร์ภายใน เบอร์ต่อ extension ติดตั้งโทรศัพท์ voip fdcom คพ telephone office phone'
   },
   {
     title: 'ถ่ายเอกสารขาว-ดำ',
