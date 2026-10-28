@@ -35,7 +35,7 @@ function image_gallery($folder, $title, $alt_prefix, $steps = array())
   foreach ((array) glob(__DIR__ . '/../' . $folder . '/*') as $f) {
     if (preg_match('/\.(png|jpe?g|gif|webp)$/i', $f)) $files[] = $f;
   }
-  if (!$files) return '';
+  if (!$files && !$steps) return '';
   natcasesort($files);
   $files = array_values($files);
 
@@ -47,7 +47,10 @@ function image_gallery($folder, $title, $alt_prefix, $steps = array())
 
   $html = '<p style="font-size:.95rem;font-weight:600;color:var(--clr-text);margin-bottom:10px">' . htmlspecialchars($title) . '</p>
       <div style="display:flex;flex-direction:column;gap:' . ($steps ? '24px' : '8px') . '">';
-  foreach ($urls as $i => $url) {
+  // วนตามจำนวนที่มากกว่า: ขั้นตอนที่ยังไม่มีรูปจะแสดงเฉพาะข้อความ
+  $count = max(count($urls), count($steps));
+  for ($i = 0; $i < $count; $i++) {
+    $url  = isset($urls[$i]) ? $urls[$i] : null;
     $step = isset($steps[$i]) ? $steps[$i] : null;
     $alt  = $step ? $step['title'] : $alt_prefix . ' ' . ($i + 1);
     $html .= '
@@ -60,10 +63,13 @@ function image_gallery($folder, $title, $alt_prefix, $steps = array())
           </div>
           <div style="font-size:.9rem;line-height:1.85;color:var(--clr-text);margin:0 0 10px 36px">' . $step['desc'] . '</div>';
     }
-    $html .= '
+    if ($url) {
+      $html .= '
           <img src="' . htmlspecialchars($url) . '" alt="' . htmlspecialchars($alt) . '" loading="lazy"
             onclick="lbOpen(' . htmlspecialchars($js_list) . ',' . $i . ')"
-            style="width:100%;max-width:' . ($steps ? '720px' : '460px') . ';border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer' . ($step ? ';margin-left:36px;width:calc(100% - 36px)' : '') . '">
+            style="width:100%;max-width:' . ($steps ? '720px' : '460px') . ';border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer' . ($step ? ';margin-left:36px;width:calc(100% - 36px)' : '') . '">';
+    }
+    $html .= '
         </div>';
   }
   return $html . '
@@ -348,38 +354,28 @@ $guides = [
       <p style="font-size:1rem;font-weight:700;color:var(--clr-text);margin-bottom:12px">2. โทรศัพท์สำนักงาน (IP Phone)</p>
 
       <p style="font-size:.95rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-        <a href="https://fdnet.dhammakaya.network/fdcom/login.php" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">กรอก Link คพ.</a>
-        ขอใช้บริการติดตั้งโทรศัพท์ภายใน
+        ยื่นคำขอใช้บริการติดตั้งโทรศัพท์ภายในได้ทาง
+        <a href="https://cf-dkc-oauth-app.fdnet3.workers.dev/" target="_blank" style="color:#1e73be;font-weight:600;text-decoration:none">ระบบขอติดตั้งโทรศัพท์ภายใน</a>
       </p>
 
-      <p style="font-size:.95rem;font-weight:600;color:var(--clr-text);margin-bottom:12px">ตัวอย่างขั้นตอนการกรอกข้อมูล</p>
+    ' . image_gallery('assets/images/procurement/ipphone', 'ตัวอย่างขั้นตอนการกรอกข้อมูล', 'ขั้นตอนขอติดตั้งโทรศัพท์ภายใน', [
+      [
+        'title' => 'เข้าสู่ระบบ',
+        'desc'  => 'เปิดลิงก์ระบบขอติดตั้งโทรศัพท์ภายในด้านบน แล้วกดปุ่ม <strong>"เข้าสู่ระบบด้วยบัญชีองค์กร"</strong>',
+      ],
+      [
+        'title' => 'กรอก Username และ Password (หน้าแดง)',
+        'desc'  => 'ระบบจะพาไปยังหน้าเข้าสู่ระบบของวัดพระธรรมกาย ให้กรอก <strong>Username AD</strong> และ <strong>Password</strong> (หน้าแดง) ของท่านให้ถูกต้อง แล้วกด <strong>Log in</strong>',
+      ],
+      [
+        'title' => 'กรอกข้อมูลคำขอให้ครบถ้วน',
+        'desc'  => 'ระบบจะแสดง <strong>แบบฟอร์มขอติดตั้งโทรศัพท์ภายใน</strong> โดยดึงชื่อผู้ขอ หน่วยงาน/กอง และสำนักมาให้อัตโนมัติ
+          จากนั้นกรอก <strong>เบอร์โทรศัพท์ผู้ขอ</strong>, <strong>สถานที่ติดตั้ง/ห้อง</strong> และ <strong>เหตุผล/วัตถุประสงค์</strong> ให้ครบถ้วนและถูกต้อง
+          (สามารถแนบรูปภาพสถานที่ติดตั้งได้สูงสุด 3 ภาพ — ไม่บังคับ) แล้วจึงยื่นคำขอ',
+      ],
+    ]) . '
 
-      <div style="display:flex;flex-direction:column;gap:20px;font-size:.92rem;line-height:1.85;color:var(--clr-text);margin-bottom:20px">
-
-        <div>
-          <p style="margin:0 0 8px"><strong>1.</strong> Login เข้าหน้า FDcom</p>
-          <img src="../assets/images/procurement/ipphone/step1.png" alt="Login FDcom"
-            onclick="lbOpen([\'../assets/images/procurement/ipphone/step1.png\',\'../assets/images/procurement/ipphone/step2.png\',\'../assets/images/procurement/ipphone/step3.png\'],0)"
-            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        </div>
-
-        <div>
-          <p style="margin:0 0 8px"><strong>2.</strong> กดเลือกเมนู 1.2 กรอกใบ คพ.</p>
-          <img src="../assets/images/procurement/ipphone/step2.png" alt="เมนู 1.2"
-            onclick="lbOpen([\'../assets/images/procurement/ipphone/step1.png\',\'../assets/images/procurement/ipphone/step2.png\',\'../assets/images/procurement/ipphone/step3.png\'],1)"
-            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        </div>
-
-        <div>
-          <p style="margin:0 0 8px"><strong>3.</strong> เลือกหมวดอุปกรณ์ "ขอติดตั้งโทรศัพท์ภายใน"</p>
-          <img src="../assets/images/procurement/ipphone/step3.png" alt="เลือกหมวดขอติดตั้งโทรศัพท์ภายใน"
-            onclick="lbOpen([\'../assets/images/procurement/ipphone/step1.png\',\'../assets/images/procurement/ipphone/step2.png\',\'../assets/images/procurement/ipphone/step3.png\'],2)"
-            style="width:100%;max-width:460px;border-radius:8px;border:1px solid var(--clr-border);display:block;cursor:pointer">
-        </div>
-
-      </div>
-
-      <div style="padding:14px 16px;background:var(--clr-bg);border-radius:10px;border:1px solid var(--clr-border);font-size:.9rem;line-height:1.85;color:var(--clr-text)">
+      <div style="padding:14px 16px;margin-top:20px;background:var(--clr-bg);border-radius:10px;border:1px solid var(--clr-border);font-size:.9rem;line-height:1.85;color:var(--clr-text)">
         <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:4px;color:var(--clr-text-muted)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <span>ติดต่อที่กองบริการสารสนเทศ อาคาร 100 ปีคุณยายฯ ตึก O ชั้น 11</span>
